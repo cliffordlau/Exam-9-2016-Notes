@@ -1,0 +1,13 @@
+name: "Exam 9 Notes"
+description: "CAS Exam 9 Notes"
+
+baseurl: /Exam-9-2016-Notes
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+highlighter: rouge
+github: [Repository metadata]
+
+gems: [jekyll-paginate]
