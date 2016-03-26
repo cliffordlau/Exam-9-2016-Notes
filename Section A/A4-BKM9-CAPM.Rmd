@@ -1,0 +1,15 @@
+---
+title: "A4 BKM9: Capital Asset Pricing Model"
+author: "Z. Bodie, A. Kane, A. Marcus"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
