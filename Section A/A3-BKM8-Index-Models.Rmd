@@ -275,7 +275,7 @@ If short positions are prohibited, we need to take out securities with negative 
 
     * $w^*_A = \dfrac{w^0_A}{1 + (1-{\color{orange}{\beta_A}})w^0_A}$
 
-        * $w^0_A = \dfrac{{\color{blue}{\alpha_A}} / {\color{green}{\sigma^2(e_A)}}}{\operatorname{E}[R_M] / \sigma^2_m}$
+        * $w^0_A = \dfrac{ {\color{blue}{\alpha_A}} / {\color{green}{\sigma^2(e_A)}}}{\operatorname{E}[R_M] / \sigma^2_m}$
 
 5. Calculate the weights of the market and each security in the optimal risky portfolio
 
