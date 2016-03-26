@@ -85,7 +85,7 @@ A version of the single factor model with return on an index used as proxy for t
 
 **Advantages**
 
-Only requires $3n+2 variables
+Only requires $3n+2$ variables
 
 * $\alpha_i, \beta_i, \sigma_i$ for each stock and $R_M$ and $\sigma^2_m$
 
