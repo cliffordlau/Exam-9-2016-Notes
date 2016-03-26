@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"A4 BKM9: Capital Asset Pricing Model\"\nauthor: \"Z. Bodie, A. Kane, A. Marcus\"\ndate: \"`r format(Sys.time(), '%B %d, %Y')`\"\noutput: \n  html_document:\n    toc: true\n    toc_float:\n      collapsed: false\n      smooth_scroll: false\n    toc_depth: 4\n---\n\n## Introduction\n\n",
+    "created" : 1458967487781.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3199093032",
+    "id" : "21BB23AD",
+    "lastKnownWriteTime" : 1458967596,
+    "last_content_update" : 1458967596718,
+    "path" : "~/Documents/Exam 9 2016 Notes/Section A/A4-BKM9-CAPM.Rmd",
+    "project_path" : "Section A/A4-BKM9-CAPM.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
