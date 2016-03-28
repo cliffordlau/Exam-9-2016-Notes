@@ -63,7 +63,7 @@ $w_E^{Min} = 1 - w_D^{Min}$
 
 ![alt text](figures/Exam 9 - 5.png)
 
-$\operatorname{E}[r_p] vs $\sigma_p$ with varying weights for a given $\rho$
+$\operatorname{E}[r_p]$ vs $\sigma_p$ with varying weights for a given $\rho$
 
 ## Portfolios of 2 Risky and a $r_f$ Assets
 

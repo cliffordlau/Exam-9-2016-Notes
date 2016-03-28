@@ -50,7 +50,7 @@ $\hookrightarrow$ $U = -p-0.5Ap(1-p)$
 
 Insurance with premium $v$
 
-$\operatorname{E}[r] = -v; $\sigma^2(r) = 0$
+$\operatorname{E}[r] = -v$; $\sigma^2(r) = 0$
 
 $\hookrightarrow$ $U = -v$
 
@@ -77,7 +77,7 @@ $\operatorname{E}[r_c] = r_f + \dfrac{\sigma_c}{\sigma_p}\left( \operatorname{E}
 
 Slop of CAL = $\left. \dfrac{\operatorname{E}[r_p] - r_f}{\sigma_p} \right \} \text{Sharpe Ratio} = \dfrac{\text{Incremental Return}}{\text{Unit of }\sigma}$
 
-CAL to the right of ($\operatorname{E}[r_p], \sigma_p) is achieve by borrowing at risk free rate
+CAL to the right of ($\operatorname{E}[r_p]$, $\sigma_p$) is achieve by borrowing at risk free rate
 
 * If borrowing at risk free is not possible, the slope will be less steep = $\dfrac{\operatorname{E}[r_p] - r_f^B}{\sigma_p}$ where $\r_f^B$ is the risk free rate we can borrow
 

@@ -201,7 +201,7 @@ Some assets are tradable e.g. human capital and privately held business
 Little impact to CAPM as owners can still achieve diversification by reducing their portfolio of other similar traded assets $\Rightarrow$ Still holding market portfolio
 
 * Privately held business w/o similar characteristics to traded assets:  
-Portfolio of traded assets that hedge the private business will be up $Rightarrow$ $\downarrow$ expected return $\Rightarrow$ $-\alpha$ in traditional CAPM
+Portfolio of traded assets that hedge the private business will be up $\Rightarrow$ $\downarrow$ expected return $\Rightarrow$ $-\alpha$ in traditional CAPM
 
 **Human Capital**
 

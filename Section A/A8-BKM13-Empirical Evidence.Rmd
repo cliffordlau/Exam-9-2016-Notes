@@ -1,0 +1,474 @@
+---
+title: "A8 BKM13: Empirical Evidence on Security Returns"
+author: "Z. Bodie, A. Kane, A. Marcus"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Tests of CAPM
+
+Tests of various component of CAPM
+
+### $\operatorname{E}[Return]$ & $\beta$ Relationship
+
+Early test of CAPM $\operatorname{E}[r_i] = r_f + \beta_i \left( \operatorname{E}[r_M] - r_f \right)$
+
+**1) Sample data**
+
+Select a sample period (e.g. 60mos) and for each incremental period (month) $t$ collect:
+
+* $r_{it}$: rates of return of $n$ stocks
+* $r_{Mt}$: market proxy (return?)
+* $r_{ft}$: risk free rate for the incremental period $t$ (1 month)
+    
+**2) Estimate SCL (Security Characteristic Line)**
+
+$r_{it} - r_{ft} = \alpha_i + b_i(r_{Mt} - r_{ft}) + e_{it}$
+
+Estimate $\beta$ via first-pass regression for each of the 100 stocks
+
+<span style="color:red">What about the e term?</span>
+
+<span style="color:red">Double check understanding on this</span>
+
+Recall SCL from BKM8 ($\operatorname{E}[r]$ vs $\sigma$)
+
+**3) Estimate SML (Security Market Line)**
+
+Estimate the $\gamma$'s via the second-pass regression using the $n$ $\beta$s from the different companies in step 2
+
+$\overline{r_i - r_f} = \gamma_0 + \gamma_1 \beta_i + \gamma_2 \sigma^2(e_i)$
+
+* $\overline{r_i - r_f}$ is the sample average over the periods for each stock
+
+<span style="color:red">What is the sigma coming from?</span>
+
+Recall SML from BKM9 ($\operatorname{E}[r]$ vs $\beta$)
+
+**Expected Results** if CAPM is valid
+
+* $\gamma_0 = 0$
+
+* $\gamma_1 = \overline{r_M - r_f}$
+
+* $\gamma_2 = 0$
+
+**Test Results**
+
+* Neither $\gamma_0$ and $\gamma_2$ are 0
+
+* $\gamma_1$ is significantly less than the sample average $\overline{r_M - r_f}$
+
+**Caveat**
+
+Several difficulties of this testing approach that might have caused the inconsistent results
+
+ * Stock results are volatile, reducing the accuracy of the tests that rely on return
+ * Concerns about the validity of the tests:
+    * Market index used is not the true market portfolio
+    * Large sample error of the $\beta$ estimates in the first-pass regression
+    * Investors can't borrow at risk free
+    
+### The Market Index
+
+**Roll's Critique**
+
+The only testable hypothesis of CAPM is that *the market portfolio is mean-variance efficient*
+
+* The other implications are based on the market portfolio's efficiency and are not independently testable
+
+    * e.g. Linear relationship between $\operatorname{E}[r]$ and $\beta$
+    
+A given sample of observed individual returns can form an infinite number of ex post portfolios that are mean-variance efficient $\Rightarrow$ The $\beta$s of these portfolio will satisfy the SML relation exactly regardless of whether the true market portfolio is mean-variance efficient
+
+CAPM is not testable unless we know the composition of the true market and use it in the test $\Rightarrow$ All assets are required to be included in the sample
+
+2 difficulties with using proxy such as S&P 500
+
+1) Proxy may be mean-variance efficient even though the true market is not
+
+2) Most proxies are highly correlated with themselves and the true market
+
+    * Even if the S&P is highly correlated, using a different coreelated proxy may result in different conclusion
+    
+    * Benchmark error: use of incorrect benchmarks in the tests of the theory
+    
+**Roll & Ross Critique**
+
+Tests that reject a positive relationship between the average return & $\beta$ is due to inefficiency in the proxy
+
+**Kandel & Stambaugh**
+
+Zero-beta CAPM requires portfolio on the efficient frontier
+
+Need market proxy since we can not easily identify such a portfolio
+
+Market proxy was used to estimate a second pass regression for the zero-beta CAPM:
+
+$r_i - r_z = \gamma_0 + \gamma_1 \times \hat{\beta}_i$
+
+Kandel & Stambaugh showed that the values of $\gamma_0$ and $\gamma_1$ would be biased by an amount $\propto$ the efficiency of the proxy
+
+$\hookrightarrow$ For the test to be valid, we need an efficient proxy but it is difficult to test how efficient the proxy is
+
+Given the difficulty in testing CAPM directly, easier to test APT instead, which produces the same SML given that the portfolio is well diversified
+
+### Measurement Error in $\beta$
+
+If the right handside variable of a regression equation is measured with error $\Rightarrow$ slope coefficient will be biased $\downarrow$ and the intercept biased $\uparrow$
+
+$\hookrightarrow$ $\beta$ is measured with error in the second-pass regression $\Rightarrow$ Estimated $\gamma_0$ was $> 0$ and $\gamma_1 < \overline{r_M - r_f}$
+
+***
+
+Mill & Scholes used simulated rates of return than followed CAPM in the first-pass regression to estimate $\beta$ but the results were identical to the results based on actual stock returns
+
+* Test was not high power enough
+
+***
+
+Modified test to reduce measurement error by using portfolios (instead of individual securities) to diversify away firm risk $\Rightarrow$ More accurate $\beta$
+
+* Caveat: Combining reduced the number of observations for the second-pass regression
+
+$\hookrightarrow$ Portfolios were constructed to produce the largest possible dispersion of $\beta$ coefficients, as this results in more accurate regression estimates
+
+Fama & MacBeth tested with the portfolios with the SML below:
+
+$r_i = \gamma_0 + \gamma_1 \beta_i + \gamma_2 \beta_i^2 + \gamma_3 \sigma(e_i)$
+
+* $\gamma_2$ should be 0 based on CAPM but represents the potential nonlinearity
+
+* $\gamma_3$ fluctuated a lot but was not significant
+
+$\hookrightarrow$ Test did not reject CAPM but alternate datasets did reject the model
+
+## Tests of Multifactor CAPM & APT
+
+Potential supplemental factor to the market risk is a multifactor SML
+
+* Factors that hedge consumption against uncertainty of prices of important consumption categories or general inflation (CCAPM)
+* Factors that hedge future investment opportunities (
+ICAPM e.g. interest rates or market risk premium)
+* Factors that hedge assets missing from the market index (non-traded asset e.g. labor income or private business)
+
+### Labor Income
+
+True market portfolio includes aggregate labor income that is (+)-ly correlated with the market index and have significant value compared to the value of securities in the index
+
+Stocks that have (+) $\beta$ on the value of labor will have lower prices as investor will try to hedge the risk of their human capital by avoiding those stocks
+
+* Risk premium will be larger than indicated by the standard CAPM
+
+To capture human capital:
+
+1) Assume $\Delta$ aggregate labor income $\approx$ $\Delta$ value of human capital
+
+2) Difference between yields on low and high grade bonds $\approx$ state of the economy
+
+    * As business cycles may affect the asset $\beta$ ($\beta$ are conitional on the state of the economy)
+
+3) Incorporate firm size adjustment
+
+    * $ME$, market value of equity
+    
+$\hookrightarrow$ $\operatorname{E}[R_i] = c_0 + c_{size} \operatorname{log}(ME) + c_{vw}\beta^{vw} + c_{prem}\beta^{prem} + c_{labor}\beta^{labor}$
+
+* $\beta^{vw}$ is the $\beta$ of a value weighted index
+
+Test rejected CAPM
+
+### Macro Factor Model
+
+Variables that may be proxies fro systematic risk factors:
+
+* $IP$: Growth rate of industrial production
+
+* $EI$: $\Delta$ in expected inflation (based on $\Delta$ in short term interest rates)
+
+* $UI$: Unexpected inflation
+
+* $CG$: Unexpected $\Delta$ in risk premium (difference between returns of corporate Baa bonds & long term government bonds)
+
+* $GB$: Unexpected $\Delta$ in the term premium (difference between returns of long term and short term government bonds)
+
+**First-Pass Regression**
+
+Groups stocks into 20 portfolio based on size
+
+* Size is expected to be associated with average stock returns
+
+Based on 5 years of data, regression on each of the group
+
+$r = a + \beta_M r_M + \beta_{IP} IP + \beta_{EI} EI + \beta_{UI} UI +\beta_{CG} CG + \beta_{GB} GB + e$
+
+**Second-Pass Regression**
+
+$\beta$s from first-pass regression were used for the second-pass regression on the 20 portfolios
+
+$r = \gamma_0 + \gamma_M \beta_M + \gamma_{IP} \beta_{IP} + \gamma_{EI} \beta_{EI} + \gamma_{UI} \beta_{UI} +\gamma_{CG} \beta_{CG} + \gamma_{GB} \beta_{GB} + e$
+
+***
+
+Regression was ran twice using value weighted NYSE and equally weighted NYSE
+
+Neither market index is statistically significant ($|t|$ < 2)
+
+$IP$, $CG$, and $UI$ showed significant explanatory power
+
+### Fama French 3 Factor Model
+
+Divide stocks into 6 portfolio based on B:M ratios (Low Mid High) and size (Small Big)
+
+$\operatorname{E}[r_i] - r_f = \alpha_i + b_i [\operatorname{E}[r_M] - r_f] + s_i \operatorname{E}[SMB]+ h_i \operatorname{E}[HML]$
+
+First-pass regression: to estimate factors $b_i$ $s_i$ and $h_i$, intercept should be 0
+
+Comparison of actual returns of US stocks to returns by CAPM and FF showed that FF does a better job of predicting the returns
+
+### Risk Based interpretations
+
+Liew & Vassalou:  
+Returns on style portfolio (HML or SMB) did seem to predict GDP growth $\Rightarrow$ Factors capture components of business cycle risk
+
+* Based on comparing return in the years before good GDP growth - return before poor growth
+
+***
+
+Petkova & Zhang:  
+Similar test above using conditional CAPM ($\beta$ and risk premium vary and co-vary over time)
+
+Relationship between $\beta$ and $R_M$
+
+* Value firms typically have larger amounts of tangible capital $\Rightarrow$ More exposed to the risk of economic downturn due to investment irreversibility as they will suffer from XS capacity $\Rightarrow$ Higher $\beta$ during down markets
+
+* Evidence also show market risk premium $R_M$ is higher during down markets
+
+$\hookrightarrow$ (+) correlation between $\beta$ and $R_M$ for higher B:M value firms
+
+***
+
+Try to prove the above by fitting $\beta$ and $R_M$ to state variables that summarize the state of the economy
+
+* $DIV$: Market dividend yield
+* $DEFLT$: Default spread on corporate bonds
+* $TERM$: Term structure spread
+* $TB$: 1 month t bill rate
+
+$\begin{array}{cccc}
+  R_{HML} &= \alpha + &\beta &R_{Mt} + e \\
+  &= \alpha + &\underbrace{[b_0 + b_1 DIV_t + b_2 DEFLT_t + b_3 TERM_t + b_4 TB_t]}_{\text{time varying }\beta} &R_{Mt} + e_i \\
+\end{array}$
+
+Equation to tie the market risk premium to the state variables
+
+$r_{Mt,t} - r_{ft} = c_0 + c_1 DIV_t + c_2 DEFLT_t + c_3 TERM_t + c_4 TB_t + e_t$
+
+Results showed that $\beta$ is counter cyclical, negative in good economies and positive during down markets
+
+Test indicated that the value factor may indeed be a proxy for risks not fully captured by the standard CAPM $\beta$
+
+### Behavioral Explanations
+
+Value premium arises due to market irrationality
+
+* Analysts extrapolate the performance too far into the future $\Rightarrow$ Overestimate the value of firms with recent good performance $\Rightarrow$ Prices fall when market realizes its mistakes
+
+$\hookrightarrow$ Glamour firms will often under perform value firms
+
+* Glamor firms = those with recent good performance, high prices and lower B:M ratios
+
+Studies below support the view of market irrationality
+
+***
+
+Overreaction study (Chan, Karceski and Lakonishok)
+
+* Groups firms into deciles based on income growth for the past 10 years
+
+* Measured B:M value at the beginning and end of 5 years period and found:
+  
+    * Ending B:M falls steadily with growth $\Rightarrow$ Past growth has therefore been extrapolated and incorporated into the price
+    
+    * Beginning B:M has minimal (small positive) relationship with growth $\Rightarrow$ Glamour firms do not outperform other firms in terms of future income growth
+
+***
+
+Performance of value vs glamour stocks (La Porta, Lakonishok, Shleifer & Vishny)
+
+* Focused on the stock price performance of each type once earnings were released
+
+* Found that value stocks consistently outperform glamour stocks
+
+* Could be due to market being disappointed by the earnings releases of growth stocks because the expectations were too high
+
+### Momentum
+
+Momentum has been proposed to be included in the Fama French model as a 4^th^ factor
+
+This may be what was causing the $\alpha$ in the 3 factor model
+
+However it is difficult to justify/ explain this factor and unclear to see what type of risk this would be acting as a proxy for
+
+## Liquidity and Asset Pricing
+
+Liquidity's impacts on asset's $\operatorname{E}[r]$
+
+1) Transaction costs (bid/ask spread)
+2) Liquidity risk ($\Delta$ in liquidity cost)
+
+Difficult to estimate as they are often unobservable
+
+Characteristics of **Liquidity**
+
+* Trading costs
+* Ease of sale
+* Price concessions required to motivate a quick transaction
+* Market depth
+* Price predictability
+
+$\hookrightarrow$ Difficult to have a single statistic to capture all the above components
+
+***
+
+Common methods to measure liquidity focus on the price impact:
+
+**Price reversals follow large trades**:
+
+* Based on the assumption that reversals on the following day would be a symptom of price impact of the initial trade
+    
+* $ILLIQ = \text{M-thly Avg of Daily}\left[ \dfrac{\mid Return_{stock}\mid}{\text{Dollar Volume}} \right]$
+    
+* Focus on the relationship between large trades and price movements
+
+    * Measures the price impact per dollar of transactions
+    
+    * Measures both liquidity cost and liquidity risk
+
+**Asymmetric information**:
+
+* Based on the assumption that the price impact is due to asymmetric information
+
+* Regressions are used to determine how much of the price impact is due to information
+
+* Liquidity risk will be cause by changes in the prevalence of informationally motivated trades
+
+***
+
+Use one of the above 2 method to derive the level of market wide illiquidity $\Rightarrow$ Calculate liquidity beta (sensitivity of returns to $\Delta$ liquidity) of an individual stock
+
+If stocks with higher liquidity $\beta$ have higher returns $\Rightarrow$ Liquidity is a priced factor
+
+Pistor & Stambaugh study:
+
+* Examine whether liquidity risk is a priced factor
+
+* Sorted sample portfolio into deciles, based on the liquidity $\beta$
+
+* Calculate the average $\beta$ of each decile using a model that ignores liquidity (standard CAPM and FF 3 factor)
+
+* Found that $\alpha$ did rise substantially for the higher liquidity $\beta$ deciles $\Rightarrow$ Supported the view that liquidity risk was a priced factor
+
+## Equity Premium Puzzle
+
+**Equity premium puzzle**:  
+Historical XS returns on risky assets in the US are too large to be consistent with economic theory and reasonable levels of risk aversion
+
+### Consumption Growth & Market Rates of Return
+
+ICAPM implies that investors make decisions based on their lifetime flow of consumption and not just their current wealth
+
+To measure consumer well being we should focus on the consumption flow that wealth can support
+
+***
+
+CAPM $\beta = \dfrac{\operatorname{Cov}(r_i, r_M)}{\sigma^2_M}$, based on the covariance of returns with market return $\Rightarrow$ Only focused on just wealth
+
+Should rely on covariance of the market with aggregate consumption: 
+
+$\operatorname{E}[r_M] - r_f = A \cdot \operatorname{Cov}(r_M, r_C)$
+
+* $A$: Average coefficient of risk aversion
+
+* $r_C$: Rate of return on a consumption tracking portfolio that has been designed to have the highest possible correlation with growth in aggregate consumption
+
+Based on reasonable values of $A$, covariance is much too low to produce the empirical average XS returns $\Rightarrow$ Given an appropriate risk aversion factor, XS returns are too high
+
+***
+
+Study to demonstrate that the Fama French factors are associated with consumption $\beta$ (Jagannathan & Wang)
+
+* High B:M stocks generally have higher consumption $\beta$s
+
+* Larger firms generally have lower $\beta$s
+
+$\hookrightarrow$ Explanatory powers of the FF factors may be due to consumption risk
+
+* Also proved that CCAPM model explains returns better than the FF model
+
+***
+
+Standard CCAPM focuses on an average investor $\Rightarrow$ Does not acknowledge the heterogeneous investor with different level of wealth and consumption habits
+
+Newer models reflect the different types of investors
+
+* e.g. incorporate the fact that the covariance between market returns and consumption $\uparrow$ when household holds financial securities
+
+$\hookrightarrow$ Reflecting the heterogeneity may mitigate the observed equity premium puzzle
+
+### Expected vs Realized Returns
+
+Historical returns of the S&P 500 relative to the $r_f$ $\upuparrows$ since 1950s
+
+Using average realized returns to derive the risk premium may be the problem causing the puzzle
+
+Calculate $\operatorname{E}[r]$ using dividend discount model
+
+$\operatorname{E}[r] = \dfrac{D_1}{P_0} + g$
+
+* $D_1$ = end of year dividend
+
+* $P_0$ = current stock price
+
+* $g$ = expected dividend growth rate
+
+Model produced a smaller risk premium than actual for the period after 1950 $\Rightarrow$ High XS returns for the period may have been > than the rate that investors expected to earn
+
+$\hookrightarrow$ Unanticipated gains may be responsible for the equity premium puzzle
+
+### Survivorship Bias
+
+Equity premium puzzle is based on studies of US stock return
+
+May be caused by survivor-ship bias as the US market has experienced some of the highest returns during the historical period
+
+### CAPM Extensions
+
+CAPM extensions may resolve the equity premium puzzle
+
+Can modify the basic CAPM to account for the observed XS returns by relaxing some of the standard CAPM assumptions
+
+* Consumers face income shocks (loss of job), the risk of which increases during economic downturns
+
+* Investors stage in the life cycle has an impact on their situation e.g. borrowing constraints change over time, younger people will typically face more borrowing constraints
+
+Study showed that afters accounting for these and other factors, we can explain the higher risk premium observed in the market
+
+### Behavioral Explanations
+
+Puzzle may arise due to irrational investor behavior
+
+**Narrow framing**
+
+Investors evaluate each risk that they are exposed to in isolation $\Rightarrow$ Ignore the fact that risk from the stock portfolio has a low correlation with other components of wealth $\Rightarrow$ Require a higher risk premium than indicated by the models
+
+**Loss aversion**
+
+This will also cause investors to require higher premiums
+

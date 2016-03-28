@@ -17,7 +17,7 @@ Problem with Markowitz Model from BKM 7
 
 * As # of securities $\uparrow$, # of variables that need to be estimate $\Uparrow$
 
-    * $n$ expected return, $n$ variance, and $\dfrac{n^2 - n}{2} covariance
+    * $n$ expected return, $n$ variance, and $\dfrac{n^2 - n}{2}$ covariance
     
 * Increase likelihood of estimation error and may produce nonsensical results
 
@@ -71,7 +71,7 @@ A version of the single factor model with return on an index used as proxy for t
 
 * $R_i(t) = \alpha_i + \beta_i R_M(t) + e_i(t)$
 
-* $\alpha_i$: expected XS return of security when market XS return ($R_M(t)) = 0
+* $\alpha_i$: expected XS return of security when market XS return ($R_M(t)$) = 0
 
 * $\alpha_i$ $\uparrow$ if stock is underpriced
 
@@ -193,7 +193,7 @@ Example
 4) Calculate $\alpha$ using security analysis
     * Return based on security analysis - results from step 3
 
-### Optiaml Risky Portfolio
+### Optimal Risky Portfolio
 
 Based on Single Index Model
 

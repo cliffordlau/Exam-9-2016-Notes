@@ -104,7 +104,7 @@ Given 2 well diversified portfolio $M$ and $P$ that has (+) $\alpha$
 
 Construct $Z$ a zero beta portfolio with $M$ and $P$
 
-$\beta_Z = \w_p \beta_p + (1-w_p)\beta_M = 0$ $Rightarrow$ $w_p = \dfrac{1}{1-\beta_p}$
+$\beta_Z = w_p \beta_p + (1-w_p)\beta_M = 0$ $\Rightarrow$ $w_p = \dfrac{1}{1-\beta_p}$
 
 $\hookrightarrow$ $Z$ is riskless since no residual risk from diversification and 0 systematic risk from $\beta$
 
@@ -116,7 +116,7 @@ $\operatorname{E}[R_z] = \alpha_Z = w_p \alpha_p = \dfrac{\alpha_p}{1 - \beta_p}
 
 ### No-Arbitrage Equation
 
-Return of well diversified portfolio with APT $\operatorname{E}[R_p] = \alpha_p \beta_p \operatorname{E}[R_M]$
+Return of well diversified portfolio with APT $\operatorname{E}[R_p] = \alpha_p + \beta_p \operatorname{E}[R_M]$
 
 $\Downarrow$ No arbitrage, $\alpha = 0$
 
@@ -140,7 +140,7 @@ Advantages:
 
 * Does not require an all inclusive portfolio
 
-### Optimizatio in a Single Index Market
+### Optimization in a Single Index Market
 
 APT indicates how to generate infinite profit if risk premium of well diversified portfolio differs from the SML
 
