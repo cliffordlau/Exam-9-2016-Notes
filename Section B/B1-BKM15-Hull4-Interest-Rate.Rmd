@@ -1,0 +1,14 @@
+---
+title: "B1 BKM 15/Hull 4: Term Structure of Interest Rate"
+author: "Z. Bodie, A. Kane, A. Marcus, Hull"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
