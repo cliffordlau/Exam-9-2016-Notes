@@ -11,7 +11,7 @@
 
 <meta name="author" content="Z. Bodie, A. Kane, A. Marcus, Hull" />
 
-<meta name="date" content="2016-03-27" />
+<meta name="date" content="2016-03-29" />
 
 <title>B1 BKM 15/Hull 4: Term Structure of Interest Rate</title>
 
@@ -208,13 +208,129 @@ div.tocify {
 
 <h1 class="title">B1 BKM 15/Hull 4: Term Structure of Interest Rate</h1>
 <h4 class="author"><em>Z. Bodie, A. Kane, A. Marcus, Hull</em></h4>
-<h4 class="date"><em>March 27, 2016</em></h4>
+<h4 class="date"><em>March 29, 2016</em></h4>
 
 </div>
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
+<p><strong>Spot rate</strong>:<br />
+Interest rate that applies from time 0 to <span class="math inline">\(t\)</span>; Yield to maturity (YtM) on zero coupon bonds (ZCB)</p>
+<ul>
+<li>= Zero rates</li>
+</ul>
+<p><strong>Short rate</strong>:<br />
+Interest rate that will apply during a future time interval</p>
+<ul>
+<li>Can use short rates to determine spot rates (But not the other way around?)</li>
+</ul>
+<p><strong>Treasury rates</strong>:<br />
+Rates earned on T-bills and T-bonds; Risk free</p>
+<p><strong>LIBOR</strong>:<br />
+Rate at which a bank will make a large wholesale deposit with another bank; Close to risk free</p>
+<p><strong>Repo rate</strong>:<br />
+The difference between the higher repurchase prices and the price sold at t=0</p>
+<ul>
+<li>Essentially a collateralized loan</li>
+</ul>
+</div>
+<div id="interest-rate" class="section level2">
+<h2>Interest Rate</h2>
+<p><span class="math inline">\(A \times \left(1 + \dfrac{R}{m} \right)^{m \cdot n}\)</span></p>
+<ul>
+<li>Terminal value of <span class="math inline">\(A\)</span> invested for <span class="math inline">\(n\)</span> years at rate <span class="math inline">\(R\)</span> compounded <span class="math inline">\(m\)</span> times per annum</li>
+</ul>
+<p><span class="math inline">\(A \times e^{R \cdot n}\)</span></p>
+<ul>
+<li>Terminal value of <span class="math inline">\(A\)</span> invested for <span class="math inline">\(n\)</span> years at rate <span class="math inline">\(R\)</span> compounded continuously</li>
+</ul>
+</div>
+<div id="bond-pricing" class="section level2">
+<h2>Bond Pricing</h2>
+<p><strong>Bond yield</strong>: Single discount rate that would produce a bond price equal to is market value</p>
+<p><strong>Par yield</strong>: Rate which would produce a bond price = par</p>
+</div>
+<div id="bootstrapping-method" class="section level2">
+<h2>Bootstrapping Method</h2>
+<p>To determine the zero rates (spot rates) based on price of coupon bonds</p>
+<ul>
+<li>Typically start with bonds that do not pay coupons</li>
+</ul>
+</div>
+<div id="forward-rates" class="section level2">
+<h2>Forward Rates</h2>
+<p><strong>Forward rate</strong>: future expected short rates</p>
+<p><span class="math inline">\((1 + f_n) = \dfrac{(1+y_n)^n}{(1+y_{n-1})^{n-1}}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(f_n\)</span> forward rate that applies during the future interval <span class="math inline">\(n\)</span></p></li>
+<li><p><span class="math inline">\(y_n\)</span> spot rates</p></li>
+</ul>
+</div>
+<div id="forward-rate-agreements-fra" class="section level2">
+<h2>Forward Rate Agreements (FRA)</h2>
+<p><strong>FRA</strong>:<br />
+Over the counter agreement between two parties to exchange a specified <em>interest rate</em> that applies to a specified <em>principal</em> during a specified <em>future interval</em></p>
+<ul>
+<li><p>On party will pay a fixed rate and the other would pay a floating rate (e.g. LIBOR)</p></li>
+<li><p>Agreement is typically settled financially at the beginning of the interval based on the different between the fixed and actual floating rate</p></li>
+</ul>
+<p><strong>FRA Payoff</strong></p>
+<p><span class="math inline">\(\dfrac{\overbrace{L(r_K - r_M)\overbrace{(T_2 - T_1)}^{\text{Pro-rate for Interval}}}^{\text{Payoff at }T_2}}{\underbrace{1 + r_M(T_2 - T_1)}_{\text{Discount to }T_1 \text{ from }T_2}}\)</span></p>
+<ul>
+<li><p>For the party that pays <span class="math inline">\(r_M\)</span> and receive <span class="math inline">\(r_K\)</span></p></li>
+<li><p><span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> = beginning and end of the interval</p></li>
+<li><p><span class="math inline">\(r_M\)</span> = Actual LIBOR rate at <span class="math inline">\(T_1\)</span> that applies between <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span></p></li>
+<li><p><span class="math inline">\(r_k\)</span> = fixed rate agreed for the FRA</p></li>
+<li><p><span class="math inline">\(L\)</span> = principal</p></li>
+</ul>
+<p><strong>FRA Value</strong> @ any point in time</p>
+<p><span class="math inline">\(L(r_K - r_f)(T_2 - T_1)\underbrace{e^{-r_2T_2}}_{\text{Discount from }T_2}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(r_f\)</span> = current forward rate that applies between <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span></p></li>
+<li><p><span class="math inline">\(r_2\)</span> = risk free spot rate for maturity <span class="math inline">\(T_2\)</span></p></li>
+<li><p>Discount from <span class="math inline">\(T_2\)</span> because the FRA is for the principal over the whole period</p></li>
+<li><p>Note that both <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> are both points in the future</p></li>
+</ul>
+</div>
+<div id="theories-of-the-term-structure" class="section level2">
+<h2>Theories of the Term Structure</h2>
+<p><strong>Yield curve</strong>: Graph that shows the relationship between the interest rate and time to maturity</p>
+<p>3 theories that explain the shape of the yield curve:</p>
+<div id="expectations-hypothese" class="section level3">
+<h3>Expectations Hypothese</h3>
+<p>Forward rate = expected future short rates <span class="math inline">\(\Rightarrow\)</span> Upward sloping yield curve is a signal that investors expect rate increases</p>
+</div>
+<div id="liquidity-preference" class="section level3">
+<h3>Liquidity Preference</h3>
+<p>Investors select bond that matures around the time that need the money to avoid interest rate and reinvestment risk</p>
+<p>Liquidity premium is required to compensate short term investors for the interest rate risk they face</p>
+<p><strong>Liquidity preferene theory</strong></p>
+<p>Shape of the yield curve is influenced by the proportions of the different term investors</p>
+<ul>
+<li><p>Short term investors dominate <span class="math inline">\(\Rightarrow\)</span> Forward rates &gt; expected spot rates <span class="math inline">\(\Rightarrow\)</span> Rising yield curve</p></li>
+<li><p>Vice versa</p></li>
+</ul>
+</div>
+<div id="segmentation-theory" class="section level3">
+<h3>Segmentation Theory</h3>
+<p>Theory states that the short, medium and long term rates are independent</p>
+<ul>
+<li><p>Most large investors have certain maturities they are interested in and do not readily switch from them</p></li>
+<li><p>Different maturity bonds each find their equilibrium in their respective market based on supply and demand</p></li>
+</ul>
+<p><span class="math inline">\(\hookrightarrow\)</span> Rate for each maturity period is determined by the supply and demand for that specific maturity</p>
+</div>
+<div id="interpretating-the-term-structure" class="section level3">
+<h3>Interpretating the Term Structure</h3>
+<p>Consensus is that the expectation theory is correct</p>
+<p>However the term structure may be impacted by other factors as well such as the liquidity premium (e.g. forward = expected short rate + liquidity premium) <span class="math inline">\(\Rightarrow\)</span> Impact of the additional factors will need to be removed</p>
+<p>Yield curve can provide signs about the future business cycle:</p>
+<ul>
+<li><p>Steep (+) rise <span class="math inline">\(\Rightarrow\)</span> Market expects an expansion in economic activity</p></li>
+<li><p>(-) slope <span class="math inline">\(\Rightarrow\)</span> Interest rates are expected to decline</p></li>
+</ul>
+</div>
 </div>
 
 
