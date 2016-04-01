@@ -1,0 +1,124 @@
+---
+title: "B4 Asset Liability Management Strategies for P&C Companies"
+author: "Noris"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Market Value of a P&C Company
+
+2 components of MV of P&C company:
+
+1) **Portfolio equity**: Currently booked assets - currently booked liabilities
+
+    * Methods to measure portfolio equity
+    
+        * *Statutory surplus*:  
+        Stat accounting
+        
+        * *Current value accounting*:  
+        MV Asset with undiscounted liabilities
+        
+        * *Economic accounting•:  
+        Market value of surplus (MVS), MV Asset with discounted liabilities
+    
+    * Paper focus on portfolio equity and MVS
+    
+2) **Franchise equity**: Value of net income from business not yet booked
+
+## Managing Market Value Surplus
+
+MVS is highly volatile due to heavy investing in long term bonds
+
+* Not ideal as MVS is a leading indicator of future BV as BV converges to market value as the assets and liabilities mature
+
+* Management should try to manage the volatility of MVS
+
+MVS = Net bond with (+) and (-) cash flow
+
+* Sensitivity of MVS to interest rate is impacted by the duration
+
+**Market Value of Surplus (MVS)**
+
+$MVS = MV_A - MV_L$
+
+**Duration of MVS**
+
+$D_{MVS} = \dfrac{D_{MVA} \times MV_A - D_{MVL} \times MV_L}{MVS}$
+
+**Duration Gap of Surplus**
+
+$DG_s = D_{MVS}$
+
+* Use $\dfrac{1}{i}$ and $\dfrac{1}{d}$ as shortcut for duration for bond and stock
+
+Manage size of duration gap of surplus to protect against interest rate fluctuations
+
+* Select a certain gap based on projected interest rate
+
+Target $D_{MVS}$ = 0 or 1 so that it is immune to rate changes
+
+* Limit surplus fluctuation is beneficial as large drop can restrict the premium that insurer is able to write
+
+* $D_{MVS} = 0$ can be too restrictive
+
+* $D_{MVS} = 1$ will immunize the rate of return during the holding period
+
+    * This is typical as insurers are trying to manage the annual returns on surplus
+    
+    * If insurer is immunized to longer time horizon, the interim results may vary
+    
+### Additional Duration Measures
+
+**Duration Gap of Total Return on Surplus** ($DG_{trs}$)
+
+$DG_{trs} = DG_S - H$
+
+* Measures the effectiveness of immunizing over a given holding period
+
+**Economic Leverage**
+
+$\dfrac{MVA}{MVS}$
+
+* Desirable to keep this constant
+* Keep both constant or change by the same proportions
+
+**Duration Gap of Economic Leverage** ($DG_{el}$)
+
+$DG_{el} = D_{MVS} - D_{MVA}$
+
+* $DG_{el} = 0$ to keep the economic leverage constant
+
+### Unexpected Loss Development
+
+Insurer still exposed to risk that the ultimate loss is > than anticipated
+
+In additional, strategies above immunize *nominal* return
+
+To mitigate unanticipated inflation:
+
+* Immunize against the real rate of return $\Rightarrow$ Purchase securities with inflation dependent returns
+
+    * Caveat: typically higher volatility
+    
+* Buy investments that roll over often to benefit from higher yields that follows inflation
+
+    * Caveat: Departure from duration matching
+    
+* Maintain a contingency reserve (overstating reserve)
+
+    * Caveat: You can't based on IRS or rules
+    
+### Practical Issue
+
+Issues that might be encountered when trying to restructure asset portfolio
+
+If the bonds at amortized cost is higher than the market value, insurer would suffer a surplus hit if it liquidates the bonds
+
+Therefore need to consider impact to surplus when implementing these strategy
