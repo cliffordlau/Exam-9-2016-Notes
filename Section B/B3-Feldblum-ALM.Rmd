@@ -1,0 +1,97 @@
+---
+title: "B3 Asset Liability Matching for P&C Insurers"
+author: "Feldblum"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
+Assets liabilities mismatch is more of an issue for life insurers
+
+* If rate decrease, investment income might not be sufficient to meet its obligations
+
+* If rate increase, insureds may close out their policies to obtain higher investment rates available elsewhere $\Rightarrow$ Insurers forced to sell bonds at a capital loss to make disimbursements
+
+P&C insurers are exposed to interest rate risk as more long tail business are written
+
+One wrinkle is that P&C liabilities are inflation sensitive
+
+## Nominal vs Inflation Sensitive
+
+**Liability duration**
+
+* Based on payment pattern
+
+* Discount at new money yield (yield offered by new instruments)
+
+* Discount at the midpoint of each period
+
+However since the liabilities are inflation sensitive, assets and liabilities are no longer matched
+
+### Inflation Sensitive Cash Flow
+
+Asset or liability with inflation sensitive cash flow will have a 0 duration $\Rightarrow$ To match asset and liability:
+
+* Shorter term securities
+* Inflation sensitive assets
+
+Note that some reserves are not fully inflation sensitive:
+
+* WC indemnity are fixed as of accident date
+* BI claims are often determined shortly after the accident
+
+But general damages are inflation sensitive to the settlement date
+
+* Bulk of GL, PL, Med Mal, etc
+
+### Duration of Stocks
+
+Impact of inflation on stock prices:
+
+1) **Value of the firm**
+    * Firm assets $\uparrow$
+    * But inflation & interest rates are correlated
+    * $\hookrightarrow$ Real value unchanged
+2) **Supply & Demand**
+    * Supply cost $\uparrow$
+    * Demand will likely stay flat
+    * $\hookrightarrow$ Firm value $\downarrow$
+3) **Investment Strategy**
+    * Investors shift investments to long term bonds when interest $\uparrow$ $\Rightarrow$ Demand of stocks $\downarrow$
+    * $\hookrightarrow$ Stock prices $\downarrow$
+
+Scenario 1 is long term $\Rightarrow$ unexpected rise in inflation will cause stock prices to $\downarrow$ then $\uparrow$ later
+
+* Historical correlation between inflation and stock returns are positively correlated with 1 year lag even though there is an initial negative correlation
+
+$\hookrightarrow$ Stock prices generally $\propto$ inflation $\Rightarrow$ Duration close to 0 and is a good choice to protect against inflation sensitive liabilities
+
+## Properties of Various Instruments
+
+| Asset Class | Advantages                  | Disadvantages            |
+| ----------- | --------------------------- | ------------------------ |
+| Stocks      | Higher yields               | 1) Systematic market risks 2) Higher transaction costs |
+| Real Estate | Inflation sensitive         | 1) Limited by regulation 2) Illiquid 3) Need investment expertise |
+| Short term bills & Commercial paper | Short duration: Liability matching and not as sensitive to interest | 1) Lowest yield 2) Higher transaction costs than long term bonds |
+| Long term bonds | 1) Higher yields than short term bond 2) Lowest transaction costs 3) Held at amortization so seems less volatile | 1) Lower yield than stocks 2) Longer duration |
+
+Life insurers vs P&C insurers:
+
+* Life insurers are exposed to risk of disintermediation $\Rightarrow$ Important that assets are sufficient to cover the obligations at any given point in time
+
+* P&C insurers are not subject to this risk, can use cash flow from current premium and investment income to pay claims $\Rightarrow$ Mismatch duration is not a major problem unless current income is insufficient to support the losses
+
+P&C insurer should focus more on the traditional concerns
+
+* Maximizing expected returns
+* Ensuring the safety of principal
+* Balancing the risk of each class of securities
+
+$\hookrightarrow$ P&C insurers should invest in stocks and long term bonds (instead of short term bills)
