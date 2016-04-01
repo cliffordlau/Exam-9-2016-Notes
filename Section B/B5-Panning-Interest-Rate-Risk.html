@@ -215,6 +215,85 @@ div.tocify {
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
+<p>Asset liability management measure impact on <span class="math inline">\(\Delta\)</span> interest rates on the economic value of a firm, but typically does not account for the franchise value</p>
+<p><strong>Franchise value</strong>:<br />
+Economic value of the profits that will be earned in the future years from the future renewals of the current policies</p>
+<ul>
+<li><p>Franchise value can make up a large portion of the total economic value</p></li>
+<li><p>Value is reflected in stock price</p></li>
+<li><p>Based on the PV of future <span class="math inline">\(CF_t\)</span> to the firm <span class="math inline">\(\Rightarrow\)</span> Exposed to interest rate risk</p></li>
+<li><p>Invisible to senior executives <span class="math inline">\(\Rightarrow\)</span> Unmanaged</p></li>
+</ul>
+</div>
+<div id="calculation-of-franchise-value" class="section level2">
+<h2>Calculation of Franchise Value</h2>
+<p><strong>Net Income</strong> = <span class="math inline">\(P - L - E + (S + P - E) \times y\)</span></p>
+<p>Assumes <strong>premium</strong> based on target dollar return (<span class="math inline">\(kS =\)</span> Net Income)</p>
+<p><span class="math inline">\(P = \dfrac{S(k-y)+L}{1+y} + E\)</span></p>
+<p><strong>Current economic value</strong></p>
+<p><span class="math inline">\(\underbrace{C}_{MVS} = \underbrace{S + P - E}_{MV_A} - \underbrace{\dfrac{L}{1+y}}_{MV_L}\)</span></p>
+<ul>
+<li><span class="math inline">\(D_C = \dfrac{(S+P-E)D_A - \frac{L}{1+y}D_L}{C}\)</span></li>
+</ul>
+<p><strong>Franchise Value</strong></p>
+<p><span class="math inline">\(\begin{array}{ccc}  F &amp;= \left[ P - E - \dfrac{L}{1+y} \right] &amp;\dfrac{d}{1-d} \\  &amp;= \left[ P - E - \dfrac{L}{1+y} \right] &amp;\sum \limits_{k=1}^{\infty} \left[ \dfrac{cr}{1+y} \right]^k \\ \end{array}\)</span></p>
+<ul>
+<li><span class="math inline">\(d = \dfrac{cr}{1+y}\)</span> = discounted retention</li>
+</ul>
+<p>Total Economic Value = Current Economic Value + Franchise Value = Total Market Value</p>
+<p><strong>Assumptions</strong></p>
+<p>All business are written @ 1/1 for each year</p>
+<p>Pays all expenses @ 1/1 each year</p>
+<p>Know the true value of losses and pays all losses @ 12/31 each year</p>
+<p>Expenses and <span class="math inline">\(\operatorname{E}[Loss]\)</span> are the same each year</p>
+<p>Surplus is the same each year <span class="math inline">\(\Rightarrow\)</span> Profits are distributed, losses will be cover by additional equity</p>
+<p>All calculations occur @ 1/1 just before the insurer writes its new business for the year</p>
+<p>No taxes</p>
+<p><strong>Definitions</strong></p>
+<p><span class="math inline">\(P\)</span> = Premium</p>
+<p><span class="math inline">\(E\)</span> = Expenses</p>
+<p><span class="math inline">\(L\)</span> = Loss &amp; LAE</p>
+<p><span class="math inline">\(y\)</span> = <span class="math inline">\(r_f\)</span></p>
+<p><span class="math inline">\(S\)</span> = Surplus</p>
+<p><span class="math inline">\(k\)</span> = Target RoS</p>
+<p><span class="math inline">\(cr\)</span> = Client retention</p>
+<p><span class="math inline">\(F\)</span> = Franchise value</p>
+<p><span class="math inline">\(C\)</span> = Current economic value: PV of the surplus &amp; business already written</p>
+<div id="interest-rate-sensitivity" class="section level3">
+<h3>Interest Rate Sensitivity</h3>
+<p><strong>Assumption</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Premium is based on target return <span class="math inline">\(k\)</span></p></li>
+<li><p><span class="math inline">\(k = a + b \cdot y\)</span></p>
+<ul>
+<li><p><span class="math inline">\(k\)</span> is a function of the interest rate <span class="math inline">\(y\)</span></p></li>
+<li><p><span class="math inline">\(y\)</span> = spot rate corresponding to the firm’s liabilities</p></li>
+<li><p>A fixed <span class="math inline">\(k\)</span> means <span class="math inline">\(b=0\)</span> and <span class="math inline">\(k = a\)</span></p></li>
+</ul></li>
+</ol>
+<p><span class="math inline">\(F = \dfrac{cr \cdot S[a + y (b-1)]}{(1+y)(1+y-cr)}\)</span></p>
+<p><span class="math inline">\(D_F = \dfrac{a - b + 1}{(1+y)(a + by - y)} + \dfrac{1}{1 + y - cr}\)</span></p>
+<p>Weight the duration of the components of <span class="math inline">\(F\)</span> will also yield the duration</p>
+<p>Duration of <span class="math inline">\(P &gt; L, E\)</span> because premium is sensitive to interest rates <span class="math inline">\(\Rightarrow\)</span> Interest rate <span class="math inline">\(\uparrow\)</span> Premium size <span class="math inline">\(\downarrow\)</span></p>
+</div>
+<div id="managing-interest-rate-risk" class="section level3">
+<h3>Managing Interest Rate Risk</h3>
+<p><span class="math inline">\(D_{total} = \dfrac{D_C \cdot C + D_F \cdot F}{C +F}\)</span> <span style="color:red">Check</span></p>
+<p>Reducing the duration of invested assets does not work well as the <span class="math inline">\(D_F\)</span> is a big driver</p>
+<ul>
+<li><p>Difficult to manage interest rate risk when franchise value is large</p></li>
+<li><p>Reducing the duration of invested assets may puzzle regulatory authorities and rating agencies as they only see the accounting numbers <span class="math inline">\(\Rightarrow\)</span> Does not account for the franchise value when analyzing the actions of the firm</p></li>
+</ul>
+<p><strong>Pricing strategy</strong>:<br />
+Reduce the sensitivity of the franchise value to interest rates</p>
+<p>e.g. set <span class="math inline">\(b \neq 0\)</span> for <span class="math inline">\(k = a + b \cdot y\)</span></p>
+<p>This is the ideal method to manage duration</p>
+<ul>
+<li>Find parameters <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that RoS and duration are both acceptable</li>
+</ul>
+<p><strong>Advantages</strong>: avoid rating agency and regulatory risk that are associated with managing the duration of the invested assets</p>
+<p><strong>Disadvantages</strong>: Desired combination of target RoS and target duration can be maintained only for small interest rate <span class="math inline">\(\Delta\)</span></p>
+</div>
 </div>
 
 
