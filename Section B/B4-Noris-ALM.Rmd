@@ -25,7 +25,7 @@ output:
         * *Current value accounting*:  
         MV Asset with undiscounted liabilities
         
-        * *Economic accounting•:  
+        * *Economic accounting*:  
         Market value of surplus (MVS), MV Asset with discounted liabilities
     
     * Paper focus on portfolio equity and MVS

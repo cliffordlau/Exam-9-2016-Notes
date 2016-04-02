@@ -117,7 +117,7 @@ Issuer can recall the bond if its price reaches a certain level
 
 convexity of a callable bond is different to that of a regular bond as the callability option places a ceiling on the price to which the bond can rise
 
-![alt text](figures/Exam 9 - 12.png)
+![alt text](figures/Exam 9 - 13.png)
 
 When the yield falls enough, the value of the bond compressed to the call price
 
@@ -150,7 +150,7 @@ Strategies used to protect the portfolio from interest rate fluctuations
 **Immunization**:  
 Process where an investors creates a portfolio with duration equal to the investment horizon so that the price risk and reinvestment risk cancels out
 
-1) PV(Asset) = PV(Liabilities)
+1) PV(Asset) $\geq$ PV(Liabilities)
 2) Duration(Asset) = Duration(Liabilities)
 3) Convexity(Asset) $\geq$ Convexity(Liabilities)
 
@@ -217,7 +217,7 @@ Similar to equities, active management will only generate abnormal returns if th
 
 **Workout period**: the temporary period that is out of alignment (in 1 and 2)
 
-**tax swap**: To exploit tax advantage by swapping to bond that has decreased in price to receive the tax benefit from the capital loss
+**Tax swap**: To exploit tax advantage by swapping to bond that has decreased in price to receive the tax benefit from the capital loss
 
 ## Manage Interest Rate Risk with Securities
 
@@ -311,6 +311,10 @@ Risk is lower than lending to a borrower with a high initial rating for the enti
 
 <span style="color:red">Not sure what this section is about </span>
 
+Swap rate is like IRR for the whole swap
+
+<span style="color:red">elaborate a little</span>
+
 #### Valuation of Interest Rate Swaps
 
 **Bond Method**
@@ -319,9 +323,11 @@ Assume principals are exchanged at inception and maturity (which it doesn't) $\R
 
 * $V_{swap} = B_{fix} - B_{fl}$
 
-$B_fl = (L + k^*)e^{-r^*t^*}$
+$B_{fl} = (L + k^*)e^{-r^*t^*}$
 
 * Value of floating rate bond is worth the notional principal immediately after the coupon payment
+
+    * Since floating bond is traded at par after coupon is paid <span style="color:red">elaborate a little</span>
 
 * $L$ = principal
 
