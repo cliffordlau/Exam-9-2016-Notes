@@ -1,0 +1,308 @@
+---
+title: "C2 Credit Derivatives"
+author: "Hull"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Credit Derivatives
+
+Credit derivatives requires payout when the underlying counterparty defaults
+
+Use for managing credit risk exposure:
+
+* Reduce credit exposure to a specific counterparty
+
+* Diversify risk (e.g. purchase protection for sectors with lots of exposure and sell protections in other sectors)
+
+## Credit Default Swaps
+
+Credit default swaps (CDS) protects against the risk a default (**credit event**) of a company (**reference entity**)
+
+* Buyer makes periodic payments (**CDS spread**) to the seller until maturity
+
+    * Payments is typically quoted as a % of the notional principal
+    
+    * If payments are made in arrears, a final accrual payment will be made by the buyer to cover the length of time between the beginning of the period and the credit event
+
+* If the credit event occurs, buyer has the right to sell the underlying security for their face value (**notional principal**) to the seller (**physical settlement**)
+
+    * For **cash settlement**, seller will make a payment to the buyer = notional principal - value of the cheapest deliverable bond
+
+    * No further periodic payments will be required once the credit event occurs
+    
+### CDS & Bond Yields
+
+Corporate bond holders can purchase a CDS on the issuer of the bond to eliminate credit risk $\Rightarrow$ Convert to risk free bond
+
+To prevent arbitrage opportunities, theoretically:
+
+* CDS Spread = Yield on corporate bond - yield on risk free bond
+
+* **CDS-bond basis** is the difference of actual CDS spread and the above; should be close to zero
+
+### Valuation of CDS
+
+Base on probability of default of the reference entity
+
+Given assumptions on:
+
+* Probability of default
+* Potential time of default
+* Frequency of CDS spread payments 
+* LIBOR
+* Recovery
+
+We can calculate the spread
+
+**Step 1**: PV(Expected Payments)
+
+* Expected CDS spread payments based on probability of survival
+* Probability of survival till the end of the period
+* Discounted @ LIBOR
+* Calculate $\sum$ PV(Expected Payments) as a function of CDS spread
+
+| Time | Survival Probability | Expected Payment | Discount Factor | PV(Expected Payments) | 
+| :--: | :--------: | :-------------: | :-------: | :-------: |
+| (1)    | (2) | (3) | (4) | (5) |
+| Assumption | Assumption | (2) $\times$ $s$ | @ LIBOR | (3) $\times$ (4) |
+
+**Step 2**: PV(Expected Accrual Payments)
+
+* For the expected prorated payments if CDS spread is paid in arrears
+* Probability of default is for defaulting in that period given survival @ the beginning of the period
+* Expect accrual payment is prorated based on the time of default assumption
+* Calculate $\sum$ PV(Expected Accrual Payments) as a function of CDS spread
+
+| Time | Default Probability | Expected Accrual Payment | Discount Factor | PV(Expected Accrual Payments) | 
+| :--: | :--------: | :-------------: | :-------: | :-------: |
+| (1)    | (2) | (3) | (4) | (5) |
+| Assumption | Assumption | (2) $\times$ $s$ $\times$ Proration | @ LIBOR | (3) $\times$ (4) |
+
+**Step 3**: PV(Expected Payoff)
+
+* Calculate $\sum$ PV(Payoff)
+
+| Time | Default Probability | Recovery Rate | Expected Accrual Payment | Discount Factor | PV(Expected Payoff) | 
+| :--: | :--------: | :----: | :-------------: | :-------: | :-------: |
+| (1)    | (2) | (3) | (4) | (5) | (6) |
+| Assumption | Assumption | Assumption | (2) $\times$ [1 - (3)] | @ LIBOR | (4) $\times$ (5) |
+
+**Step 4**: Calculate CDS Spread
+
+PV Expected Payoff = PV Expected Payment + PV Expected Accrual Payment
+
+Solve for $s$
+
+### Marking to Market a CDS
+
+Value of CDS = 0 @ t=0
+
+Value of the CDS will change as the spread change
+
+Value to seller = PV Expected Payments w/ accrual - PV expected Payoffs
+
+### Binary CDS
+
+Similar to CDS but payoff is a fixed dollar amount
+
+Can be valued similar to the above but without the recovery
+
+### Use of Fixed Coupons
+
+In practice, instead of paying the spread, buyer pays coupon and an initial price where the price is based on a quoted spread
+
+1) Assume $n$ coupon payments are made per year in arrears
+
+2) Calculate hazard rate iteratively based on quoted spread
+
+3) Calculate duration $D$ for the CDS payments
+
+    * $D$ $\times$ Spread = PV of spread payments
+
+4) $P = 100 - 100 \cdot D \cdot (S - C)$
+
+    * $S$: Spread
+    * $C$: Coupon
+
+Buyer will pay 100 - $P$ per $100 of notional
+
+* If 100 - $P$ is negative, seller pays money to the buyer
+
+Buyer then also pay the coupon $\times$ remaining notional at each payment date
+
+Remaining notional:
+
+* Original notional until default for a CDS
+
+* For CDS index, # of component names that have not defaulted multiplied by the principal per name
+
+
+## Total Return Swap
+
+Agreement to exchange the total return of a bond (or portfolio of assets) for LIBOR plus spread
+
+* Total return = coupons (or interest) and gains/loss
+
+Example
+
+* 5 year agreement with notional principal of 100M
+* Exchange the total return of a bond for LIBOR + 25bps
+    * LIBOR is set on a coupon date and paid on the next similar to interest rate swap
+* At the end of the swap, additional payment is required to cover the change in value of the bond
+    * If bond value $\uparrow$ by x% $\Rightarrow$ Total return payer will pay x% $\times$ 100M to the total return receiver
+    * If bond value $\downarrow$ by y% $\Rightarrow$ Total return receiver will pay the buyer y$ $\times$ 100M
+* If the bond defaults, swap will be terminated and the receiver make a final payment equal to the notional principal of 100M - MV of bond
+
+***
+
+Arrangement allows a party that owns a bond (total return payer) to pass the credit risk to the receiver
+
+If the payer does not own the bond, it is essentially taking a short position on the bond
+
+This is often used as a financing tool
+
+* e.g. Receiver wants to invest 100M in the bond $\Rightarrow$ Approach the payer (financial institution) to engage in the swap
+
+    * Payer will invest 100M in the bond
+    
+    * From receiver's POV, this is equivalent to borrowing 100M @ LIBOR + 25 bps to purchase the bond
+    
+Advantage of the structure is that the payer owns the bond $\Rightarrow$ Exposed to less credit risk
+
+* If they have lent the receiver the money to purchase the bond with the bond being collateral, they can run into legal issues when trying to claim the collateral
+
+Spread over LIBOR to compensate the payer for the risk that the receiver will default
+
+* Payer will lose money if the receiver defaults when the bond price has declined
+
+* Spread depends on: credit quality of the receiver, bond issuer, and correlation between the two
+
+## Asset Backed Securities
+
+Asset back security (ABS) is made up of portfolio of financial assets
+
+* e.g. loans, bonds, credit card receivables, etc
+
+ABS are created to remove these financial assets from its balance sheet as they will be transferred to the purchasers of the securities
+
+To create ABS:
+
+1) Transfer assets to special purpose vehicle (SPV)
+2) SPV issues securities backed by the cash flows of the assets
+3) ABS is structured into different tranches with different level of credit risk exposure
+
+Trenches are designed to achieve a specific credit rating with the senior tranche typically rated AAA
+
+* Senior is the highest, mezzanine is the middle while the equity tranche is the lowest most risky tranche
+
+* AAA can be achieved even if the entire asset pool consists of lower rated assets
+
+* However it might not be appropriate if the underlying assets are highly correlated
+
+* As # of assets in the pool $\uparrow$, larger portion can receive credit ratings that are higher than the average rating of the assets in the pool
+
+### ABS CDO
+
+Repackaged mezzanine tranches from different ABS into a new ABS
+
+* aka ABS COD or CDO^2^
+
+Even more sensitive to the default probability estimate than the expected payoff of the respective tranche from the CDO
+
+Similarly, senior tranche can be extremely risky if the underlying assets are highly correlated
+
+### Collateralized Debt Obligations
+
+CDO is a type of ABS where the pool of assets consists of bonds issued by corporations or countries
+
+**Synthetic CDO**
+
+* Constructed from short positions in CDS
+* Since long position in a corporate bond has the same credit risk as a short position in a CDS
+* Principal of the synthetic CDO = total principals underlying the CDS
+* Creator of the synthetic CDO has cash inflows from the CDS spreads and outflows when the companies default
+* Inflows and outflows are allocated to tranches
+
+### Pricing of Systematic Risk
+
+Non systematic risk is already diversified away in structured products
+
+Losses of the pool is almost entirely systematic risk
+
+Senior tranches investors bear a great deal of systematic risk as they are likely to only suffer losses if the overall market perform poorly
+
+* Payoff from the tranche is equivalent to the payoff from ta derivative written against a  broad economic index
+
+Securities need to offer higher expected return than single name bonds that have the same level of *total risk*
+
+* Because of the high level of systematic risk
+
+* The firm specific risk of the single name bonds' risk can be diversified away
+
+* Empirical data shows that they are not providing enough of a premium $\Rightarrow$ Returns insufficient to compensate for the risk levels
+
+## 2008 Financial Crisis
+
+**Rating Agencies**
+
+Rating agencies begun rating significant volumes of structured financial instruments few years before 2008
+
+The agencies did not have to account for correlation for the typical single-name corporate finance
+
+Study showed that based on simulation the rating of the securities is highly sensitive to the estimate of the correlation coefficient
+
+The agencies did not understand the impact of errors in the correlation assumptions on the default probabilities
+
+In addition, there's conflict of interest for the rating agencies as the issuer paid for the credit rating $\Rightarrow$ Incentive for the agencies to give better ratings in order to get more business
+
+**Subprime Mortgages**
+
+Agencies such as Fannie Mae, Freddie Mac, Ginnie Mae were created to purchase mortgages from banks to increase the amount of credit available to home buyers
+
+* Mortgages must meet certain size and quality requirements to be purchased by the agencies
+
+* The agencies then repackage the mortgages into MBS
+
+Non-conforming mortgages are either held by the issuers or sold in secondary markets
+
+* Amount of these mortgages increased dramatically over the last decade
+
+* Quality of sub prime has deteriorated:
+
+    * $\dfrac{\text{Mortgage Value}}{\text{Home Price}} \uparrow$
+    * $\uparrow$ use of 2^nd^ lien loans
+    * $\uparrow$ issuance of mortgages with low/no documentation
+    
+Investment bank had the incentive to keep dealing in structured finance business as the u/w standard fell due to the huge short term profits
+
+Banks held the senior tranches that were not sold, as the capital requirements were low due to the high rating and also because they were considered to be safe
+
+Lack of historical data to used to derive the probability of default or correlations between defaults $\Rightarrow$ Estimate are likely to be wrong
+
+Further more, CMO (basically CDO^2^) were formed using the mezzanine tranche of the MBS and the CMO are biased against the investors
+
+* Higher probability of default due to lower credit quality of borrowers
+* Lower recovery values as they are typically sold under financial pressure
+* High level of default correlation due to pooling mortgages from similar geographic areas/ vintages
+* Impact of errors in the estimate is magnified due to the CDO^2^ structure
+
+When the sub prime mortgages began to default in large numbers, value of the securities plummeted and even the senior tranches experienced significant losses
+
+**Conclusion**
+
+Market for the structured credit will likely not return to its prior size as investors now know that they are biased against them
+
+Investors will likely be reluctant to invest in complicated securities they do not fully comprehend
+
+Credit rating process should improve to better reflect the parameter and model uncertainty $\Rightarrow$ Portion of AAA rate securities will decrease dramatically
+
+Investors will need to be able to distinguish the difference in the types of risk between single-name and structured securities
+
+* Risk from structured securities is comprised of solely systematic risk and should require a premium
