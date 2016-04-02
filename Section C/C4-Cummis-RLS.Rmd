@@ -1,0 +1,15 @@
+---
+title: "C4 CAT Bond and Other Risk Linked Securities"
+author: "Cummis"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
