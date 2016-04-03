@@ -12,3 +12,138 @@ output:
 ---
 
 ## Profitablity vs Rate of Return
+
+**Profit**
+
+Absolute number
+
+Investors and management are interested in profit
+
+Difficult to compare
+
+**Rate of Return**
+
+Profit as a % of:
+
+* Equity
+* Assets
+* Sales
+
+Measure of efficiency
+
+Use for comparison
+
+**Regulation**
+
+Regulators focus on rate of return
+
+Rate regulation is prospective
+
+If applied retrospectively, be aware that a single year of experience is not sufficient to assess the true profitability of the business
+
+## Opportunity Cost
+
+Policyholders are losing out on some investment income as premiums are paid up front
+
+Factors that affect opportunity cost:
+
+1) **LoB**: Opportunity cost is greater for LoBs with longer tail
+2) Cash needed to support the **infrastructure** of the insurer
+
+    * This cash is not invested and is tied up in infrastructure
+    * Most are provided by prior policyholders and the current insureds are benefiting from them
+    * Policyholders should not receive credit for the investment income from the money invested in infrastructure
+    
+Opportunity cost should be discounted at **risk free**
+
+* Policyholder is not exposed to any of the risk of the investment
+* Policyholders do not have to provide for the shortfall even if the insurer's investment lose money
+
+***
+
+Total Surplus = Policyholder Funds + Shareholder Funds
+
+* Investment income is earned on the total surplus
+* Investment income needs to be segmented between the 2 types of funds
+
+Premium credit should only be given for the investment income of policyholders fund
+
+* Surplus is not owned by the p/h
+* Including surplus will penalize high surplus insurers as they will need to charge lower premiums
+
+***
+
+Calculation:
+
+1) Determine net cash flow (Premium - Loss - Expense) over the whole time horizon
+2) Discount with risk free rate
+
+## ROE vs ROS
+
+Return on equity vs return on sales (premium)
+
+ROE compares the profit of the insurer to the owner's investment
+
+### Problems of ROE
+
+**ROE vs Rate Equity**
+
+Problem of focusing on ROE in rate regulation is that this forces the regulator to focus on ROE instead of rate equity
+
+ROE can be distorted by the leverage ($\dfrac{\text{Premium}}{\text{Surplus}}$) of the insurer $\Rightarrow$ Concept of rate equity may not apply
+
+* $\uparrow$ Surplus $\Rightarrow$ $\uparrow$ ROE
+
+**Surplus Allocation**
+
+Surplus allocation is artificial
+
+Surplus allocation ignores the value of unallocated surplus
+
+* e.g. 100M PHS company with 1M allocated vs 1M PHS company
+
+**ROS is Simpler**
+
+If surplus is allocated based on target P:S ratio, it would be more direct to regulate ROS directly
+
+### ROS
+
+Regulating ROS specifies an adequate profit margin as % of premium
+
+* Similar to the concept of markup
+
+ROS means a lot more to consumer than ROE
+
+ROS is a true rate regulation because it does not depend on the relationship between premium and equity
+
+## Profitability Standards
+
+Insurer needs to charge an adequate rate of return that provides a margin of safety
+
+* u/w profit provision needs to provide for an appropriate after tax return
+
+If rates are inadequate $\Rightarrow$ Tighten u/w standards $\Rightarrow$ Reduce current volume
+
+$\therefore$ Regulators can judge if the current rate of return is appropriate by examining the structure of the industry
+
+Signs of inadequate return:
+
+* Increasing size of residual market
+* Reducing degree of product diversity
+* Reduced innovation
+
+## Uncertainty of Profitability
+
+Lost of uncertainty in the estimation of losses for insurers
+
+Management can influence the results by tempering with reserve
+
+* Weaken reserves in poor year to reduce the size of u/w loss
+* Strengthen reserves in a good year to provide some cushion for future years
+
+Current u/w results will be affected by
+
+* Current reserve decisions
+* Amortization of past reserving decisions
+
+$\therefore$ difficult for analyst examining the financials to determine how they really are performing in a given year
