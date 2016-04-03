@@ -1,0 +1,134 @@
+---
+title: "C7 Value at Risk: Uses & Abuses"
+author: "Culp/Miller/Neves"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
+**Value at Risk**
+
+Dollar loss at a given probability level
+
+Quantifies the exposure of a portfolio of risk
+
+Requires a distribution of possible portfolio values over a set time horizon
+
+Properties:
+
+* Calculations are based on a common time horizon (risk horizon)
+* Uses a consistent basis to quantify risk (dollar losses), it can be used to directly compare the risk of different LoB
+* Probability based $\Rightarrow$ Can derive a potential loss at any degree of confidence
+
+VaR is best suited for:
+
+* Firms that focused on value management
+* Firms with relatively short risk horizons
+    * Won't be distorted by changing portfolio composition over the risk horizon
+    
+## Limitations of VaR Examples {.tabset}
+
+VaR should not be used in isolation to manage risk and is most beneficial when used in conjunction with other analysis
+
+* VaR is not designed to be applied to a single transaction
+* Requires management to actively monitor the value risk and control the VaR
+* Does not capture poor internal controls
+* VaR only quantifies the downside risk; need to combine with estimates of potential gains
+* VaR focuses only value risk, not cash flow risk
+
+### Proctor & Gamble
+
+P&G entered into a fixed for floating swap and increased in interest rates caused P&G to lose 150M
+
+VaR would not have prevented this:
+
+* VaR is not designed to be applied to a single transaction $\Rightarrow$ Would not have been calculated specifically for that swap
+* If VaR had been done for the entire treasury department, loss may still not have been prevented
+    * P&G was more concerned with cash flow risk than value risk $\Rightarrow$ Management may not have been monitoring and controlling the VaR
+    
+### Barings
+
+Baring Bank failed due to rogue trader who made bad bets on the Japanese stock market
+
+VaR would not have been able to prevent this
+
+Management did not even know about the trades because of poor controls
+
+### Orange County
+
+Orange County Investment Pool made bets on the slop of the yield curve
+
+* Purchase intermediate term securities financed with short term borrowing
+
+Adversely impacted when the Fed increased interest rates $\Rightarrow$ Intermediate term securities depreciated and cost of short term borrowing increased
+
+MV of the pool $\downarrow$ 1.5b
+
+VaR would not have prevented this as management was aware of the risk and intentionally made the trades due to potential profits
+
+VaR only quantifies the downside but not the upside $\Rightarrow$ VaR is only useful if combined with estimates of the potential gains
+
+### Metallgesellschaft/ MGRM
+
+MGRM offered customers long term price guarantee on gas and fuel
+
+Purchased short term futures that would appreciate from increasing price to hedge
+
+Oil prices then fell for consecutive months and MGRM had to make several margin calls on its losing future positions
+
+Transactions were hedged but they were exposed to cash flow risk
+
+* Large negative cashflows upfront that would eventually be offset by the gains from the fixed priced customer contracts
+
+## Alternatives to VaR {.tabset}
+
+### Cash Flow Risk
+
+Useful for companies that are more concerned about the volatility of the cash flows than volatility of value
+
+Procedure is similar to VaR but a distribution of cash flow is generated instead of distribution of values
+
+### Abnormal Returns
+
+Abnormal returns (XS of $r_f$) can measures risk taking activities
+
+Returns should be based on capital that has been allocated $propto$ exposure to risk
+
+Does not penalize managers for exploiting perceived information advantages
+
+Difficult to determine the appropriate amount of allocated capital
+
+### Shortfall Risk
+
+Determines a probability associated with a particular given shortfall
+
+* Compare to VaR which determine the dollar loss associated with a given probability
+
+Useful for pension plans and endowments where a shortfall would require additional contributions from the sponsor
+
+**Below target risk**:
+
+Penalizes large shortfalls more than short ones, but can be misinterpreted if not reported with a corresponding measure of potential gains
+
+**Below target probability**:
+
+Does not weigh large deviations below the target more heavily than the small one
+
+## Conclusions
+
+VaR is only useful to certain types of firm and only under certain circumstances
+
+* Best suited for firms focused on total value risk management where the total value of exposures from different activities are of concern
+
+VaR should be applied carefully to firms that are selectively managing their risks
+
+* Mainly use as a diagnostic monitoring tool and should be reported along with an estimate of corresponding profit
+
+No form of risk measurement is a substitute for good management
