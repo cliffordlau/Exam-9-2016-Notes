@@ -16,7 +16,7 @@ output:
 Risk adjusted performance measures
 
 * Explicitly reflect the risks to which a business is exposed
-* Adjusting either numerator or demoninator of the return
+* Adjusting either numerator or denominator of the return
 
 **Risk-adjusted return on captial** (RAROC)
 
@@ -64,8 +64,8 @@ Risk adjusted
 * **Regulatory required capital**
 * **Rating agency required capital**: necessary for a specific rating
 * **Economic capital**: capital necessary to provide the firm with a certain probability of achieving a specific objective over the time horizon
-    * Solvency objective: firm can meet exisiting obligations to policyholders
-    * Capital adequacy objective: firm can continue to pay dividents/ grow premiums/ maintain a certain financial strength
+    * Solvency objective: firm can meet existing obligations to policyholders
+    * Capital adequacy objective: firm can continue to pay dividends/ grow premiums/ maintain a certain financial strength
 * **Risk capital**: amount of capital the needs to be provide by the shareholders to cover the risk that the liabilities may exceed the funds already provided (in the form of loss reserve or premium)
 
 ***
@@ -118,7 +118,7 @@ Disadvantages:
 
 * Hard to isolate the estimate of the threshold to just the probability of default
 
-    * Likely be focused on a number of issues that conern policyholders
+    * Likely be focused on a number of issues that concern policyholders
     
 **Arbitrary default probabilities**
 
@@ -138,7 +138,7 @@ Does not have to estimate values at very low probability of occurrences, where a
 
 Risk to the firm's current investments from changes in market variables
 
-* e.g. equity indicies, interest rates, FX rates
+* e.g. equity indices, interest rates, FX rates
 
 Financial industry typically calculate them based on very short duration (< 10 days)
 
@@ -148,7 +148,7 @@ Insurers however typically calculate them over a 1 year horizon to make it easie
 
 Risk of loss due to credit events
 
-* e.g. counterparty default, changes in couterparty rating etc
+* e.g. counter-party default, changes in counter-party rating etc
 
 3 sources of exposures:
 
@@ -261,7 +261,7 @@ Historical data is not the best indication of future losses
 
 * Events are rate
 * Exposures change over time
-* Severities change over time due to changes in building materials and design
+* Severity change over time due to changes in building materials and design
 
 CAT models are used
 
@@ -281,7 +281,7 @@ CAT models modules:
 
 ### Other Risk
 
-Operational risk: failure of people/ systmes/ processes
+Operational risk: failure of people/ systems/ processes
 
 Strategic risk: related to competitors
 
@@ -324,9 +324,229 @@ Link the variability of the risks to common factors
 Methods to aggregate dist^n^ once the dependency has been estimated
 
 * Closed form solution
-* Approximation method: e.g. assume normal/lognormal and then derive the paramters of the aggregate
+* Approximation method: e.g. assume normal/lognormal and then derive the parameters of the aggregate
 * Simulation methods
 * Square root rule (See Butsic)
 
 ## Capital Allocation
 
+Allocation to different risk sources once the aggregate amount of risk capital is determined
+
+### Proportional Allocation
+
+Proportional allocation based on a risk measure
+
+Allocate risk measure in proportion to the risk measure applied to each unit
+
+$r(X_j) = \dfrac{\rho(X_j)}{\sum_i \rho(X_i)} \rho(Y)$
+
+Risk measure used can have a material impact on the allocation
+
+### Incremental Allocation
+
+Allocate based on the incremental contribution of the particular risk to the risk measure
+
+* Incremental risk measure = Total risk measure - all other risk measure
+
+### Marginal Allocation
+
+Based on marginal increments of risk
+
+**Myers-Read method**
+
+View the insurer's owner as having an option to default on the obligation
+
+* Put option on the $\dfrac{\text{Asset}}{\text{Liability}}$ with strike = 1.0
+
+* Potential losses usually $gg$ assets of a firm
+
+* Value of the put options $\uparrow$ as the amount of risk $\uparrow$ and $\downarrow$ as capital held $\uparrow$
+
+Capital is allocated to equalize the marginal impact of each LoB on the value of the option
+
+$s_i = s - \left(\dfrac{\partial p}{\partial s}\right)^{-1} \left(\dfrac{\partial p}{\partial \sigma}\right) \dfrac{(\sigma_{iL} - \sigma_L^2) - \overbrace{(\sigma_{iV} - \sigma_{LV})}^{=0 \text{ if asset }\perp\!\!\!\perp \text{ liab}}}{\sigma}$
+
+* $s_i$: $\dfrac{\text{Capital}}{\text{Liability}}$ for the LoB
+
+* $s$: Aggregate $\dfrac{\text{Capital}}{\text{Liability}}$
+
+* $\dfrac{\partial p}{\partial s}$: partial derivatives of the put value 
+w.r.t. $s$
+
+* $\sigma_{iL}$: Covariance of the LoB's losses with the aggregate 
+losses
+
+* $\sigma_{iV}$: Covariance of the LoB's losses with the assets
+
+* $\sigma$: overall s.d. = $\sqrt{\sigma_V^2 + \sigma_L^2}$
+
+Method may not be practical if the risk sources can not be represented proportional to revenue or expected losses or if it is difficult to determine the marginal impact
+
+Once we have the $s_i$, multiply them by the liability for each LoB $i$ to get the capital
+
+Notes:
+
+* Method was not developed to determine risk adjusted capital requirement
+* Requires significantly more quantitative resources than other methods
+* Mathematical challenges have indicated that the method may not be appropriate for most insurance applications
+* Capital allocated to a line is $\propto$ covariability with the loss portfolio and *inversely* $\propto$ covariability with the asset portfolio
+* Method allocates all the capital
+
+### Co-Measures Approach
+
+Risk measure has to be adopted to determine the capital requirement of the entire firm
+
+Co-measure = calculating the equivalent risk measures for the individual LoB in the cases where the *firmwide* measures exceed a threshold
+
+## Guiding Strategic Decisions
+
+Applications of risk adjusted performance metrics
+
+**Assessing capital adequacy**
+
+* Does the firm have enough capital to meet the policyholder obligations
+* Does management understand the source of risks in business
+* Doe management actively measure/ manage its exposure to risk
+
+**Setting risk management priorities**
+
+* Identify segment that is generating the most risk capital
+
+**Evaluating alternative risk management strategies**
+
+* Examine the impact of a risk management strategy on RAROC
+
+**Risk adjusted performance measurement**
+
+* See following section
+
+**Insurance policy pricing**
+
+* See following section
+
+### Performance Measurement
+
+Traditional measures can be misleading as they do not account for the level of risk
+
+Use RAROC to reflect the level of risk adjusted return
+
+* e.g. use economic profit / Co-CTE allocated capital
+
+RAROC measurement is highly sensitive to the capital allocation method used
+
+### Insurance Policy Pricing
+
+Set price targeting a specific RAROC
+
+* e.g. determine the additional risk margin needed to arrive at the target
+
+Additional risk margin:
+
+1) RAROC $\times$ Allocated Capital = Required economic profit
+2) Additional risk margin = Discounted(Required - current)
+
+* Assume the risk margin is earning the same expected rate of investment as the premiums; or assume it is invested at risk free
+
+$RAROC = \dfrac{(\text{Original Premium} + \text{Risk Margin} - \text{Expenses}) \times (1 + \text{Expected Invested Income}) - PV(\text{Expected Claims})}{\text{Allocated Capital}}$
+
+***
+
+#### Investment Income on Allocated
+
+Economic profit above did no include investment income expected to be earned on the risk capital
+
+$\therefore$ Target return = XS return over the investment rate
+
+True target return needs to include the investment return on risk capital
+
+***
+
+#### Multi-Period Capital Commitment
+
+Above assumes capital is only held for one period
+
+Assume risk capital is released at the same rate as they are paid
+
+* $C_t$ based on % unpaid
+
+Adjusted target RAROC = $R \left[ \dfrac{\sum_t C_t (1 + r)^{-t}}{C_1}\right]$
+
+* $r$ = investment rate
+* $C_t$ = beginning risk capital for period $t$
+* $R$ = single period target RAROC
+
+Target Economic Profit = Adjusted Target RAROC $\times$ Capital
+
+***
+
+#### Cost of Risk Capital
+
+Methods in the industry that are commonly used to derived the cost of risk capital:
+
+* CAPM and Fama French
+
+Issues:
+
+* Definition of risk in CAPM is the systematic risk associated with an investment
+
+    * RAROC is based on different type of risk
+    
+    * Depending on the risk measure, it's the difference between the cash flow's expected value and the values in the tail
+    
+* Denominator of the RAROC calculation is understated as it does not account for the franchise value $\Rightarrow$ RAROC is overstated
+
+## Practical Considerations
+
+Simplifications
+
+### Time Horizons
+
+Inconsistent time horizons between market risk and insurance risk
+
+**Potential solution 1**: look at all risks over their potential lifetime
+
+* Difficult to quantify some parameters over the long term e.g. equity prices, interest rates, FX
+* Over the long term, there will likely be changes to the investment portfolio
+
+**Potential solution 2**: look at change in value of the insurance liabilities over 1 year horizon
+
+* Little available methods/data to estimate the timing of the recognition of adverse loss development
+
+* change in value for loss reserve won't be totally consistent with market risk
+
+    * Mostly focus on the best estimate of the reserve vs
+    
+    * Market risk is based on market value, includes a risk margin
+    
+* Information that would result in revaluation of the liabilities is often not available over the short term $\Rightarrow$ Likely be minimal change in the liability valuation despite potential significant risk over the long term
+
+***
+
+Models typically ignores the inconsistency
+
+Can argue that only insurance related risk should be aggregated and apply haircut to assets for the market and credit risk
+
+### Alternative Return Measures
+
+There are alternatives to Economic Profit such as accounting based return
+
+Return measures are sometime reduced by the **cost of stranded capital**
+
+* Capital XS of actual capital over the risk capital
+* Or XS over regulatory or rating agency capital
+
+$\hookrightarrow$ Adjustment is equivalent to allocating all capital instead of just the risk capital in the initial stages of the calculation
+
+### Risk Based Allocation
+
+Risk measures that focuses on the tail allocates more of the capital to segments with the most skewed losses
+
+This might make sense for regulatory or risk management perspective
+
+Might not be the most appropriate in terms of guiding business decisions $\Rightarrow$ Focus on less extreme events that would still impact the credit rating or financial strength
+
+### Diversification Adjustments
+
+Assumption selected will have a material impact on the derivation of the aggregate risk profile, allocation of risk capital and RAROC
+
+$\therefore$ RAROC should not be the only metric used to drive decisions

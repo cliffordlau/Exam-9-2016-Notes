@@ -218,7 +218,7 @@ div.tocify {
 <p>Risk adjusted performance measures</p>
 <ul>
 <li>Explicitly reflect the risks to which a business is exposed</li>
-<li>Adjusting either numerator or demoninator of the return</li>
+<li>Adjusting either numerator or denominator of the return</li>
 </ul>
 <p><strong>Risk-adjusted return on captial</strong> (RAROC)</p>
 <ul>
@@ -269,8 +269,8 @@ div.tocify {
 <li><strong>Rating agency required capital</strong>: necessary for a specific rating</li>
 <li><strong>Economic capital</strong>: capital necessary to provide the firm with a certain probability of achieving a specific objective over the time horizon
 <ul>
-<li>Solvency objective: firm can meet exisiting obligations to policyholders</li>
-<li>Capital adequacy objective: firm can continue to pay dividents/ grow premiums/ maintain a certain financial strength</li>
+<li>Solvency objective: firm can meet existing obligations to policyholders</li>
+<li>Capital adequacy objective: firm can continue to pay dividends/ grow premiums/ maintain a certain financial strength</li>
 </ul></li>
 <li><strong>Risk capital</strong>: amount of capital the needs to be provide by the shareholders to cover the risk that the liabilities may exceed the funds already provided (in the form of loss reserve or premium)</li>
 </ul>
@@ -310,7 +310,7 @@ div.tocify {
 <li><p>Does not factor in risk, which is important consideration to compare to reward</p></li>
 <li><p>Hard to isolate the estimate of the threshold to just the probability of default</p>
 <ul>
-<li>Likely be focused on a number of issues that conern policyholders</li>
+<li>Likely be focused on a number of issues that concern policyholders</li>
 </ul></li>
 </ul>
 <p><strong>Arbitrary default probabilities</strong></p>
@@ -331,7 +331,7 @@ div.tocify {
 <h3>Market Risk</h3>
 <p>Risk to the firm’s current investments from changes in market variables</p>
 <ul>
-<li>e.g. equity indicies, interest rates, FX rates</li>
+<li>e.g. equity indices, interest rates, FX rates</li>
 </ul>
 <p>Financial industry typically calculate them based on very short duration (&lt; 10 days)</p>
 <p>Insurers however typically calculate them over a 1 year horizon to make it easier to aggregate with the other risks to which it is exposed</p>
@@ -340,7 +340,7 @@ div.tocify {
 <h3>Credit Risk</h3>
 <p>Risk of loss due to credit events</p>
 <ul>
-<li>e.g. counterparty default, changes in couterparty rating etc</li>
+<li>e.g. counter-party default, changes in counter-party rating etc</li>
 </ul>
 <p>3 sources of exposures:</p>
 <p>Firm’s investments in <strong>securities</strong> may lose value from credit events</p>
@@ -382,7 +382,6 @@ div.tocify {
 <p><strong>Process risk</strong>: deviation from expected due to random variation inherent in the claim development process</p>
 <p><strong>Prarmeter risk</strong>: deviation from estimate due to inaccurate parameters</p>
 <p><strong>Model risk</strong>: deviation from estimate due to use of the wrong model</p>
-<hr />
 <p>We can try to quantify the uncertainty below</p>
 <p><strong>Reserve estimation error</strong>: range of uncertainty (depicted as a CI) associated with the reserve estimate</p>
 <ul>
@@ -392,6 +391,7 @@ div.tocify {
 <ul>
 <li>Shows the probabilities of the full range of possible values for the unpaid loss</li>
 </ul>
+<hr />
 </div>
 <div id="underwriting-risk" class="section level4">
 <h4>Underwriting Risk</h4>
@@ -431,7 +431,7 @@ div.tocify {
 <ul>
 <li>Events are rate</li>
 <li>Exposures change over time</li>
-<li>Severities change over time due to changes in building materials and design</li>
+<li>Severity change over time due to changes in building materials and design</li>
 </ul>
 <p>CAT models are used</p>
 <p>CAT models modules:</p>
@@ -453,12 +453,236 @@ div.tocify {
 </div>
 <div id="other-risk" class="section level3">
 <h3>Other Risk</h3>
-<p>Operational risk: failure of people/ systmes/ processes</p>
+<p>Operational risk: failure of people/ systems/ processes</p>
 <p>Strategic risk: related to competitors</p>
 <p>Difficult to quantify and is ignored in this paper</p>
 </div>
 <div id="risk-aggregation" class="section level3">
 <h3>Risk Aggregation</h3>
+<p>Aggregate the individual dist<sup>n</sup> of the above risks</p>
+<p>Need to consider dependency between the risks</p>
+<ul>
+<li>dependency <span class="math inline">\(\neq\)</span> correlation, as correlation looks at linear relationship</li>
+</ul>
+<p>Methods to quantify dependency:</p>
+<p><strong>Empirical Analysis</strong></p>
+<p>Disadvantage:</p>
+<ul>
+<li>Usually insufficient data</li>
+<li>Little insight as to how the dependencies will change during tail events</li>
+</ul>
+<p><strong>Subjective Estimates</strong></p>
+<p>Advantages:</p>
+<ul>
+<li>Can account for tail events</li>
+<li>Reflects user’s intuition</li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li>As number of risk categories increases, # of dependency parameters that need to be estimated increases exponentially</li>
+</ul>
+<p><strong>Explicit Factor Models</strong></p>
+<p>Link the variability of the risks to common factors</p>
+<hr />
+<p>Methods to aggregate dist<sup>n</sup> once the dependency has been estimated</p>
+<ul>
+<li>Closed form solution</li>
+<li>Approximation method: e.g. assume normal/lognormal and then derive the parameters of the aggregate</li>
+<li>Simulation methods</li>
+<li>Square root rule (See Butsic)</li>
+</ul>
+</div>
+</div>
+<div id="capital-allocation" class="section level2">
+<h2>Capital Allocation</h2>
+<p>Allocation to different risk sources once the aggregate amount of risk capital is determined</p>
+<div id="proportional-allocation" class="section level3">
+<h3>Proportional Allocation</h3>
+<p>Proportional allocation based on a risk measure</p>
+<p>Allocate risk measure in proportion to the risk measure applied to each unit</p>
+<p><span class="math inline">\(r(X_j) = \dfrac{\rho(X_j)}{\sum_i \rho(X_i)} \rho(Y)\)</span></p>
+<p>Risk measure used can have a material impact on the allocation</p>
+</div>
+<div id="incremental-allocation" class="section level3">
+<h3>Incremental Allocation</h3>
+<p>Allocate based on the incremental contribution of the particular risk to the risk measure</p>
+<ul>
+<li>Incremental risk measure = Total risk measure - all other risk measure</li>
+</ul>
+</div>
+<div id="marginal-allocation" class="section level3">
+<h3>Marginal Allocation</h3>
+<p>Based on marginal increments of risk</p>
+<p><strong>Myers-Read method</strong></p>
+<p>View the insurer’s owner as having an option to default on the obligation</p>
+<ul>
+<li><p>Put option on the <span class="math inline">\(\dfrac{\text{Asset}}{\text{Liability}}\)</span> with strike = 1.0</p></li>
+<li><p>Potential losses usually <span class="math inline">\(gg\)</span> assets of a firm</p></li>
+<li><p>Value of the put options <span class="math inline">\(\uparrow\)</span> as the amount of risk <span class="math inline">\(\uparrow\)</span> and <span class="math inline">\(\downarrow\)</span> as capital held <span class="math inline">\(\uparrow\)</span></p></li>
+</ul>
+<p>Capital is allocated to equalize the marginal impact of each LoB on the value of the option</p>
+<p><span class="math inline">\(s_i = s - \left(\dfrac{\partial p}{\partial s}\right)^{-1} \left(\dfrac{\partial p}{\partial \sigma}\right) \dfrac{(\sigma_{iL} - \sigma_L^2) - \overbrace{(\sigma_{iV} - \sigma_{LV})}^{=0 \text{ if asset }\perp\!\!\!\perp \text{ liab}}}{\sigma}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(s_i\)</span>: <span class="math inline">\(\dfrac{\text{Capital}}{\text{Liability}}\)</span> for the LoB</p></li>
+<li><p><span class="math inline">\(s\)</span>: Aggregate <span class="math inline">\(\dfrac{\text{Capital}}{\text{Liability}}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{\partial p}{\partial s}\)</span>: partial derivatives of the put value w.r.t. <span class="math inline">\(s\)</span></p></li>
+<li><p><span class="math inline">\(\sigma_{iL}\)</span>: Covariance of the LoB’s losses with the aggregate losses</p></li>
+<li><p><span class="math inline">\(\sigma_{iV}\)</span>: Covariance of the LoB’s losses with the assets</p></li>
+<li><p><span class="math inline">\(\sigma\)</span>: overall s.d. = <span class="math inline">\(\sqrt{\sigma_V^2 + \sigma_L^2}\)</span></p></li>
+</ul>
+<p>Method may not be practical if the risk sources can not be represented proportional to revenue or expected losses or if it is difficult to determine the marginal impact</p>
+<p>Once we have the <span class="math inline">\(s_i\)</span>, multiply them by the liability for each LoB <span class="math inline">\(i\)</span> to get the capital</p>
+<p>Notes:</p>
+<ul>
+<li>Method was not developed to determine risk adjusted capital requirement</li>
+<li>Requires significantly more quantitative resources than other methods</li>
+<li>Mathematical challenges have indicated that the method may not be appropriate for most insurance applications</li>
+<li>Capital allocated to a line is <span class="math inline">\(\propto\)</span> covariability with the loss portfolio and <em>inversely</em> <span class="math inline">\(\propto\)</span> covariability with the asset portfolio</li>
+<li>Method allocates all the capital</li>
+</ul>
+</div>
+<div id="co-measures-approach" class="section level3">
+<h3>Co-Measures Approach</h3>
+<p>Risk measure has to be adopted to determine the capital requirement of the entire firm</p>
+<p>Co-measure = calculating the equivalent risk measures for the individual LoB in the cases where the <em>firmwide</em> measures exceed a threshold</p>
+</div>
+</div>
+<div id="guiding-strategic-decisions" class="section level2">
+<h2>Guiding Strategic Decisions</h2>
+<p>Applications of risk adjusted performance metrics</p>
+<p><strong>Assessing capital adequacy</strong></p>
+<ul>
+<li>Does the firm have enough capital to meet the policyholder obligations</li>
+<li>Does management understand the source of risks in business</li>
+<li>Doe management actively measure/ manage its exposure to risk</li>
+</ul>
+<p><strong>Setting risk management priorities</strong></p>
+<ul>
+<li>Identify segment that is generating the most risk capital</li>
+</ul>
+<p><strong>Evaluating alternative risk management strategies</strong></p>
+<ul>
+<li>Examine the impact of a risk management strategy on RAROC</li>
+</ul>
+<p><strong>Risk adjusted performance measurement</strong></p>
+<ul>
+<li>See following section</li>
+</ul>
+<p><strong>Insurance policy pricing</strong></p>
+<ul>
+<li>See following section</li>
+</ul>
+<div id="performance-measurement" class="section level3">
+<h3>Performance Measurement</h3>
+<p>Traditional measures can be misleading as they do not account for the level of risk</p>
+<p>Use RAROC to reflect the level of risk adjusted return</p>
+<ul>
+<li>e.g. use economic profit / Co-CTE allocated capital</li>
+</ul>
+<p>RAROC measurement is highly sensitive to the capital allocation method used</p>
+</div>
+<div id="insurance-policy-pricing" class="section level3">
+<h3>Insurance Policy Pricing</h3>
+<p>Set price targeting a specific RAROC</p>
+<ul>
+<li>e.g. determine the additional risk margin needed to arrive at the target</li>
+</ul>
+<p>Additional risk margin:</p>
+<ol style="list-style-type: decimal">
+<li>RAROC <span class="math inline">\(\times\)</span> Allocated Capital = Required economic profit</li>
+<li>Additional risk margin = Discounted(Required - current)</li>
+</ol>
+<ul>
+<li>Assume the risk margin is earning the same expected rate of investment as the premiums; or assume it is invested at risk free</li>
+</ul>
+<p><span class="math inline">\(RAROC = \dfrac{(\text{Original Premium} + \text{Risk Margin} - \text{Expenses}) \times (1 + \text{Expected Invested Income}) - PV(\text{Expected Claims})}{\text{Allocated Capital}}\)</span></p>
+<hr />
+<div id="investment-income-on-allocated" class="section level4">
+<h4>Investment Income on Allocated</h4>
+<p>Economic profit above did no include investment income expected to be earned on the risk capital</p>
+<p><span class="math inline">\(\therefore\)</span> Target return = XS return over the investment rate</p>
+<p>True target return needs to include the investment return on risk capital</p>
+<hr />
+</div>
+<div id="multi-period-capital-commitment" class="section level4">
+<h4>Multi-Period Capital Commitment</h4>
+<p>Above assumes capital is only held for one period</p>
+<p>Assume risk capital is released at the same rate as they are paid</p>
+<ul>
+<li><span class="math inline">\(C_t\)</span> based on % unpaid</li>
+</ul>
+<p>Adjusted target RAROC = <span class="math inline">\(R \left[ \dfrac{\sum_t C_t (1 + r)^{-t}}{C_1}\right]\)</span></p>
+<ul>
+<li><span class="math inline">\(r\)</span> = investment rate</li>
+<li><span class="math inline">\(C_t\)</span> = beginning risk capital for period <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(R\)</span> = single period target RAROC</li>
+</ul>
+<p>Target Economic Profit = Adjusted Target RAROC <span class="math inline">\(\times\)</span> Capital</p>
+<hr />
+</div>
+<div id="cost-of-risk-capital" class="section level4">
+<h4>Cost of Risk Capital</h4>
+<p>Methods in the industry that are commonly used to derived the cost of risk capital:</p>
+<ul>
+<li>CAPM and Fama French</li>
+</ul>
+<p>Issues:</p>
+<ul>
+<li><p>Definition of risk in CAPM is the systematic risk associated with an investment</p>
+<ul>
+<li><p>RAROC is based on different type of risk</p></li>
+<li><p>Depending on the risk measure, it’s the difference between the cash flow’s expected value and the values in the tail</p></li>
+</ul></li>
+<li><p>Denominator of the RAROC calculation is understated as it does not account for the franchise value <span class="math inline">\(\Rightarrow\)</span> RAROC is overstated</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="practical-considerations" class="section level2">
+<h2>Practical Considerations</h2>
+<p>Simplifications</p>
+<div id="time-horizons" class="section level3">
+<h3>Time Horizons</h3>
+<p>Inconsistent time horizons between market risk and insurance risk</p>
+<p><strong>Potential solution 1</strong>: look at all risks over their potential lifetime</p>
+<ul>
+<li>Difficult to quantify some parameters over the long term e.g. equity prices, interest rates, FX</li>
+<li>Over the long term, there will likely be changes to the investment portfolio</li>
+</ul>
+<p><strong>Potential solution 2</strong>: look at change in value of the insurance liabilities over 1 year horizon</p>
+<ul>
+<li><p>Little available methods/data to estimate the timing of the recognition of adverse loss development</p></li>
+<li><p>change in value for loss reserve won’t be totally consistent with market risk</p>
+<ul>
+<li><p>Mostly focus on the best estimate of the reserve vs</p></li>
+<li><p>Market risk is based on market value, includes a risk margin</p></li>
+</ul></li>
+<li><p>Information that would result in revaluation of the liabilities is often not available over the short term <span class="math inline">\(\Rightarrow\)</span> Likely be minimal change in the liability valuation despite potential significant risk over the long term</p></li>
+</ul>
+<hr />
+<p>Models typically ignores the inconsistency</p>
+<p>Can argue that only insurance related risk should be aggregated and apply haircut to assets for the market and credit risk</p>
+</div>
+<div id="alternative-return-measures" class="section level3">
+<h3>Alternative Return Measures</h3>
+<p>There are alternatives to Economic Profit such as accounting based return</p>
+<p>Return measures are sometime reduced by the <strong>cost of stranded capital</strong></p>
+<ul>
+<li>Capital XS of actual capital over the risk capital</li>
+<li>Or XS over regulatory or rating agency capital</li>
+</ul>
+<p><span class="math inline">\(\hookrightarrow\)</span> Adjustment is equivalent to allocating all capital instead of just the risk capital in the initial stages of the calculation</p>
+</div>
+<div id="risk-based-allocation" class="section level3">
+<h3>Risk Based Allocation</h3>
+<p>Risk measures that focuses on the tail allocates more of the capital to segments with the most skewed losses</p>
+<p>This might make sense for regulatory or risk management perspective</p>
+<p>Might not be the most appropriate in terms of guiding business decisions <span class="math inline">\(\Rightarrow\)</span> Focus on less extreme events that would still impact the credit rating or financial strength</p>
+</div>
+<div id="diversification-adjustments" class="section level3">
+<h3>Diversification Adjustments</h3>
+<p>Assumption selected will have a material impact on the derivation of the aggregate risk profile, allocation of risk capital and RAROC</p>
+<p><span class="math inline">\(\therefore\)</span> RAROC should not be the only metric used to drive decisions</p>
 </div>
 </div>
 
