@@ -1,0 +1,111 @@
+---
+title: "C9 Rethinking Risk Management"
+author: "Stulz"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
+Companies do not necessarily purchase derivative to control exposure in interest rate risk, FX risk, commodities risk etc
+
+* Larger firm uses derivatives a lot more than smaller firms
+    * Smaller firm actually have a greater need for risk management due to volatile cash flows and more restricted capital access
+* Many companies allow their views and expectations of the future influence their hedging ratios (amount of the exposure that is hedged)
+    * This is appropriate when companies have specialized knowledge acquired during the course of their normal operating activities
+    * Should conduct risk taking audit to ensures that they do have a comparative advantage
+
+Main determinants of whether or not companies hedge:
+
+* Managerial ownership of shares
+    * Greater % owned, higher the amount of hedging
+* Nature of management compensation
+    * More heavily in options, significantly less hedging
+    
+### Examples of Poor Risk Management
+
+Examples where management's view of the future influenced how the risk was managed
+
+**Metallgesellschaft**: Trader's hedging strategy was influenced by the fact that they believe they could benefit from their insight into the market
+
+**Daimler-Benz**: Firm chose not to hedge the FX risk of a large amount of American dollars that they were going to receive in the future due to belief that the dollar was going to remain at a high level
+
+## Diversification
+
+Management should not devote energy to manage diversifiable risk
+
+* More efficient for shareholders to control for these risk by holding diversified portfolios
+* A lot less expensive than management controlling the risk
+
+$\hookrightarrow$ Companies will not be rewarded by investors for intentionally managing their financial risk
+
+Companies should devote resources to manage the risks if the cash flow variability from the risk may impose real cost on the firm
+
+* Higher **expected bankruptcy cost**
+* Higher **expected payments to stakeholders** to compensate for risk
+    * Stakeholders can't diversify their risk as easily as shareholders
+* Higher **tax payments**
+    * Taxes are usually higher if income is more volatile
+    
+Benefits of risk management arise from its ability to reduce these 3 costs
+
+Management should conduct a risk-taking audit to review the risk they are exposed to when deciding whether or not to assume risks
+
+* Management should ensure that they have a comparative advantage to justify leaving some risks unhedged
+
+## Capital Structure & Risk Taking
+
+Companies with low or no debt should not really benefit from hedging
+
+* Main purpose of managing risks is to minimize the probability of financial distress
+
+$\hookrightarrow$ Risk management can be viewed as a direct substitute for equity $\Rightarrow$ Only practice risk management to the extent that *equity capital is more expensive than debt*
+
+Companies with too much capital should use risk management so that they can increase the leverage <span style="color:red">sub out equity with risk management?</span>
+
+* Debt financing has tax advantage over equity financing
+* Increasing the leverage should increase managements incentive to improve efficiency (since XS capital is being paid out) and add value (since ownership is now becoming more concentrated)
+    * Also strengthens the incentive for management to improve operating performance, as hedging presumably will reduce the impact of factors out of the manager's control
+    
+**Examples**:
+
+Company with very little debt and almost no chance of default
+
+* Tail never reaches the range where it imposes financial distress
+* No reason to hedge
+* Should take bets if it has specialized information
+
+Company with lower rating and significant probability that it can face distress
+
+* Hedge its exposures to minimize the probability of distress
+* Should not take bets nor allow management let their view influence the hedge ratio
+
+Company already in distress
+
+* Not in shareholder's interest to reduce risk
+* Firm should accept bets and seek additional bets to increase the probability of positive tail outcome
+
+## Limitation of VaR
+
+VaR does not work well for an extended period of time
+
+* Insufficient data to conduct empirical tests
+    * e.g. $VaR_{99%}$ with 1 year risk horizon will require 100 years worth of data
+* Typically relies on normal distribution
+    * Tail probabilities are usually greater than those implied by the normal distribution
+    * Tail events are more important when looking over longer time periods
+    
+When hedging risk, main concern is the possibility of distress during the year, which depends on the level of cumulative losses during the year    
+* VaR only gives the maximum loss at a particular confidence level
+
+* Value during the year is more important than the value at year end
+
+<span style="color:red">Don't quite understand</span>
+
+Should conduct sensitivity analysis of the expected dist^n^ of cash flows to reflect the value during the year
