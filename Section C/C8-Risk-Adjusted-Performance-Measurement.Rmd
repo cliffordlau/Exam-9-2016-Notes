@@ -1,0 +1,332 @@
+---
+title: "C8 Risk Adjusted Performanced Measurement for P&C Insurers"
+author: "Goldfarb"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
+Risk adjusted performance measures
+
+* Explicitly reflect the risks to which a business is exposed
+* Adjusting either numerator or demoninator of the return
+
+**Risk-adjusted return on captial** (RAROC)
+
+* $RAROC = \dfrac{\text{Income}}{\text{Risk-Adjusted Capital}}$
+
+* Adjusts denominator
+
+* Focus of this paper
+
+## Income Measures
+
+**GAAP Net Income**
+
+* Based on GAAP accounting
+* Convenient when RAROC is used in management decisions
+
+**Statutory Net Income**
+
+* Based on Stat accounting
+
+**IASB Fair Value**
+
+* Based on fair value accounting
+* Removes accounting biases of various accounting conventions
+
+**Economic Profit**
+
+* Change in economic value of the firm over a period
+* MV asset & discounted liabilities
+* Caveat:
+    * Ignores franchise value
+    * Make less sense to management as they do not reconcile with GAAP
+    * Difficulty in justifying decisions to external parties that only have access to Stat and GAAP accounting
+* Basis for this paper
+
+## Capital Measures
+
+Not risk adjusted
+
+* **Actual committed capital**: actual capital provided by shareholders
+* **Market value of equity**: market capitalization
+
+Risk adjusted
+
+* **Regulatory required capital**
+* **Rating agency required capital**: necessary for a specific rating
+* **Economic capital**: capital necessary to provide the firm with a certain probability of achieving a specific objective over the time horizon
+    * Solvency objective: firm can meet exisiting obligations to policyholders
+    * Capital adequacy objective: firm can continue to pay dividents/ grow premiums/ maintain a certain financial strength
+* **Risk capital**: amount of capital the needs to be provide by the shareholders to cover the risk that the liabilities may exceed the funds already provided (in the form of loss reserve or premium)
+
+***
+
+Risk based measures of the required capital are typically much lower than the market value of the firm's equity $\Rightarrow$ May result in an understated number when using the risk adjusted capital to determine the cost of capital
+
+* Alternative is to allocate actual capital using a risk based approach
+
+## Risk Measures
+
+Derive the necessary amount of capital
+
+**Percentile risk measure**: provides a capital required to achieve a certain probability of ruin (asset < liabilities)
+
+**Conditional Tail Expectation**(CTE): mean loss of all the losses that exceed a certain percentile
+
+**Expected Policyholder Deficit Ratio**
+
+### Threshold Level
+
+**Bond default probabilities** @ a selected credit rating level
+
+Maintain enough capital that would result in a probability of default of the firm equal to the probability of default of a bond with a specific credit rating
+
+Disadvantages:
+
+* Need to select credit rating target
+    
+* Does not account for downgrade risk
+    
+Cautions on industry default rate data
+
+* Historical vs Current estimate: stability vs responsiveness
+    
+* Source of default statistics may indicate different numbers due to using data from different periods
+    
+* Time horizon: data is typically annual default probabilities, while risk capital models are often based on default during the lifetime of the liabilities
+
+**Management's risk preferences**
+
+Threshold based on the risk tolerance of management
+
+Disadvantages:
+
+* Difficult to articulate and agree on
+
+* Preferences will be differ to preferences of directors and shareholders
+
+* Does not factor in risk, which is important consideration to compare to reward
+
+* Hard to isolate the estimate of the threshold to just the probability of default
+
+    * Likely be focused on a number of issues that conern policyholders
+    
+**Arbitrary default probabilities**
+
+Arbitrary percentile that is relatively easy to measure
+
+Does not have to estimate values at very low probability of occurrences, where a lot of uncertainty exists
+
+## Risk Sources
+
+* Market risk
+* Credit risk
+* Insurance u/w risk
+* Operational risk
+* Strategic risk
+
+### Market Risk
+
+Risk to the firm's current investments from changes in market variables
+
+* e.g. equity indicies, interest rates, FX rates
+
+Financial industry typically calculate them based on very short duration (< 10 days)
+
+Insurers however typically calculate them over a 1 year horizon to make it easier to aggregate with the other risks to which it is exposed
+
+### Credit Risk
+
+Risk of loss due to credit events
+
+* e.g. counterparty default, changes in couterparty rating etc
+
+3 sources of exposures:
+
+Firm's investments in **securities** may lose value from credit events
+
+* Marketable securities/ derivatives/ swap positions etc
+
+**Insured's** contingent premium and deductible receivable
+
+* e.g. loss sensitive premium adjustments, deductibles
+    
+* Risk that the insured may not pay the balance it owes
+
+**Reinsurance recoverables**
+
+* Most difficult to estimate
+    
+* *Definition of default* should be modified
+
+    * Reinsurer's credit get downgraded can lead to death spiral where policyholders try to end their contracts $\Rightarrow$ liquidity problems $\Rightarrow$ Settle claims for < 100% of the full amount
+    
+* Substantial *contingent exposure*
+
+    * Recoverable at a given point in time may increase in the future due to adverse loss development $\Rightarrow$ Credit risk exposure will increase as well
+    
+* Reinsurance credit risk is highly *correlated with the underlying insurance risk*
+
+* Includes partial default where settling at less than full recovery due to disputes
+
+### Insurance Underwriting Risk
+
+3 categories:
+
+1) Potential adverse development of loss reserve on prior policy years
+2) Underwriting risk for the current policy year
+3) Property CAT risk
+
+***
+
+#### Loss Reserve Risk
+
+Total Reserve Risk = Process Risk + Parameter Risk + Model Risk
+
+**Process risk**: deviation from expected due to random variation inherent in the claim development process
+
+**Prarmeter risk**: deviation from estimate due to inaccurate parameters
+
+**Model risk**: deviation from estimate due to use of the wrong model
+
+We can try to quantify the uncertainty below
+
+**Reserve estimation error**: range of uncertainty (depicted as a CI) associated with the reserve estimate
+
+* Indicates how statistically reliable the estimate is relative to the true value
+
+**Reserve distribution**: estimates the likelihood that the ultimate amount deviates from the current estimate
+
+* Shows the probabilities of the full range of possible values for the unpaid loss
+
+***
+
+#### Underwriting Risk
+
+Risk that the losses and expenses from the new business (written and/ or earned) during the risk horizon period exceeds the premiums collected
+
+Methods to quantify:
+
+**Loss ratio distribution model**
+
+Based on assumed dist^n^ of LR (with estimates of WP during the risk horizon)
+
+Parameters can be based on either empirical or industry data
+
+Choice of distribution model will have material impact on the amount of uncertainty recognized
+
+**Frequency & severity model**
+
+Aggregate dist^n^ based on separate frequency and severity model
+
+Requires sufficiently detailed claim data
+
+*Advantages* (over LR dist^n^ model)
+
+* Easier to account for premium growth
+* More accurately reflect inflation
+* More easily reflect changes in limit and deductibles
+* Can account for impact of deductibles on frequency
+* Can treat the split of losses between parties consistently
+
+*Methods to generate the aggregate dist^n^*
+
+* Analytical solution: generate based on the freq & sev parameters
+* Numerical method: numerical approximation
+* Approximation: based on the mean, variance of the collective risk model
+* Simulation: allows for complex policy structures with minimal mathematical complexity, need large # of iterations for results to converge
+
+**Inference from reserve risk model**
+
+Inferring new business risk based on reserve risk models
+
+Reserve risk model reflect the amount of risk conditional on information generated after the policy was written $\Rightarrow$ Not totally applicable
+
+Need to convert these conditional models to unconditional
+
+***
+
+#### Property CAT Risk
+
+Historical data is not the best indication of future losses
+
+* Events are rate
+* Exposures change over time
+* Severities change over time due to changes in building materials and design
+
+CAT models are used
+
+CAT models modules:
+
+* Stochastic module/ hazard module:
+
+    * Generate the events that can occur (location, intensity, etc)
+    
+* Damage (vulnerability) module:
+
+    * Derives the damage that would arise from an event, based on exposure information
+    
+* Financial analysis module:
+
+    * Applies the insurance/ reinsurance terms to the losses to determine the financial impact to the insurer
+
+### Other Risk
+
+Operational risk: failure of people/ systmes/ processes
+
+Strategic risk: related to competitors
+
+Difficult to quantify and is ignored in this paper
+
+### Risk Aggregation
+
+Aggregate the individual dist^n^ of the above risks
+
+Need to consider dependency between the risks
+
+* dependency $\neq$ correlation, as correlation looks at linear relationship
+
+Methods to quantify dependency:
+
+**Empirical Analysis**
+
+Disadvantage:
+
+* Usually insufficient data
+* Little insight as to how the dependencies will change during tail events
+
+**Subjective Estimates**
+
+Advantages:
+
+* Can account for tail events
+* Reflects user's intuition
+
+Disadvantages:
+
+* As number of risk categories increases, # of dependency parameters that need to be estimated increases exponentially
+
+**Explicit Factor Models**
+
+Link the variability of the risks to common factors
+
+***
+
+Methods to aggregate dist^n^ once the dependency has been estimated
+
+* Closed form solution
+* Approximation method: e.g. assume normal/lognormal and then derive the paramters of the aggregate
+* Simulation methods
+* Square root rule (See Butsic)
+
+## Capital Allocation
+
