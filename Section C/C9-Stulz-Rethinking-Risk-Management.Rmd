@@ -96,12 +96,13 @@ Company already in distress
 VaR does not work well for an extended period of time
 
 * Insufficient data to conduct empirical tests
-    * e.g. $VaR_{99%}$ with 1 year risk horizon will require 100 years worth of data
+    * e.g. $VaR_{99\%}$ with 1 year risk horizon will require 100 years worth of data
 * Typically relies on normal distribution
     * Tail probabilities are usually greater than those implied by the normal distribution
     * Tail events are more important when looking over longer time periods
     
-When hedging risk, main concern is the possibility of distress during the year, which depends on the level of cumulative losses during the year    
+When hedging risk, main concern is the possibility of distress during the year, which depends on the level of cumulative losses during the year
+
 * VaR only gives the maximum loss at a particular confidence level
 
 * Value during the year is more important than the value at year end

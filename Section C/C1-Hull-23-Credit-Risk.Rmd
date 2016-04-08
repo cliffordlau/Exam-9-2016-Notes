@@ -221,7 +221,7 @@ $\operatorname{E}[LGD]$ = Risk free PV of Debt - MV of Debt
 
 $\operatorname{E}[LGD]$ = Risk free PV of Debt $\times$ $N(-d_2)$ $\times$ (1 - Recovery Rate)
 
-## Credi Risk of Derivatives
+## Credit Risk of Derivatives
 
 Difficult to calculate credit exposure because the eventual claim that will be made is uncertain with 3 possible outcomes:
 
@@ -393,7 +393,7 @@ $VaR = L \cdot (1-R) \cdot V(X,T)$
 
 * $R$: recovery rate
 
-### CrediMetrics
+### Credit Metrics
 
 Method to calculate Credit VaR
 
