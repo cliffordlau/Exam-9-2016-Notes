@@ -12,3 +12,146 @@ output:
 ---
 
 ## Introduction
+
+Surplus allocation is required for regulators and IEE using **leverage ratios** ($\dfrac{R}{S}$) <span style="color:red">What is it here? P:S or R:S?</span>
+
+Approach is flawed as not all risk which an insurer is exposed are related to the premium volume in just a specific segment (e.g. credit risk or investment risk)
+
+## Surplus & Risk
+
+Level of surplus depends on the level of risk and for risk that are not necessarily related to a particular line:
+
+**Underwriting** risk: premium will be insufficient to cover loss & expense
+
+**Investment income** risk: expected yield not achieved
+
+**Investment asset** risk: fluctuations in market values; probability of default; asset/liability cash flow
+
+**Reserve** risk: reserves not sufficient to pay losses
+
+**Social** risk: inflation; law changes; impact of the economy on frequency
+
+**CAT** risk
+
+**Credit** risk: uncollectable reinsurance recoverable and agents' balances
+
+P:S ratio vary greatly between insurers so we can not use a general leverage ratio for all insurers in the industry
+
+Need to develop the total amount of risk based surplus for an insurer to account for diversification
+
+2 meaningful measure of surplus:
+
+* Required surplus for the insurance group
+* Required *marginal* surplus for a specific change in assets/liabilities/premiums
+
+## Reasonable Rate of Return
+
+**Income**: annual increase in net worth of the business from actual business operations
+
+* Excluding contributions or outflows of surplus from other sources
+
+* Require for rate of return
+
+* Includes $\Delta$ unrealized capital gains
+
+**Rate of Return** $\dfrac{\partial S}{S}$ = income ($\partial S$) $\div$ initial surplus ($S$)
+
+* Can use either GAAP or Stat and won't make a different as they are usually different by a fixed magnitude (x%)
+
+### Fair & Reasonable Return
+
+Insurers are allowed to earn **fair & reasonable rate of return**
+
+* Return will be similar to that of other companies with similar risk
+* Return will be sufficient for the insurer to attract capital
+
+If the currently allowable return is **adequate** or there is a perception that returns are reasonable:
+
+* Industry attracts capital
+* New companies are being formed
+
+If the currently allowable return is **inadequate** or there is a perception that returns are not reasonable:
+
+* Stockholder dividends > Capital inflow
+* Companies are leaving the market
+
+Insurers are only require to have the *opportunity* to earn a reasonable return
+
+* Does not require that each insurer actually earns a reasonable return
+
+## Mutual vs Stock Insurers
+
+Mutual insurers: goal is to provide availability of insurance
+
+* Looser u/w-ing standards and greater reliance of p/h dividends
+
+Stock insurers: goal is profit maximization
+
+Higher portion of stock insurers have historically become insolvent than mutuals
+
+* Focus more on commercial LoB
+* Higher leverage in order to make better use of capital
+
+### Reasonable Return for Mutual
+
+Stock insurers need to increase surplus to fund:
+
+* Expense & claims inflation
+* $\uparrow$ in aggregate reserves
+    * $\uparrow$ in aggregate deflated reserves: from growing and increase in reserve from loss development (<span style="color:red">Confirm</span>)
+* $\uparrow$ demand for insurance
+* Dividends to stockholders
+
+Mutual does not pay dividend $\Rightarrow$ Only need to increase surplus enough to cover the first 3 to conclude that they are earning a fair & reasonable return
+
+**Required surplus $\Delta$**:  
+= expense & claims inflation + increase demand + increase reserve
+
+**Actual surplus $\Delta$**:  
+= retained return on capital + surplus paid in
+
+**Required rate of return**:  
+= required surplus $\Delta$ + stock dividends - surplus paid in
+
+**Actual rate of return**:  
+= stock dividends - retained return on capital
+
+No stock dividends and surplus paid in for mutual
+
+More difficult for mutual to increase their growth rate as that require additional surplus
+
+* Stock company can have surplus paid in while mutual can only rely on retained capital
+
+Stock insurers is required to pay higher rate of return
+
+* To pay dividend
+
+* Needs to write higher risk LoB such as commercial lines
+
+## Stock Insurers: Book vs MV
+
+Test to determine rate adequacy discussed earlier only works for industry in aggregate but not to individual insurers
+
+However, test is not necessary as these investors are receiving a fair and reasonable return by definition
+
+* Each insurer has a unique share price, which changes in response to the investor's assessment of its risk and return $\Rightarrow$ Return is reasonable
+
+Stronger firm (higher Market:Book and P/E ratio) the higher the MV
+
+Return on market is the return investors demand to invest in the shares
+
+* Demand is higher for medium performers than great performers
+
+* Higher risk projects should have higher returns
+
+* Return is fair and reasonable
+
+Return on book
+
+* No widely accepted answer
+
+* Should be fair (author)
+
+    * Ratio of M:B is roughly the same as a benchmark ratio of companies from all industries combined
+    
+    * Actual return on book values derived above are close to the required rates of returns which were derived in an earlier table
