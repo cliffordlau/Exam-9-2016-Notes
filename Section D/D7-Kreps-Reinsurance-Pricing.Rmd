@@ -1,0 +1,270 @@
+---
+title: "D7 Investment Equivalent Reinsurance Pricing"
+author: "Kreps"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+## Introduction
+
+Risk load based on:
+
+* Investment criteria
+* Loss distribution
+* Underwriting conservatism
+
+Reinsurance pricing is mainly market driven, but theoretical model is still useful to determine whether to write or accept a particular contract
+
+Model prices on a stand alone basis $\Rightarrow$ Risk loads are overstated (not accounting for diversification)
+
+**Assumptions**
+
+1) Reinsurer set aside sufficient liquid assets to cover the losses to some **safety level** at the time at which the loss occurs
+
+    * Loss safety constraint
+    
+2) Desires to have at least as favorable **risk** & **return** over the period of the contract as it would get from its target investment
+
+    * At least as favorable risk $\Rightarrow$ Investment variance constraint
+    * At least as favorable return $\Rightarrow$ Based on the 2 financial techniques
+
+## Kreps Method
+
+2 financial techniques: swap and put options
+
+**Definitions**
+
+$s$: Dollar safety level
+
+$L$: Loss amount
+
+$\mu_L$: Mean loss
+
+$y$: Target investment yield
+
+$i$: Actual investment yield
+
+$P$: Premium net of expenses
+
+$A$: Assets allocated by reinsurer
+
+$F$: Funds initially invested
+
+$R$: Risk load
+
+**For technique 2:**
+
+$r$: Rate of put option
+
+$I$: Investment return
+
+$i$: Mean investment return
+
+***
+
+Premium:  
+$P = R + \dfrac{\mu_L}{1 + r_f}$
+
+* Assuming losses are paid at the end of year 1
+
+**Contsraints**
+
+1) **Loss safety constraint**: $(1+ r_f)F \geq s$
+
+    * Final value of the investment at time 1 must cover the losses at a specific safety level
+    
+2) **Investment yield constraint**: $\sigma_i \leq \sigma_y$
+
+    * Reinsurer does not want higher volatility from the contract compared to the target investment
+
+### Technique 1: Swap
+
+Reinsurer invests the funds to pay the losses in a risk free investment instead of the target investment
+
+* Loss of investment income
+* Reduction in risk
+
+Could results in higher risk loads
+
+***
+
+Shareholder IRR:  
+$(1 + IRR)A = \underbrace{(P+A)}_{F}(1+r_f) - L \cdots (1)$
+
+* Investor only contributes $A$ at t=0
+* Both premium and assets are invested
+* Inflow @ t=1: $F(1+r_f)$
+* Outflow @ t=1: $L$
+* Get back surplus and premium with investment income net of losses
+
+The expected value of the above and assuming IRR = target investment yield:  
+$(1 + y)A = F(1+r_f) - \mu_L \cdots (2)$
+
+$\Downarrow$
+
+$R = A \dfrac{y - r_f}{1+r_f}$
+
+#### Loss Safety Constraints
+
+$A \geq \dfrac{s - \mu_L}{1+y}$
+
+* By combining $(1+r_f)F \geq s$ in $(2)$
+
+$R = \underbrace{\dfrac{s - \mu_L}{1+y}}_{A} \dfrac{y - r_f}{1+r_f}$
+
+#### Investment Variance Constraint
+
+$\sigma_{IRR} = \sigma_L$
+
+* By taking s.d. on both side of $(1)$
+
+$A \geq \dfrac{\sigma_L}{\sigma_y}$
+
+* Since variance of the IRR must be $\leq$ variance of the target investment
+
+$R = \underbrace{\dfrac{\sigma_L}{\sigma_y}}_{A} \dfrac{y - r_f}{1+r_f}$
+
+### Technique 2: Put options
+
+Reinsurer invests the funds in the target investment then purchases a put option with strike price that yields risk free return (before recognizing the cost of the option)
+
+* Cost of the option
+* Increased return and reduction in variance
+
+***
+
+Shareholder IRR:  
+$(1 + IRR)A = \underbrace{\dfrac{P+A}{1+r}}_{F}(1+I) - L \cdots (3)$
+
+* Similar to technique 1 expect investment yield is $I$ and $F$ is different
+* Fund invested is decreased by the cost of put option
+
+The expected value of the above and assuming IRR = target investment yield:  
+$(1 + y)A = F(1+i) - \mu_L \cdots (4)$
+
+#### Loss Safety Constraint
+
+$A \geq \dfrac{s \cdot { \color{blue}{ \phi } } - \mu_L}{1+y}$
+
+* ${ \color{blue}{ \phi } } = \dfrac{1+i}{1+r_f}$
+* By combining $(1+r_f)F \geq s$ in $(4)$
+
+$R = \dfrac{s[(1+y)(1+r) - (1+i)] - \mu_L (y-r_f)}{(1+r_f)(1+y)}$
+
+* Same as technique 1 if $i = r_f$ and $r=0$
+
+#### Investment Variance Constraint
+
+$(A \sigma_Y)^2 = (F \sigma_i)^2 + (\sigma_L)^2$
+
+* By taking s.d. on both side of $(3)$
+* Assumes correlation between loss and investment return is 0
+
+$A = \dfrac{b + \sqrt{b^2 + a \cdot c}}{a}$
+
+* $a = \sigma_y^2 (1+i)^2 - \sigma_i^2(1+y)^2$
+
+* $b = \mu_L(1+y)\sigma_i^2$
+
+* $c = \mu_L^2 \sigma_i^2 + \sigma_L^2 (1+i)^2$
+
+$R = A \dfrac{(1+r)(1+y) - (1+i)}{1+i} + \mu_L \left[ \dfrac{1+r}{1+i} - \dfrac{1}{1+r_f} \right]$
+
+* Same as technique 1 if $i = r_f$, $r=0$ and $\sigma_i = 0$
+
+## Calculating the Risk Load
+
+Procedure:
+
+1) Pick the more restrictive constraint from each technique
+
+    * The constraints are minimum standard $\Rightarrow$ Pick the higher of the 2 constraint
+    * Don't need to calculate the risk load at this step as it is based on the $A$
+    
+2) Pick risk load between the 2 technique
+
+    * Lower risk load $\Rightarrow$ More competitive
+    * Higher risk load $\Rightarrow$ Greater profit (if market accept)
+    
+## Adjustments to the Scenario
+
+Adjustments to some of the assumptions used in the model
+
+### Single Payment at Arbitrary Time
+
+Formula needs to change in the loss payment can occurs at arbitrary time $t$ instead of end of the year
+
+Need to annualized the returns e.g. $(1+i)$ $\rightarrow$ $(1+i)^t$
+
+Option rate and $\sigma$ will also change to reflect the loss payments at different times
+
+### High XS Layer and Minimum Premium
+
+Consider situations where:
+
+* High XS layer, or
+* Any finite rate event
+
+Kreps showed that there is a non zero rate on line ($\dfrac{\text{Premium}}{\text{Limit}}$) despite the very low probability of loss
+
+**Assumptions**
+
+* Loss dist^n^ $\sim$ Binomial with probability $p$ hitting the layer
+* It loss does hit the layer it is total loss
+
+Safety limit $s$ = limit of the layer
+
+Consider $\lim \limits_{p \rightarrow 0}$ for rare losses
+
+$\lim \limits_{p \rightarrow 0} \mu_L = \lim \limits_{p \rightarrow 0} ps = 0$
+
+**Option technique**
+
+$R = \dfrac{s[(1+y)(1+r)-(1+i)]}{(1+r_f)(1+y)}$
+
+$ROL = \dfrac{[(1+y)(1+r)-(1+i)]}{(1+r_f)(1+y)}$
+
+**Swap technique**
+
+$ROL = \dfrac{y-r_f}{(1+r_f)(1+y)}$
+
+* Based on above with $i = r_f$ and $r=0$
+
+***
+
+Both are (+) numbers $\Rightarrow$ as $\lim \limits_{p \rightarrow 0} ROL > 0$
+
+In the market, the minimum $ROL$ is justified by underwriters as a charge for using surplus
+
+Our method supports the view and also with a quantification of the charge
+
+## Pooling
+
+Risk load can be reduced by pooling since contracts are not fully correlated $\Rightarrow$ $s$ < $\sum s_i$ as it will be very rare for all the risks insured to have tail losses
+
+$\therefore$ Reinsurer should not use the above to price, unless:
+
+* Desires to be very conservative, or
+* That is the only contract being priced
+
+## Simplifications
+
+Losses were assumed to occur at year end
+
+* Easy to modify for losses that occur at other points in time
+
+Ignored the spot rates for the risk free investment depends on the length of time being considered
+
+* Easy to modify
+
+In multi year examples, it may be possible to recognize a degree of correlation between the various years since they are from the same firm/ exposures
+
+Pricing method in this paper biased high as it assume each risk is standalone
+
+* More accurate would be to consider the risk load of the whole book with and without the proposed contract
