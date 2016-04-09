@@ -12,3 +12,245 @@ output:
 ---
 
 ## Introduction
+
+For portfolio $L$:
+
+* Size of loss distribution $L$
+
+* Frequency with Poisson process with occurrence rate $\lambda$
+
+* Use the binomial approximation with probability $p$
+
+$\operatorname{E}[L] = \sum_i L_i \cdot p_i$
+
+$\operatorname{Var}(L) = \sum_i L_i^2 \cdot p_i \cdot (1-p_i)$
+
+Covariance of adding a new account (losses $n_i$) to existing portfolio $L_i$
+
+$\operatorname{Cov}(L,n) = \sum_i L_i \cdot n_i \cdot p_i \cdot (1 - p_i)$
+
+Total variance of the combined portfolio $(L + n)$
+
+$\operatorname{Var}(L+n) = \operatorname{Var}(L) + \operatorname{Var}(n) +2\operatorname{Cov}(L,n)$
+
+## Calculating Surplus Needs
+
+2 methods to calculate the risk load
+
+* Marginal surplus method
+* Marginal variance method
+
+**Notations**
+
+$L_0$: Losses before the new account is added
+
+$L_1$: Losses after the new account is added
+
+$S_0$: Standard deviation of $L_0$
+
+$S_1$: Standard deviation of $L_1$
+
+$R_0$: Return on portfolio before new account is added
+
+$R_1$: Return on portfolio after new account is added
+
+$V$: Surplus required
+
+### Marginal Surplus (MS) Method
+
+$V = z \cdot \sigma(Loss) - \operatorname{E}[Loss]$
+
+* From Kreps
+
+* $z$: # of s.d. associated with the percentile that the surplus allocated is sufficient to cover the actual surplus needs
+
+Let $r = R_1 - R_0$, and the difference in returns would be due to the risk load charged to the new account
+
+Marginal surplus from adding account $=V_1 - V_0 = z[S_1 - S_0] - r$
+
+Let $y$ be the required return on the marginal surplus
+
+<span style="color:red;background:yellow">Memorize</span>
+
+$r = \underbrace{\dfrac{y}{1+y} z}_{\text{Multiplier}} \cdot \underbrace{(S_1 - S_0)}_{\text{Marginal }\sigma}$
+
+* Risk load $\propto$ marginal standard deviation
+
+### Marginal Variance (MV) Method
+
+Risk load $\propto$ marginal variance
+
+<span style="color:red;background:yellow">Memorize</span>
+
+$\begin{array}{cccc}
+  r &= &\underbrace{\overbrace{\dfrac{y}{1+y} z}^{\text{MS Multiplier}} \dfrac{1}{\underbrace{\sqrt{\operatorname{Var}(L + n)}}_{S_1}}}_{\text{Multiplier }\lambda} \cdot &\underbrace{\left[\operatorname{Var}(L+n) - \operatorname{Var}(L)\right]}_{\text{Marginal }\sigma^2} \\
+  &= &\lambda &\left[ \operatorname{Var}(n) - 2\operatorname{Cov}(L,n)\right] \\
+\end{array}$
+
+<span style="color:red">Confirm that S_1 big is right</span>
+
+* The $\lambda$ is set so that the risk load produced by the MS and MV will be the same
+
+## Building/ Renewing Account
+
+Assume 2 account $X$ and $Y$
+
+With a given $y$ and $Z$
+
+### Building up portfolio of 2 accounts
+
+**MS Method**
+
+1) Calculate the multiplier $\lambda_{MS}$
+
+2) Calculate the s.d. for $X$ and then $X+Y$
+
+3) $r_{X} = \lambda_{MS} \cdot \sigma_X$
+
+4) $r_{Y} =  \lambda_{MS} \cdot \left[\sigma_{X + Y} - \sigma_X \right]$
+
+**MV Method**
+
+1) Calculate the multiplier $\lambda$
+
+2) Calculate the $\operatorname{Var}(\cdot)$ for $X$ and then $X+Y$
+
+3) $r_{X} = \lambda \cdot \operatorname{Var}(X)$
+
+4) $r_{Y} =  \lambda \cdot \left[\operatorname{Var}(X + Y) - \operatorname{Var}(X) \right]$
+
+***
+
+Note that the total risk load is the same for the 2 method, however the distribution between the 2 is different
+
+### Renewing the portfolio of 2 accounts
+
+Assume when $X$ is renewed, $Y$ is already in force, and similarly for $Y$
+
+**MS Method**
+
+Risk load for $X$ is less in the build-up scenario
+
+$\begin{array}{cll}
+  \Delta \sigma_X &= \sigma_{X+Y} - \sigma_{Y} \\
+  & = \sqrt{\sum_i (X_i + Y_i)^2 \cdot p_i \cdot (1-p_i)} - \sqrt{\sum_i Y_i^2 \cdot p_i \cdot (1-p_i)} \\
+  & < \sqrt{\sum_i X_i^2 \cdot p_i \cdot (1-p_i)} &= \sigma_X = \text{Build-up} \\
+\end{array}$
+
+Risk load for $Y$ is the same as it was being added to an existing account
+
+**MV Method**
+
+Risk load for $X$ is higher in the **renewal** scenario
+
+$\begin{array}{cl}
+  \Delta \operatorname{Var}(X) &= \operatorname{Var}(X+Y) - \operatorname{Var}(Y) \\
+  &= \left[\operatorname{Var}(X) + 2 \operatorname{Cov}(X,Y) + \operatorname{Var}(Y) \right] - \operatorname{Var}(Y) \\
+  &= \operatorname{Var}(X) + 2 \operatorname{Cov}(X,Y) \\
+  &> \operatorname{Var}(X) = \text{Build-up} \\
+\end{array}$
+
+When account is renew, it receives a risk load for the full covariance shared with the existing accounts
+
+### Renewal Additivity
+
+**Renewal additive**:  
+Sum of renewal risk loads of each risk is equal to the risk load for the aggregate portfolio
+
+Neither MS nor MV are renewal additive:
+
+* MS: $\sum$ renewal risk loads < risk load for the portfolio $\Rightarrow$ Accounts undercharged
+
+* MV: $\sum$ renewal risk loads > risk load for the portfolio
+
+## Sharing the Covariance
+
+2 methods to alter the MV method and split the covariance between accounts
+
+**Shapley Value**
+
+Average marginal variance from all the different combinations in which a new account can be added to a portfolio
+
+* Look at different permutation and the marginal variance for each
+
+Shapely Value = $\operatorname{Var}(n) + \sum \limits_{\in L}\operatorname{Cov}(L,n)$
+
+* Allocates the mutual covariance equally between accounts
+
+* $\operatorname{Average}\Big[\underbrace{\operatorname{Var}(X+Y) - \operatorname{Var}(X)}_{\text{If }Y \text{ added second}},  \operatorname{Var}(Y)\Big]$ will yield the same results
+
+**Covariance Share**
+
+Covariance Share divides the mutual covariance according to weights selected by the user
+
+* E.g. $\propto$ loss size
+
+$\operatorname{Var}(Y) +$ Share of $2\operatorname{Cov}(X,Y)$ based on loss size
+
+* Covariance Share: $2 \sum_i X_i \cdot Y_i \cdot p_i \cdot (1 - p_i) \cdot \dfrac{Y_i}{X_i + Y_i}$
+
+### Building up portfolio of 2 accounts
+
+Both methods produces a lower risk load for $Y$ (the new account) than the MV Method as only a portion of the mutual covariance is allocated to $Y$
+
+Sum of risk load still less than total as the deferred risk load will be add at the renewal
+
+### Renewal
+
+Same procedure similar to the build up
+
+The renewal risk load is less than the MV method
+
+The risk load for $X$ is greater than the build up scenario as it now includes the mutual covariance
+
+Both Shapley and Covariance Share are renewal additive
+
+## Variance Method Summary
+
+$\operatorname{Var}(X+Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) + 2\operatorname{Cov}(X,Y)$
+
+Allocation of the $2\operatorname{Cov}(X,Y)$ under different methods
+
+* Given that $X$ has 60% of the losses
+
+| Method        | Covariance to $Y$ | Covariance to $X$ | Total |
+| ------------- | ----------------- | ----------------- | ------------------ | 
+| Marginal Variance | $2 \operatorname{Cov}(X,Y)$ | $2 \operatorname{Cov}(X,Y)$ | $4 \operatorname{Cov}(X,Y)$ |
+| Shapely | $\operatorname{Cov}(X,Y)$ | $\operatorname{Cov}(X,Y)$ | $2 \operatorname{Cov}(X,Y)$ |
+| Covariance Share | $0.8\operatorname{Cov}(X,Y)$ | $1.2 \operatorname{Cov}(X,Y)$ | $2 \operatorname{Cov}(X,Y)$ |
+
+## Game Theory
+
+Cooperative game with transferable utilities
+
+* Participants that have benefits or cost to share
+* Opportunity to share the benefits/costs due to the cooperation of all (or a subgroup of) the participants
+* Ability of the players to enter into negotiations
+* Conflicting player objectives, where each wants to maximize their share of the benefits (or minimize the share of the costs)
+
+**Characteristic function** $v(S)$ determine the amount to be allocated
+
+* Sub-additive: $\sum v(X_i) > v(X_i \text{ elements in unison})$
+    * e.g. allocating the premium from a risk purchasing group
+* Super-additive: $\sum v(X_i) < v(X_i \text{ elements in unison})$
+    * e.g. where the players seek to maximize the allocation
+
+### Allocation Rules
+
+Marginal Impact < Allocation < Standalone Value
+
+Factors that impact the amount to allocate:
+
+* Stability/ incentive to split from the group
+* Bargaining power
+* Marginal impact to the group's characteristic function value
+
+Rules for allocation according to game theory:
+
+* Allocation method must be renewal additive
+* Coalition should be stable (fair) $\Rightarrow$ No incentive for a player/ group of players to split from the group $\Rightarrow$ No possibilities where a subgroup is better on its own
+
+Application of game theory to the risk loads discussion:
+
+* Player want to minimize the allocation of the total risk load
+* Allocation method needs to fairly & objectively assign the risk load to each account in proportion to its contribution to the total (e.g. loss amount)
