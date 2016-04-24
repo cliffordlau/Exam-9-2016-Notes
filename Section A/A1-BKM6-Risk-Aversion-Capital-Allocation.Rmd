@@ -41,6 +41,8 @@ Optimal complete portfolio ratio on risky asset: $y^* = \dfrac{\operatorname{E}[
 
 ### Types of Exam Questions
 
+<span style="color:red">Haven't done TIA practice questions</span>
+
 **Return and $\sigma$**
 
 * [2003, Q3](#2003-3): return and $\sigma$ and risk premium
