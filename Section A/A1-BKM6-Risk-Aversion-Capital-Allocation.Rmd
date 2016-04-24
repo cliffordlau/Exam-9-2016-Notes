@@ -11,6 +11,77 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Need to memorize and know all the equations by heart and what they represent
+
+Utility: $U = \operatorname{E}[r] - 0.5A\sigma^2$
+
+* $A > 0$: Risk adverse
+
+[CE](#CE): $U = \operatorname{E}[r_f] = \operatorname{E}[r] - 0.5A\sigma^2$
+
+Complete portfolio $c$:
+
+* $\operatorname{E}[r_c] = r_f + \dfrac{\sigma_c}{\sigma_p}\left( \operatorname{E}[r_p] - r_f \right) = r_f + \sigma_c \cdot (\text{Sharpe Ratio})$
+
+* $\sigma_c = y \sigma_p$
+
+[Capital allocation line](#CAL)
+
+* Capital market line is the CAL that uses a passive portfolio as the risky portfolio
+
+Sharpe Ratio: $\dfrac{\operatorname{E}[r_p] - r_f}{\sigma_p}$
+
+Optimal complete portfolio ratio on risky asset: $y^* = \dfrac{\operatorname{E}[r_p] - r_f}{A\sigma^2_p}$
+
+[Graphically](#graphically) derive optimal risk portfolio with indifference curves
+
+* Curves that contain different portfolios that the investor is indifferent about, given the same $U$ and $A$
+
+### Types of Exam Questions
+
+**Return and $\sigma$**
+
+* [2003, Q3](#2003-3): return and $\sigma$ and risk premium
+* [2003, Q4](#2003-4): plug and play to formula for expected return for complete portfolio
+* 2004, Q3: plug and play return and $\sigma$
+* 2007, Q1 a: complete ptf return and $\sigma$
+* 2010, Q2 a: back out $\operatorname{E}[r_c]$ with sharpe ratio and $\sigma_c$
+* 2013, Q1 b: returna and $\sigma$ plug and play
+
+**CAL**
+
+* 2006, Q4: Draw CAL and the CAL equation
+* 2007, Q1 b: Draw CAL and CAL equation
+* 2010, Q2 b: Draw CAL
+* 2014, Q1: Draw CAL with borrowing restriction
+
+**Utility**
+
+* 2005, Q4 b c: utility function calcuation and CE
+* $\star$ [2009, Q1](#2009-1): Need to convert the standard $y^*$ formula
+* 2010, Q3: same as above
+* 2013, Q1 a: CE
+
+**Portfolio Weights**
+
+* $\star$ [2011, Q1](#2011-1): get $y^*$ and describe
+* $\star$ [2012, Q1](#2012-1) a: Getting weights for each assets
+* 2013, Q1 c: $y^*$ plug and play
+
+**Concepts**
+
+* 2005, Q4 a: risk neutral implication
+* 2012, Q1 b: seperation principle (BKM7)
+* 2014, Q2: active vs passive investment
+
+|  | Active | Passive |
+| -------------------------- | -------------------------- | -------------------------- |
+| Constructing Portfolio | Seeks (+)$\alpha$, picking investment | Replicate diversified portfolio |
+| Implementation and Cost | More fees from trading | Much cheaper, less frequent trading | 
+| Expected Return | Additional profit if find $\alpha$ but offset by transaction cost | Market index return |
+
 ## Introduction
 
 Risk appetites:
@@ -25,7 +96,7 @@ Utility is dependent on investor's risk appetite, expected return and risk level
 
 $U = \operatorname{E}[r] - 0.5A\sigma^2$
 
-**Certainty Equivalent Rate**  
+<a name="CE"></a> **Certainty Equivalent Rate**  
 Rate that a risk free investment need to offer to provide the same level of utility as the risky investment
 
 * Where investors is indifferent between a sure thing and the risky option
@@ -65,13 +136,17 @@ Allocation between risk free (F) and risky assets (P)
 
 * Assumption: Money is shifted between F & P and components of P remain in fixed proportions
 
-$\operatorname{E}[r_c] = r_f + \dfrac{\sigma_c}{\sigma_p}\left( \operatorname{E}[r_p] - r_f \right)$
+$\operatorname{E}[r_c] = r_f + \dfrac{\sigma_c}{\sigma_p}\left( \operatorname{E}[r_p] - r_f \right) = r_f + \sigma_c \cdot (\text{Sharpe Ratio})$
 
 * $\operatorname{E}[r_c] = y \operatorname{E}[r_p] + (1-y) r_f = \cdots$
 
 * $\sigma_c = y \sigma_p$
 
+* Drawing this equation out gets you the CAL, it represents the $\operatorname{E}[r_c]$ and $\sigma_c$ you can get for different weight on risky assets $y$
+
 ### Capital Allocation Line (CAL)
+
+<a name="CAL"></a>
 
 ![alt text](figures/Exam 9 - 1.png)
 
@@ -79,17 +154,17 @@ Slop of CAL = $\left. \dfrac{\operatorname{E}[r_p] - r_f}{\sigma_p} \right \} \t
 
 CAL to the right of ($\operatorname{E}[r_p]$, $\sigma_p$) is achieve by borrowing at risk free rate
 
-* If borrowing at risk free is not possible, the slope will be less steep = $\dfrac{\operatorname{E}[r_p] - r_f^B}{\sigma_p}$ where $\r_f^B$ is the risk free rate we can borrow
+* If borrowing at risk free is not possible, the slope will be less steep = $\dfrac{\operatorname{E}[r_p] - r_f^B}{\sigma_p}$ where $r_f^B$ is the risk free rate we can borrow
 
 ### Risk Tolerance & Asset Allocation
 
 **Optimal Portfolio** maximizes investor utility with ratio $y^*$ on the risky asset
 
-$y^* = \dfrac{\operatorname{E}[r_p] - r_f}{A\sigma^2 p}$
+$y^* = \dfrac{\operatorname{E}[r_p] - r_f}{A\sigma^2_p}$
 
 * Derived by setting the derivative of the utility equation = 0
 
-**Graphically** derive optimal risk portfolio
+<a name="graphically"></a> **Graphically** derive optimal risk portfolio
 
 1) Plot **indifference curves**, which are curves that contain different portfolios that the investor is indifferent about, given the same $U$ and $A$
 
@@ -97,9 +172,22 @@ $y^* = \dfrac{\operatorname{E}[r_p] - r_f}{A\sigma^2 p}$
 
 2) Investor will pick the highest possible indifference curve that touches the CAL
 
-3) Optimal portfolio is located at the intersection point of the CAL and the curve tangential to the CAL
+3) Optimal portfolio is located at the intersection point of the CAL and the curve **tangential** to the CAL
+
+    * As higher $U$ will shift the curve upwards
 
 ![alt text](figures/Exam 9 - 2.png)
+
+**Proof** for $y^*$ equation:
+
+$\begin{array}{lcccl}
+  U &= &\operatorname{E}[r_c] &- &\frac{1}{2}A\sigma_c^2 \\
+  U &= &y \operatorname{E}[r_p] + (1-y)r_f &- &\frac{1}{2}A(y\sigma_p)^2 \\
+  \frac{dU}{dy} &= &\operatorname{E}[r_p] - r_f &- & A y \sigma^2_p \\
+  0 &= &\operatorname{E}[r_p] - r_f &- & A y \sigma^2_p \\
+  A y \sigma^2_p &= &\operatorname{E}[r_p] - r_f \\
+  y &= &\dfrac{\operatorname{E}[r_p] - r_f}{A \sigma^2_p } \\
+\end{array}$
 
 ### Non Normal Returns
 
@@ -119,3 +207,25 @@ CAL that uses a passive portfolio as the risky portfolio
 * Free rider benefit: Assets should be fairly priced as mispricings should disappear from investors implementing the active strategy
 
 **Active** strategy is to determine the risky portfolio with security analysis
+
+## Past Exam Questions
+
+<a name="2003-3"></a> 2003, Q3
+![alt text](questions/2003-3Q.png)
+![alt text](questions/2003-3A.png)
+
+<a name="2003-4"></a> 2003, Q4
+![alt text](questions/2003-4Q.png)
+![alt text](questions/2003-4A.png)
+
+<a name="2009-1"></a> 2009, Q1
+![alt text](questions/2009-1Q.png)
+![alt text](questions/2009-1A.png)
+
+<a name="2011-1"></a> 2011, Q1
+![alt text](questions/2011-1Q.png)
+![alt text](questions/2011-1A.png)
+
+<a name="2012-1"></a> 2012, Q1
+![alt text](questions/2012-1Q.png)
+![alt text](questions/2012-1A.png)
