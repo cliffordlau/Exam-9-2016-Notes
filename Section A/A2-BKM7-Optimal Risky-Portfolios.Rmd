@@ -11,6 +11,82 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+**Total Variance of a Portfolio of Equally Weighted Assets**
+
+$\sigma^2_p = \underbrace{\overbrace{\dfrac{\bar{\sigma}^2}{n}}^{\lim \limits_{n \rightarrow \infty} \rightarrow 0}}_{\text{Firm Risk}} + \underbrace{\dfrac{n-1}{n}\bar{\operatorname{Cov}}}_{\text{Systematic Risk}}$
+
+**For 2 risky asset**
+
+$\operatorname{E}[r_p] = w_D \operatorname{E}[r_D] + w_E \operatorname{E}[r_E]$
+
+$\sigma^2_p = w^2_D \cdot \sigma^2_D + w^2_E \cdot \sigma^2_E + 2 \cdot w_D \cdot w_E \cdot \operatorname{Cov}(r_D, r_E)$
+
+Weights for the minimum variance portfolio
+
+$w_D^{Min} = \dfrac{\sigma^2_E - \operatorname{Cov}(r_D, r_E)}{\sigma^2_E + \sigma^2_D - 2\cdot\operatorname{Cov}(r_D, r_E)}$
+
+Know the shape of the [portfolio opportunity set](#ptf-op-set) for different $\rho$
+
+**For 2 risky asset and risk free**
+
+Optimal Risky Portfolio: Available portfolio with highest Sharpe ratio
+
+Weights of the optimal risky portfolio:
+
+$w_D = \dfrac{\operatorname{E}[R_D]\sigma^2_E - \operatorname{E}[R_E] \operatorname{Cov}(r_D, r_E)}{\operatorname{E}[R_D]\sigma^2_E + \operatorname{E}[R_E]\sigma^2_D - \left( \operatorname{E}[R_D] + \operatorname{E}[R_E] \right) \operatorname{Cov}(r_D, r_E)}$
+
+* $R_D = r_D - r_f$ = XS return over risk free
+
+***
+
+Markowitz Portfolio
+
+[Seperation principle](#sep-prin)
+
+Asset allocation vs security allocation
+
+Risk pooling (does not reduce risk) vs risk sharing
+
+* Caveat of risk sharing
+
+Time diversification is not true
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Plug and play**
+
+* 2000, Q8: minimum variance expected return by calculating the weight
+
+**Weights Calculation**
+
+* [2003, Q5](#2003-5): Weights for risky and risk free and CAL
+* 2005, Q5: optimal risky portfolio and special case with $\rho = -1 or 1$
+* 2006, Q5: weight for assets in optimal risky
+* 2007, Q2: optimal risky weights and complete portfolio weights
+* $\star$ 2008, Q1: optimal risky and complete ptf and rebalance
+* 2009, Q2: optimal risky portfolio and sharpe ratio
+* 2014, Q5: optimal complete portfolio return and $\sigma_c$
+
+**Concepts**
+
+* 2001, Q10: Draw CML and efficient frontier
+* 2002, Q7: Draw portfolio opportunity set for $\rho = -1$ and $\sigma$ when $\rho = 1$
+* 2002, Q13: Fallacy of time diversification
+* 2003, Q7: Efficient frontier
+* 2004, Q4: seperation principle; draw CAL, eff frontier; indifference curve
+* 2005, Q6: draw ptf opporunity set
+* 2007, Q3: fallacy of time diversification
+* 2013, Q3: risk sharing and pooling in insurance
+
+**Other**
+
+* $\star$ [2009, Q3](#2009-3): systematic risk, variance
+* $\star$ [2015, Q1](#2015-1): $A$, $\rho$, and backout $A$
+
 ## Diversification and Portfolio Risk
 
 2 categories of risk:
@@ -59,18 +135,22 @@ $w_D^{Min} = \dfrac{\sigma^2_E - \operatorname{Cov}(r_D, r_E)}{\sigma^2_E + \sig
 
 $w_E^{Min} = 1 - w_D^{Min}$
 
-**Portfolio Opportunity Set** for a given $\rho$
+<a name="ptf-op-set"></a> **Portfolio Opportunity Set** for a given $\rho$
 
 ![alt text](figures/Exam 9 - 5.png)
 
 $\operatorname{E}[r_p]$ vs $\sigma_p$ with varying weights for a given $\rho$
+
+For assets with $\rho = -1$ you can achieve $\sigma = 0$
+
+For assets perfectly correlated the minimum variance is investing all in the asset with lower risk
 
 ## Portfolios of 2 Risky and a $r_f$ Assets
 
 ![alt text](figures/Exam 9 - 6.png)
 
 **Optimal Risky Portfolio**  
-Available portfolio with highest Sharpe ratio
+Available portfolio with **highest Sharpe ratio**
 
 * Portfolio formed where the CAL is tangential to the portfolio opportunity set
 
@@ -117,6 +197,8 @@ $\sigma^2_p = \sum_i \sum_j w_i w_j \operatorname{Cov}(r_i, r_j)$
 
 ## Separation Principle
 
+<a name="sep-prin"></a>
+
 Optimal risky portfolio P is the same for all investors
 
 Difference between investors is the portion of the complete portfolio in the risky portfolio vs risk free asset driven by investor's risk aversion $A$
@@ -125,15 +207,15 @@ Difference between investors is the portion of the complete portfolio in the ris
 
 1) Select optimal risky portfolio
 
-* This only differs depending on the analyst
-
-* CAL is the same for all investors
+    * This only differs depending on the analyst
+    
+    * CAL is the same for all investors
 
 2) Select the optimal complete portfolio
 
-* Allocate between risk free vs risky assets depending on investors $A$
-
-* Investor's $A$ dictates where the optimal complete portfolio lies on the CAL
+    * Allocate between risk free vs risky assets depending on investors $A$
+    
+    * Investor's $A$ dictates where the optimal complete portfolio lies on the CAL
 
 ## Asset Allocation vs Security Selection
 
@@ -159,7 +241,7 @@ Since it's impossible to be expert in all securities from all asset class, after
 
 **Risk pooling** involves merging several uncorrelated projects together, aka the **insurance principle**
 
-* Does not reduce risk
+* Does not reduce risk (sharpe ratio and $\sigma$ both increase)
 
 * Increases the total exposure to risk
 
@@ -169,7 +251,9 @@ Since it's impossible to be expert in all securities from all asset class, after
 
 **Risk sharing** involves taking a fixed amount of risk and sharing it among several investors
 
-* Increase Sharpe ratio without increase the exposure
+* Selling shares of an risky portfolio so that total investment remains constant
+
+* Increase Sharpe ratio and reduce total risk
 
 Practical perspective:
 
@@ -187,8 +271,26 @@ Caveat:
 
 **Time diversification** is not true and does not reduce risk
 
+* Volatility of the *average* annual return do go down, but
+
+* Volability of the dollar return increase with the time
+
 * Extending investment horizon for an additional period is similar to adding additional risky asset
 
 * Similar to risk pooling
 
 * To increase Sharpe ratio while maintaining the same level of risk, investor needs to half the investment if double the time horizon
+
+## Past Exam Questions
+
+<a name="2003-5"></a> 2003, Q5
+![alt text](questions/2003-5Q.png)
+![alt text](questions/2003-5A.png)
+
+<a name="2009-3"></a> 2009, Q3
+![alt text](questions/2009-3Q.png)
+![alt text](questions/2009-3A.png)
+
+<a name="2015-1"></a> 2015, Q1
+![alt text](questions/2015-1Q.png)
+![alt text](questions/2015-1A.png)
