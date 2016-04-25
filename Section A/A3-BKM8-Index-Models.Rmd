@@ -11,6 +11,83 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+[**Single Factor Model**](#single-factor)
+
+$r_i = \operatorname{E}[r_i] + \beta_i m + e_i$
+
+* Assumptions and source of uncertainty
+
+Variance and covariance
+
+* $\sigma^2_i = \beta^2_i \sigma^2_m + \sigma^2(e_i)$
+
+* $\operatorname{Cov}(r_i, r_j) = \operatorname{Cov}(\beta_i m + e_i, \beta_j m + e_j) = \beta_i \beta_j \sigma^2_m$
+
+**Single Index Model**
+
+Return Premium with market index $M$:
+
+* $R_i(t) = \alpha_i + \beta_i R_M(t) + e_i(t)$
+
+Expected Return Premium:
+
+* $\operatorname{E}[R_i] = \overbrace{\underbrace{\alpha_i}_{\text{Non-mkt premium}} + \underbrace{\beta_i \operatorname{E}[R_M]}_{\text{Systematic risk premium}}}^{\text{Components of risk premium}}$
+
+[Pros and cons](#single-index-pros-cons) of single index model
+
+[Portfolio variance](#firm-spec-risk) as number of stock change
+
+* $\sigma^2_p = \underbrace{\beta^2_p \sigma^2_m}_{\text{System}} + \underbrace{\sigma^2(e_p)}_{\text{Firm}}$
+
+* $\sigma^2(e_p) = \dfrac{\bar{\sigma}^2(e)}{n}$
+
+Security characteristic line
+
+* And other things to do with parameters $\alpha$ and $\beta$
+
+[Alpha transport](#alpha)
+
+[Portfolio construction](#ptf-construct)
+
+1. Get the weight between active portfolio based on $\dfrac{\alpha_i}{\sigma^2(e_i)}$ then scale it to 1
+
+2. Get the weighted parameters ($\alpha, \sigma^2(e_i), \beta_i$)
+
+3. Use the 2 part formula to get the weight of the active portfolio within the total risky portfolio
+
+    * $w^*_A = \dfrac{w^0_A}{1 + (1-\beta_A)w^0_A}$
+
+    * $w^0_A = \dfrac{ \alpha_A / \sigma^2(e_A)}{\operatorname{E}[R_M] / \sigma^2_m}$
+
+4. Get the weight of the market and weight of the individual stocks withint the total risky portfolio (simple math)
+
+5. Risk premium and variance of the risky portfolio
+
+    * $\operatorname{E}[R_p] = (w^*_M + w^*_A \beta_A) \operatorname{E}[R_M] + w^*_A \alpha_A$
+
+    * $\sigma^2_p = (w^*_M + w^*_A \beta_A)^2 \sigma^2_M + \underbrace{(w^*_A)^2\sigma^2(e_A)}_{\text{firm risk}}$
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Covariance/ Systematic Risk**
+
+* $\star$ 2003, Q12: $\sigma$ and Cov with single index model
+    * Same cov formula as the one in single index model
+* $\star$ [2004, Q8](#2004-8): systematic and non systemmatic
+* $\star$ [2015, Q3](#2015-3): Covariance, systematic and firm risk
+
+**Risky portfolio construction**
+
+* $\star$ [2013, Q3](#2013-3): optimal risky portfolio portions
+
+**Concepts**
+
+* 2014, Q4: Markowitz vs single index (number of estimate and internal consistency)
+
 ## Single Factor Model
 
 Problem with Markowitz Model from BKM 7
@@ -21,7 +98,7 @@ Problem with Markowitz Model from BKM 7
     
 * Increase likelihood of estimation error and may produce nonsensical results
 
-**Single Factor Model**
+<a name="single-factor"></a> **Single Factor Model**
 
 $r_i = \operatorname{E}[r_i] + \beta_i m + e_i$
 
@@ -39,7 +116,7 @@ Return of a security:
 
 Joint normally distributed based on factor $m$
 
-2 sources of uncertainty:
+**2 sources of uncertainty**:
 
 1) Uncertainty about $m$ (systematic)
 
@@ -71,7 +148,7 @@ A version of the single factor model with return on an index used as proxy for t
 
 * $R_i(t) = \alpha_i + \beta_i R_M(t) + e_i(t)$
 
-* $\alpha_i$: expected XS return of security when market XS return ($R_M(t)$) = 0
+* $\alpha_i$: expected XS return of security when market XS return $R_M(t)$ = 0
 
 * $\alpha_i$ $\uparrow$ if stock is underpriced
 
@@ -83,7 +160,7 @@ A version of the single factor model with return on an index used as proxy for t
 
 ***
 
-**Advantages**
+<a name="single-index-pros-cons"></a> **Advantages**
 
 Only requires $3n+2$ variables
 
@@ -92,6 +169,8 @@ Only requires $3n+2$ variables
 Allows for specialization of effort in security analysis
 
 * No need for anyone to estimate the covariance between stocks from 2 different industries
+
+* With significantly less estimates, mutually inconsistent results are far less likely
 
 **Disadvantages**
 
@@ -106,6 +185,8 @@ Oversimplifies the true uncertainty
 Might be more appropriate to use multi index model if there are correlations not account for by $M$
 
 ***
+
+<a name="firm-spec-risk"></a>
 
 Firm specific risk $\downarrow$ as stock in portfolio $\uparrow$
 
@@ -123,7 +204,7 @@ Portfolio variance with equally weighted securities:
 
 * Resulting equation from regressions to estimate the parameters of the Single Index Model
 
-#### Significance of $\alpha$ and $\beta$
+#### Significance of alpha and beta
 
 Hypothesis test: $\alpha = 0$
 
@@ -139,9 +220,9 @@ Even if $\alpha$ passes the 2 criteria above, it is no appropriate to rely on it
 
 Similar can test $\beta =0$ or $\beta > 1$ (market wide $\beta$)
 
-Also can test the correlation between stock and S&P (R^2) $\Rightarrow$ Indicates the portion of the variation in the stock that can be explained by the variance of the S&P
+Also can test the correlation between stock and S&P (R^2^) $\Rightarrow$ Indicates the portion of the variation in the stock that can be explained by the variance of the S&P
 
-#### Predicting $\beta$
+#### Predicting Beta
 
 Need to forecast $\beta$'s as it changes over time
 
@@ -155,9 +236,9 @@ $\beta_t = a + b_1 \times \beta_{t-1} + b_2 \times \text{Firm Size} + b_3 \times
 
 * Other potential variables: variance in earnings or cash flow, EPS growth, market capitalization, dividend yield, debt:asset ratio
 
-#### $\alpha$ Transport & Tracking Portfolios
+#### Alpha Transport
 
-*Alpha Transport*
+<a name="alpha"></a> **Alpha Transport**
 
 Earn return independent from the market return, not exposed to risk of market
 
@@ -183,7 +264,7 @@ Example
 
 ## Portfolio Construction
 
-### $\alpha$ & Security Analysis
+### Alpha & Security Analysis
 
 1) Estimate risk premium and risk of the market index\
     * Macro econ analysis
@@ -255,6 +336,8 @@ If short positions are prohibited, we need to take out securities with negative 
 
 ### Summary of Procedure
 
+<a name="ptf-construct"></a>
+
 1. Calculate the ratio of each security of the active portfolio
 
     * $w^0_i = \dfrac{\alpha_i}{\sigma^2(e_i)}$
@@ -288,3 +371,17 @@ If short positions are prohibited, we need to take out securities with negative 
     * $\operatorname{E}[R_p] = (w^*_M + w^*_A {\color{orange}{\beta_A}}) \operatorname{E}[R_M] + w^*_A {\color{blue}{\alpha_A}}$
 
     * $\sigma^2_p = (w^*_M + w^*_A {\color{orange}{\beta_A}})^2 \sigma^2_M + \underbrace{(w^*_A)^2{\color{green}{\sigma^2(e_A)}}}_{\text{firm risk}}$
+    
+## Past Exam Questions
+
+<a name="2004-8"></a> 2004, Q8
+![alt text](questions/2004-8Q.png)
+![alt text](questions/2004-8A.png)
+
+<a name="2013-3"></a> 2013, Q3
+![alt text](questions/2013-3Q.png)
+![alt text](questions/2013-3A.png)
+
+<a name="2015-3"></a> 2015, Q3
+![alt text](questions/2015-3Q.png)
+![alt text](questions/2015-3A.png)
