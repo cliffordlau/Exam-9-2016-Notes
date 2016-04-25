@@ -187,6 +187,12 @@ Portfolio with the lowest variance
 **Efficient Frontier**  
 Portion of the minimum-variance frontier above the global minimum-variance portfolio
 
+**Disadvantages**
+
+* The number of estimates required to run the Markowitz model is enormous for many stocks. The expected return and variance estimates for each stock needs to be estimated, in addition to the covariances between every stock
+
+* Having to make so many estimates, increases the chance of producing nonsensical results. In particular, the covariances may not make sense when all the data is rolled up
+
 ***
 
 Expected return and variance of the optimal complete portfolio
