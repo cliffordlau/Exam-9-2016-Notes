@@ -11,6 +11,64 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Factor model (single, multi)
+
+* Multifactor SML (how is this derived?)
+
+[Fama French Three Factor](#famma)
+
+* Small minus big stocks
+* High minus low book:market ratio
+* Market index
+
+**Arbitrage**:  
+Opportunity to earn 1) risk-less profit 2) without need to make a net investment
+
+**Law of one price**:  
+Two assets with equivalent economical aspects should have the same market price
+
+**APT Assumptions**:
+
+1) Security returns can be described by a factor model
+
+2) There are a sufficient number of securities to diversify away idiosyncratic risk
+
+3) Well functioning securities markets do not allow for persistence of arbitrage opportunities
+
+2 ways to reach [equilibrium](#equil)
+
+Know how to execute an arbitrage opportunity
+
+[APT vs CAPM](#APT-v-CAPM)
+
+[Treynor Black Model](#TB) for optimal risky if arbritrage is identified so not to be over exposed to residual risk
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2006, Q9: Famma French additional factors
+* $\star$ 2011, Q2: arbitrage equilibirum; risk return dominance
+* $\star$ [2015, Q6](#2015-6): FF model and behavioral
+
+**Arbitrage opportunity**
+
+* 2000, Q13: structure an arbitrage opportunity
+* 2003, Q13 b: structure arbitrage
+
+**Factor Model**
+
+* 2001, Q32: expected XS return and weighted $\beta$
+* 2003, Q13 a: expected return
+* 2004, Q9: arithmetic to back out factors from 2 equations
+* 2006, Q7: factor model arithmetic
+* 2008, Q4: factor model arithmetic
+* 2009, Q4: factor model arithmetic
+
 ## Factor Models
 
 Similar to the index model but focus on individual risks rather than using market as proxy
@@ -45,6 +103,8 @@ $\operatorname{E}[r_i] = r_f + \sum \limits_{j=1}^n \beta_{ij} \left( \operatorn
 
 ### Fama French Three Factor Model
 
+<a name="famma"></a>
+
 Uses firm characteristics that seem to be proxy for exposure to systematic risk
 
 $R_{it} = \alpha_i + \beta_{iM}R_{Mt} + \beta_{iSMB}SMB_t + \beta_{iHML}HML_t + e_{it}$
@@ -57,7 +117,11 @@ $R_{it} = \alpha_i + \beta_{iM}R_{Mt} + \beta_{iSMB}SMB_t + \beta_{iHML}HML_t + 
 
 The 2 additional factors maybe acting as proxies for something fundamental
 
-Problem with FF model is that it is derived from empirical evidence, and none of the factors can be identified as hedging a specific source of uncertainty
+* Measure some of the systematic risk not captured by only using the market portfolio
+
+* F-F not necessarily thought small firms or high B:M had better returns
+
+**Problem with FF model**: It is derived from empirical evidence, and none of the factors can be identified as hedging a specific source of uncertainty
 
 * Pattern might be purely due to chance
 
@@ -78,6 +142,8 @@ Two assets with equivalent economical aspects should have the same market price
 3) Well functioning securities markets do not allow for persistence of arbitrage opportunities
 
 ### Equilibrium
+
+<a name="equil"></a>
 
 Market prices change to eliminate arbitrage opportunities and reach equilibrium when the opportunity disappears
 
@@ -128,6 +194,8 @@ For APT, there can not be 2 parallel APT SML as that would mean one to be domina
 
 ### APT vs CAPM
 
+<a name="APT-v-CAPM"></a>
+
 Disadvantages:
 
 * Based on diversified portfolio $\Rightarrow$ 0 residual risk
@@ -146,10 +214,23 @@ APT indicates how to generate infinite profit if risk premium of well diversifie
 
 * If arbitrage portfolio not perfectly well diversified, increasing the size of an investment to take advantage of an arbitrage opportunity will also increase the risk of the arbitrage position
 
-**Treynor-Black Model**
+<a name="TB"></a> **Treynor-Black Model**
 
 To construct an optimal risky portfolio based on identified underpriced asset or portfolio under a single factor market
 
 * Model produces an optimal risky portfolio if there is residual risk
 
 * More flexible that APT in reflecting residual risk that may exist
+
+## Past Exam Questions
+
+<a name="2015-6"></a> 2015, Q6
+![alt text](questions/2015-6Q.png)
+
+a. Ignore $\beta$ since it's the same; A because highest B:M value and lower MV
+
+b.
+
+* Small firm ignored by large investors due to regret avoidance, require higher return due to less information and unconventional choice
+* Forecast error, more weight in recent performance of glamour firm
+* Smaple size neglect, tend to infer too quickly and extrapolate price of low B:V too high
