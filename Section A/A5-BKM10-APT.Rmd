@@ -22,6 +22,7 @@ Factor model (single, multi)
 * Small minus big stocks
 * High minus low book:market ratio
 * Market index
+* The formula adds the $\alpha$ instead of $r_f$ like CAPM
 
 **Arbitrage**:  
 Opportunity to earn 1) risk-less profit 2) without need to make a net investment
