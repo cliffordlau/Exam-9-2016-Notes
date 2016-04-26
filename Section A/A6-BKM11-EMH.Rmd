@@ -11,15 +11,50 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+3 [forms](#EMH-forms) of EMH and [implications](#EMH-implications)
+
+Event studies and the [difficulties](#event-diff)
+
+[Difficulties](#efficient-diff) in assessing whether the market is efficient
+
+* Also the test should be risk adjusted which is also difficult
+
+* [Test](#EMH-3-forms-test) for the 3 forms of EMH
+
+    * Efficient market anomalies
+
+* Interpretation might be difficult too
+
+* There is still perpose for portfolio management
+
+Look at performance of stock analyst and also mutual fund managers
+
+### Types of Exam Questions
+
+**Concepts**
+
+* 2003, Q14: passive investment strategy and why is it better under EMH
+* 2003, Q15: Small firm in jan and B:M ratio anomalies
+* 2004, Q10: 3 EMH; Technical analysis; EMH implication; ptf managment purpose
+* 2006, Q8: Anomalies
+* 2007, Q5: semi-strong, anomalies
+* 2008, Q5: 3 EMH; price drift violate semi strong
+* 2008, Q7: Should not be persistent performance
+* 2010, Q1: value of portfolio managment; if everyone actually use the passive portfolio not price correction will happen
+* $\star$ [2012, Q3](#2012-3): 3 form of EMH; examples
+* $\star$ [2014, Q6](#2014-6: market anomalies based on data
+
 ## Introduction
 
 Stock prices should reflect all available information
 
 New information relevant to the stock will cause the price to change and since new information is unpredictable, so is the movement of stock price (random walk process)
 
-3 versions of EMH
+<a name="EMH-forms"></a> 3 versions of EMH
 
-* **Weak form**: Reflect all information that can be derived from examining market data
+* **Weak form**: Reflect all information that can be derived from examining market (trading) data
 
 * **Semi-strong form**: Reflect all publicly available information about the firm's prospects
 
@@ -28,6 +63,8 @@ New information relevant to the stock will cause the price to change and since n
 All 3 versions pertain only to information available
 
 ## Implication of EMH {.tabset}
+
+<a name="EMH-implications"></a>
 
 If EMH holds, it'll impact the following investment strategies
 
@@ -63,7 +100,7 @@ EMH advocates believe that stocks are priced fairly which means buy and sell fre
 
 ## Event Studies {.tabset}
 
-**Event study**: To determine the importance of an event by measuring the resulting price changes
+<a name="event-diff"></a> **Event study**: To determine the importance of an event by measuring the resulting price changes
 
 * Since price changes reflect new information
 
@@ -96,7 +133,7 @@ Maybe more appropriate to measure the impact of the event by referring to the cu
 
 ## Are Market Efficient?
 
-Difficulties in determining if the markets are truly efficient:
+<a name="efficient-diff"></a> Difficulties in determining if the markets are truly efficient:
 
 **Magnitude Issue**: 0.1% of a huge portfolio will be a big dollar term contribution but very small compared to the normal volatility of the market $\Rightarrow$ Hard to assess how much the manager actually contributed
 
@@ -106,7 +143,7 @@ Difficulties in determining if the markets are truly efficient:
 
 ### Tests of Different EMH Forms {.tabset}
 
-Tests can be constructed for each version of EMH
+<a name="EMH-3-forms-test"></a> Tests can be constructed for each version of EMH
 
 #### Weak-Form Tests
 
@@ -128,6 +165,8 @@ Patterns in stock returns
 
 * $\hookrightarrow$ A contrarian investment strategy may be profitable
 
+***
+
 #### Semi-strong Form Tests
 
 Efficient market anomalies
@@ -146,9 +185,13 @@ Results show that some easily available diagnostics can be used to predict abnor
 
 Tests require the level of risk to be reflected $\Rightarrow$ Need to appropriately risk adjust the return, which can be more difficult than EMH itself
 
+***
+
 ####Strong Tests
 
 Markets are not expected to be strong-form efficient, people with inside information should be able to make superior profits
+
+***
 
 ### Intrepreting the Evidence
 
@@ -217,3 +260,24 @@ Another test from Bollen & Busse was to rank mutual fund to decile and track res
 Argument supporting the lack of persistence is that fund that had good performance will attract new funds, driving the alpha down due to the additional cost & complexity of managing the new funds
 
 Study of bond fund indicate that the bond fund under perform the passive indexes by the expense amount and with no persistence in performance $\Rightarrow$ Bond market is efficient
+
+## Past Exam Questions
+
+<a name="2012-3"></a> 2012, Q3
+![alt text](questions/2012-3Q.png)
+
+a. 
+
+    * Weak form reflect all past market trading data. Technical analysis can't generate XS returns
+    * Semi strong: price reflect all public information, fundamental analysis won't benefit
+    * Strong form: all information is reflected. Unlikely this hold so fundamental analysis could work with non public information
+    
+b.
+
+    * Lucky event: 50% for each of the 3 years is not impossible
+    * Wide variance in return and small difference, might just be random
+    * Companys might be taking on more risk to achieve higher returns
+
+<a name="2014-6"></a> 2014, Q6
+![alt text](questions/2014-6Q.png)
+![alt text](questions/2014-6Q.png)
