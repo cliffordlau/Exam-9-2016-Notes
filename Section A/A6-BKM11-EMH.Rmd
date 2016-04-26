@@ -33,6 +33,8 @@ Look at performance of stock analyst and also mutual fund managers
 
 ### Types of Exam Questions
 
+<span style="color:red">Haven't done TIA practice questions</span>
+
 **Concepts**
 
 * 2003, Q14: passive investment strategy and why is it better under EMH
