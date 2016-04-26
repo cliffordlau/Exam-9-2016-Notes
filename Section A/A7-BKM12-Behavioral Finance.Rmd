@@ -11,6 +11,28 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Important to know the incorrect [information processing](#info-process) and [behavior bias](#bias)
+
+The [limits](#limits-to-a) to arbitrage: mispricing doesn't disappear, implementation cost and model risk
+
+* Examples on the violation of law of 1 price
+
+[Critique](#bad-behav) behavioral finance
+
+How technical anlaysis can work
+
+* Trends indications and market sentiments indicators
+
+### Types of Exam Questions
+
+**Concepts**
+
+* 2007, Q7: information processing error and market anomaly associated
+* 2008, Q6: Law of 1 price and violation examples
+* 2013, Q5: anomaly based on example shown; and associated information process error; what efficient market would look like
+
 ## Critique of Financial Theory
 
 Account for irrationalities in decision making
@@ -21,6 +43,8 @@ Account for irrationalities in decision making
 
 ### Information Processing
 
+<a name="info-process"></a>
+
 **Forecasting Errors**:
 
 * Too much weight assigned to recent experience
@@ -28,11 +52,19 @@ Account for irrationalities in decision making
 
 **Overconfidence**: Overestimate their abilities and think they can outperform market and trade too much
 
+* Lead to the prevalence of active investment
+
 **Conservatism**: Too slow to update their beliefs in response to new evidence
+
+* Lead to post earnings announcement drift
 
 **Sample Size Neglect & Representativeness**: Infer a pattern based on too small a sample
 
+* Lead to stocks that have best recent performance tend to show reversals in a few days due to investor adjusting their initial beliefs
+
 ### Behavioral Biases
+
+<a name="bias"></a>
 
 **Framing**: Decisions are often materially impacted by how the question is framed
 
@@ -59,6 +91,8 @@ There is diminishing return of utility as wealth increases but in addition it sh
 ![alt text](figures/Exam 9 - 11.png)
 
 ## Limits to Arbitrage
+
+<a name="limits-to-a"></a>
 
 Actions for arbitrageurs are limits $\Rightarrow$ Price irrationalities can continue
 
@@ -101,6 +135,8 @@ $\dfrac{\text{Premium}}{\text{Net Asset Value}} = \dfrac{\text{Price} - \text{NA
 * Fund will sell at a premium is $\alpha > \varepsilon$
 
 ## Critique of Behavioral Finance
+
+<a name="bad-behav"></a>
 
 **Unstructured**: Allows virtually any anomaly to be explained by a combination of irrationalities
 
@@ -173,3 +209,7 @@ $\text{Confidence Index} = \dfrac{\text{Avg yield on top 10 rated corporate bond
 $\dfrac{\text{o/s put options}}{\text{o/s call options}}$
 
 * Increase in the ratio is a bearish sign as put options profit from falling markets
+
+## Past Exam Questions
+
+n/a
