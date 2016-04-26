@@ -11,13 +11,95 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Know the CAPM assumptions
+
+* [Behavioral assumptions](#behav-ass)
+* [Market assumptions](#market-ass)
+
+Normative (test assumptions) and positive (examines prediction) model testing
+
+Be familiar of the CAPM proof
+
+[SML](#SML) (and compare to CML)
+
+CAPM test and [caveats](#CAPM-test-caveat) to the results
+
+**CAPM Extensions**
+
+Zero $\beta$
+
+* Slopt of $SML_{zb} < SML_{reg}$
+
+Non-traded assets
+
+* Portfolio of traded assets that hedge the private business will be bid up $\Rightarrow$ (-) $\alpha$ under standard CAPM
+
+* Labor intensive firms will have lower demand $\Rightarrow$ (+) $\alpha$ in traditional CAPM
+
+Multiperiod CAPM
+
+* Hedge portfolios on the additional sources of risk to arise from longer horizon will be bid up
+
+    * Assets that have higher return during periods of adverse economic environment will be bid up
+    * Bid up prices of assets that hedge the increases in prices of consumption goods (inflation protection)
+
+Consumption CAPM
+
+* Assets with (+) covariance with consumption growth (higher payoff when consumption is already high) are viewed as riskier $\Rightarrow$ Risk premium higher
+
+* $\operatorname{E}[R_i] = \beta_{iC}RP_C$
+
+Liquidity Adjustment
+
+* Demand additional return on liquidity risk
+
+* Can be adjusted with liquidity $\beta$ that reflects the sensitivity of the return of the security to changes in market liquidity
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2002, Q11: meaning of the $\beta$
+* 2003, Q11: draw stock with (+) $\alpha$ with the SML
+* 2004, Q5: CAPM assumptions
+* 2004, Q7: zero $\beta$ CAPM
+* 2008, Q3: Interpretation of plot of XS stock return vs XS market and also variability around the line
+* 2010, Q4: CAPM assumptions on wealth, tax, human capital (ignored, not public), future cash flow expectations(homogenous), portfolio selection (MV optimizers)
+* 2011, Q3: $\alpha$ should center around 0 in a bunch of stocks
+* $\star$ 2013, Q4: impact of selling market portfolio and by single stock with $\beta = 0.75$
+    * Reduce systematic risk but significant increase non systematic risk, risk increase over all
+    * Expected return should fall as well as CAPM dictates that return only rewards systematic risk
+* 2014, Q3: Empirical and implied SML and that for stock above the SML is a better buy
+
+**Calculations**
+
+* 2005, Q8: Calculate $\beta$ based on quarterly return of stock and market
+* 2005, Q12: back out numbers with CAPM
+* $\star$ 2006, Q6: Back out $\beta$ then $\alpha$ then SML
+    * Assume there is $\alpha$ is the expected return is based on analysis
+    * Need to assume equal change of scenarios for the $\alpha$ to make sense?
+* $\star \star$ [2015, Q4](#2015-4): Long questions
+    * Expected return
+    * Arbitrage with 0 variance portfolio
+* $\star$ 2015, Q5: zero beta CAPM, assumptions and properties
+
+**Plug and Play**
+
+* 2003, Q10: return of a portfolio (sum up the $\beta$'s)
+* 2004, Q6: return of a stock with CAPM
+* 2011, Q4: return of stock with CAPM
+
 ## Introduction
 
 **CAPM**
 
 Shows the relationship between risk and expected return in equilibrium
 
-Assumes:
+**Assumes**:
 
 * All investors optimized portfolio using Markowitz procedure $\Rightarrow$ Construct efficient frontier based on all available risky assets $\Rightarrow$ Identify efficient risky portfolio P
 
@@ -35,7 +117,7 @@ Key implications:
 
 ## CAPM Assumptions
 
-**Individual Behavior Assumptions**
+<a name="behav-ass"></a> **Individual Behavior Assumptions**
 
 * Investors are rational mean-variance optimizers
 
@@ -59,7 +141,7 @@ Key implications:
 
     * Everyone's analysis come to the same conclusion
     
-**Market Structure Assumptions**
+<a name="market-ass"></a> **Market Structure Assumptions**
 
 * All assets are publicly traded (can alter later) and short positions are allowed
 
@@ -116,7 +198,10 @@ $\begin{array}{ccc}
 
 $\beta$ measures the risk of the security
 
-**Security Market Lines**  
+* Can be estimated by plotting XS return on stock vs XS return on market
+* Intercept should be 0
+
+<a name="SML"></a> **Security Market Lines**  
 Graphs relationship between $\beta$ and $\operatorname{E}[r]$ of a stock
 
 ![alt text](figures/Exam 9 - 9.png)
@@ -149,7 +234,7 @@ CAPM predicts:
 
 Estimate the $\beta$ and residual variance for each stock from time series of stock return
 
-**Caveat**
+<a name="CAPM-test-caveat"></a> **Caveat**
 
 * Parameter estimates have large errors and may be correlated $\Rightarrow$ Downward bias in $\lambda_1$ and upward bias on $\lambda_0$
 
@@ -185,7 +270,7 @@ $\operatorname{E}[r_i] = \operatorname{E}[r_Z] + \beta_i \left[\operatorname{E}[
 
 Investors with borrowing restrictions will invest more in high $\beta$ stocks and less in low $\beta$ $\Rightarrow$ $\uparrow$ price of high $\beta$ stocks
 
-* $SML_{zb} < SML_{reg}$
+* Slopt of $SML_{zb} < SML_{reg}$
 
 * Risk premium on the market portfolio is smaller as the $\operatorname{E}[r_Z] > r_f$ so less reward for bearing risk
 
@@ -276,3 +361,9 @@ Security prices should be discounted to reflect illiquidity
 Investor also demand additional return on liquidity risk (risk of unanticipated changes in liquidity)
 
 * Can be adjusted with liquidity $\beta$ that reflects the sensitivity of the return of the security to changes in market liquidity
+
+## Past Exam Questions
+
+<a name="2015-4"></a> 2015, Q4
+![alt text](questions/2015-4Q.png)
+![alt text](questions/2015-4A.png)
