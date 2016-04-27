@@ -11,11 +11,88 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+**Base CAPM Test**
+
+Know the idea of the 2 pass regression and the [caveat](#2-pass-caveat)
+
+Market index not efficient
+
+* Only the MV efficient hypotheis is testable
+* CAPM not testable unless we know the composition of the true market
+    * Benchmarkt error as well
+* Inefficient proxy
+
+Measure error for $\beta$
+
+* Measurement error of $\beta$ will drive the slop down and intercept up
+* Test not high power enough to detect
+* Use portfolio to reduce measurement error of $\beta$
+
+**Multifactor CAPM and APT Test**
+
+Labor income test 
+
+* Add log market equity (for firm size), labor income (for human capital), value weighte index, premium on low and high grade bond (for state of economy)
+
+* Rejected CAPM
+
+Macro factor model
+
+* 2 pass regression with bunch of variables, but only 3 shows predictive power
+
+Fama French
+
+* 2 pass regression again and shown to be better than CAPM
+
+Risk based interpretation
+
+* HML and SMB captures business cycle risk
+* Has time varying $\beta$
+* $\beta$ is shown to be counter cyclical with economies
+* Value factor may indeed be proxy for risk not capture in CAPM $\beta$
+
+Behavioral
+
+* Market irrationality
+* Glamour firm under perform
+
+Momentum
+
+**Liquidity**
+
+Characeristics of liquidity
+
+Measure with price reversals after large trade or asymmetric information
+
+Get liquidity $\beta$ and see if higher liquidity $\beta$ goes with higher price
+
+**Equity Premium Puzzle**
+
+XS return too high based on reasonable level of risk aversion
+
+Various potential explanation
+
+* Consumption growth
+* Unexpected higher return
+* Survivorship bias
+* Extent CAPM to account for income shock and investor life cycle
+* Behavioral like narrow framing and loss aversion
+
+### Types of Exam Questions
+
+**CAPM Test**
+
+* 2000, Q12: coefficient of 2 pass regression and caveat to the test
+    * Volatile return; Not true market portfolio; sampling error of $\beta$; Can not borrow at risk free
+* 2001, Q11: Improvement of CAPM to include state of economy (low and high bonds) and market value of equity (size)
+
 ## Tests of CAPM
 
 Tests of various component of CAPM
 
-### $\operatorname{E}[Return]$ & $\beta$ Relationship
+### Expected Return and Beta
 
 Early test of CAPM $\operatorname{E}[r_i] = r_f + \beta_i \left( \operatorname{E}[r_M] - r_f \right)$
 
@@ -33,10 +110,6 @@ $r_{it} - r_{ft} = \alpha_i + b_i(r_{Mt} - r_{ft}) + e_{it}$
 
 Estimate $\beta$ via first-pass regression for each of the 100 stocks
 
-<span style="color:red">What about the e term?</span>
-
-<span style="color:red">Double check understanding on this</span>
-
 Recall SCL from BKM8 ($\operatorname{E}[r]$ vs $\sigma$)
 
 **3) Estimate SML (Security Market Line)**
@@ -47,7 +120,7 @@ $\overline{r_i - r_f} = \gamma_0 + \gamma_1 \beta_i + \gamma_2 \sigma^2(e_i)$
 
 * $\overline{r_i - r_f}$ is the sample average over the periods for each stock
 
-<span style="color:red">What is the sigma coming from?</span>
+* $\sigma^2(e_i)$ is variance of the residual from the first pass (variance on the 60 months of residual)
 
 Recall SML from BKM9 ($\operatorname{E}[r]$ vs $\beta$)
 
@@ -65,7 +138,7 @@ Recall SML from BKM9 ($\operatorname{E}[r]$ vs $\beta$)
 
 * $\gamma_1$ is significantly less than the sample average $\overline{r_M - r_f}$
 
-**Caveat**
+<a name="2-pass-caveat"></a> **Caveat**
 
 Several difficulties of this testing approach that might have caused the inconsistent results
 
@@ -119,7 +192,7 @@ $\hookrightarrow$ For the test to be valid, we need an efficient proxy but it is
 
 Given the difficulty in testing CAPM directly, easier to test APT instead, which produces the same SML given that the portfolio is well diversified
 
-### Measurement Error in $\beta$
+### Measurement Error in Beta
 
 If the right handside variable of a regression equation is measured with error $\Rightarrow$ slope coefficient will be biased $\downarrow$ and the intercept biased $\uparrow$
 
@@ -472,3 +545,4 @@ Investors evaluate each risk that they are exposed to in isolation $\Rightarrow$
 
 This will also cause investors to require higher premiums
 
+## Past Exam Questions
