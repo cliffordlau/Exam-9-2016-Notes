@@ -11,6 +11,18 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Inflation sensitive cash flow has 0 duration
+
+[Impact](#impact) of infation on stock price is generally $\propto$ inflation
+
+[Properties](#properties) of different instruments
+
+P&C insurer should focus on maximizing expected return and invest in long term bonds and some stocks
+
+### Types of Exam Questions
+
 ## Introduction
 
 Assets liabilities mismatch is more of an issue for life insurers
@@ -53,6 +65,8 @@ But general damages are inflation sensitive to the settlement date
 
 ### Duration of Stocks
 
+<a name="impact"></a>
+
 Impact of inflation on stock prices:
 
 1) **Value of the firm**
@@ -75,6 +89,8 @@ $\hookrightarrow$ Stock prices generally $\propto$ inflation $\Rightarrow$ Durat
 
 ## Properties of Various Instruments
 
+<a name="properties"></a>
+
 | Asset Class | Advantages                  | Disadvantages            |
 | ----------- | --------------------------- | ------------------------ |
 | Stocks      | Higher yields               | 1) Systematic market risks 2) Higher transaction costs |
@@ -95,3 +111,5 @@ P&C insurer should focus more on the traditional concerns
 * Balancing the risk of each class of securities
 
 $\hookrightarrow$ P&C insurers should invest in stocks and long term bonds (instead of short term bills)
+
+## Past Exam Questions

@@ -11,11 +11,83 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Relationships between [price and yield](#price-yield)
+
+**Duration**
+
+Macaulay
+
+$D = \sum t \cdot w_t$
+
+$w_t = \dfrac{CF_t(1+y)^{-t}}{\underbrace{\sum_i CF_i(1+y)^{-i}}_{\text{Price of bond}}}$
+
+Modified
+
+$D^* = \dfrac{D}{1+y}$
+
+Estimated change in price
+
+$\dfrac{\Delta P}{P} = - D^* \Delta y$
+
+[Duration](#dur-prop) properties
+
+**Convexity**
+
+$Convex = \dfrac{1}{P \cdot k^2 \left( 1+\frac{y}{k} \right) ^2} \sum \limits_{t=1}^n CF_t \cdot t \cdot (t+1) \left(1 +\frac{y}{k} \right)^{-t}$
+
+* $y$: Annual rate compounded $k$ times per annum
+
+* $n$: Period at which each cash flow is made (e.g. semi annual compound $\Rightarrow$ $n=1$ is @ 6mos)
+
+For continuously compounded
+
+$Convex = \dfrac{\sum CF_t \cdot t^2 \cdot e^{-yt}}{P}$
+
+Estimated change in price (w/ Convexity)
+
+$\dfrac{\Delta P}{P} = - D \left[ \dfrac{\Delta y}{1+y} \right] + 0.5 Convex (\Delta y)^2$
+
+Immunization and [caveat](#immun-cav)
+
+Cashflow matching pros and cons
+
+Bond swaps for active management
+
+***
+
+**Interest rate swap**
+
+Structure a [comparative advantage](#int-comp-adv)
+
+Nature of swap rate and LIBOR swap zero rate
+
+Valuation methods: [bond](#int-bond-method) and [FRA](#int-FRA-method)
+
+**Currency swap**
+
+Structure a [comparative advantage](#curr-comp-adv)
+
+Valuation methods: [bond](#curr-bond-method) and [FRA](#curr-FRA-method)
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Overnight indexed swap**
+
+Not very testable... skipped
+
+**Currency swap**
+
+Credit risk of different swaps
+
 ## Introduction
 
 Fixed income investments are exposed to interest rate risk
 
-Properties of relationships between bond prices and yields:
+<a name="price-yield"></a> Properties of relationships between bond prices and yields:
 
 1) Price and yield are inversely related: $i \uparrow \Rightarrow P \downarrow$
 
@@ -60,13 +132,15 @@ $D^* = \dfrac{D}{1+y}$
 
 * $D^* = D$ for continuously compounded interest rate
 
-### Estimated $\Delta P$
+### Estimated Change in Price
 
 $\dfrac{\Delta P}{P} = - D \left[ \dfrac{\Delta y}{1+y} \right]$ <span style="color:red">TIA looked wrong, changed</span>
 
 $\dfrac{\Delta P}{P} = - D^* \Delta y$
 
 ### Properties of Duration
+
+<a name="dur-prop"></a>
 
 1) Duration of ZCB = time to maturity
 
@@ -107,7 +181,7 @@ $Convex = \dfrac{\sum CF_t \cdot t^2 \cdot e^{-yt}}{P}$
 
 * $t$: time at which the cash flow is made (e.g. $t=0.5$ for 6 mos)
 
-### Estimated $\Delta P$ (w/ Convexity)
+### Estimated Chg in P (w/ Convexity)
 
 $\dfrac{\Delta P}{P} = - D \left[ \dfrac{\Delta y}{1+y} \right] + 0.5 Convex (\Delta y)^2$
 
@@ -161,7 +235,7 @@ Duration is not constant:
 
 $\hookrightarrow$ Need to rebalance the portfolio to remain immunized
 
-**Caveat**
+<a name="immun-cav></a> **Caveat**
 
 1) Assumes flat yield curve
     * Or else need to discount all $CF_t$ with it's respective spot rate
@@ -275,6 +349,8 @@ Fixed rates
 
 #### Comparative Advantage
 
+<a name="int-comp-adv"></a>
+
 When the difference between the fixed rates > difference in floating
 
 Total gain to the parties = Difference in fixed - difference in floating
@@ -317,7 +393,7 @@ Swap rate is like IRR for the whole swap
 
 #### Valuation of Interest Rate Swaps
 
-**Bond Method**
+<a name="int-bond-method"></a> **Bond Method**
 
 Assume principals are exchanged at inception and maturity (which it doesn't) $\Rightarrow$ Swap = long position in fixed rate bond and short position in a floating rate bond (p.o.v. of floating rate paying)
 
@@ -335,7 +411,7 @@ $B_{fl} = (L + k^*)e^{-r^*t^*}$
 
 * $r^*$ = LIBOR/swap zero rate for maturity $t^*$
 
-**FRAs Method**
+<a name="int-FRA-method"></a> **FRAs Method**
 
 View as a portfolio of FRA
 
@@ -393,6 +469,8 @@ Principal is usually exchanged at inception and maturity
 
 #### Comparative Advantage
 
+<a name="curr-comp-adv"></a>
+
 Similar to interest rate swaps, the total gain = difference between the 2 company for the two currency
 
 The deal should be structured such that only the financial institution is exposed to the FX rate risk
@@ -403,7 +481,7 @@ Comparative advantage here is genuine, might be due to tax
 
 #### Valuation of Currency Swaps
 
-**Bond Method**
+<a name="curr-bond-method"></a> **Bond Method**
 
 $V_{swap} = B_D - S_0 B_F$
 
@@ -415,7 +493,7 @@ $V_{swap} = B_D - S_0 B_F$
 
 * $S_0$: Spot FX rate of $\dfrac{\text{Domestic}}{\text{Foreign}}$
 
-**FRAs Method**
+<a name="curr-FRA-method"></a> **FRAs Method**
 
 Forward FX Rate @ $t$ = $\dfrac{D e^{r_D t}}{F e^{r_F t}} = S_0 \dfrac{ e^{r_D t}}{e^{r_F t}}$
 
@@ -438,3 +516,6 @@ Potential losses from defaults on swaps are much less than loans with similar pr
 * Potential losses from currency swap is greater than interest rate swaps because the principal are exchanged at the end so the swaps will have greater value at the time of default
 
 Due to systematic risk concern of credit risk from OTC swaps, clearing houses are used for swaps. Where it requires initial and variation margins as the value of the contracts change
+
+## Past Exam Questions
+

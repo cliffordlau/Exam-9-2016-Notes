@@ -11,6 +11,42 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Covers the basic on the different rates, and bond pricing with bootstrap
+
+[**FRA**](#FRA)
+
+**Payoff**
+
+$\dfrac{\overbrace{L(r_K - r_M)\overbrace{(T_2 - T_1)}^{\text{Pro-rate for Interval}}}^{\text{Payoff at }T_2}}{\underbrace{1 + r_M(T_2 - T_1)}_{\text{Discount to }T_1 \text{ from }T_2}}$
+
+* $T_1$ and $T_2$ = beginning and end of the interval
+
+* $r_M$ = Actual LIBOR rate at $T_1$ that applies between $T_1$ and $T_2$
+
+* $r_k$ = fixed rate agreed for the FRA
+
+* $L$ = principal
+
+**Value** @ any point in time
+
+$L(r_K - r_f)(T_2 - T_1)\underbrace{e^{-r_2T_2}}_{\text{Discount from }T_2}$
+
+* $r_f$ = current forward rate that applies between $T_1$ and $T_2$
+
+* $r_2$ = risk free spot rate for maturity $T_2$
+
+Theories of the term structure of interest rate
+
+* Expectation Hypothesis
+* Liquidity Preference
+* Segmentation Theory
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
 ## Introduction
 
 **Spot rate**:  
@@ -67,6 +103,8 @@ $(1 + f_n) = \dfrac{(1+y_n)^n}{(1+y_{n-1})^{n-1}}$
 * $y_n$ spot rates
 
 ## Forward Rate Agreements (FRA)
+
+<a name="FRA"></a>
 
 **FRA**:  
 Over the counter agreement between two parties to exchange a specified *interest rate* that applies to a specified *principal* during a specified *future interval*
@@ -125,6 +163,8 @@ Shape of the yield curve is influenced by the proportions of the different term 
 
 * Vice versa
 
+* There's some additional neuance with this... see old questions
+
 ### Segmentation Theory
 
 Theory states that the short, medium and long term rates are independent
@@ -146,3 +186,9 @@ Yield curve can provide signs about the future business cycle:
 * Steep (+) rise $\Rightarrow$ Market expects an expansion in economic activity
 
 * (-) slope $\Rightarrow$ Interest rates are expected to decline
+
+## Past Exam Questions
+
+<!-- <a name="2015-4"></a> 2015, Q4 -->
+<!-- ![alt text](questions/2015-4Q.png) -->
+<!-- ![alt text](questions/2015-4A.png) -->

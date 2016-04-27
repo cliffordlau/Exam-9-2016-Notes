@@ -11,6 +11,45 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Memorize formulas
+
+Franchise value
+
+**Net Income** = $P - L - E + (S + P - E) \times y$
+
+$P = \dfrac{S(k-y)+L}{1+y} + E$
+
+* Premium based on target dollar return ($kS =$ Net Income)
+
+**Current economic value**
+
+$\underbrace{C}_{MVS} = \underbrace{S + P - E}_{MV_A} - \underbrace{\dfrac{L}{1+y}}_{MV_L}$
+
+* $D_C = \dfrac{(S+P-E)D_A - \frac{L}{1+y}D_L}{C}$
+
+**Franchise Value**
+
+$\begin{array}{ccc}
+  F &= \left[ P - E - \dfrac{L}{1+y} \right] &\dfrac{d}{1-d} \\
+  &= \left[ P - E - \dfrac{L}{1+y} \right] &\sum \limits_{k=1}^{\infty} \left[ \dfrac{cr}{1+y} \right]^k \\
+\end{array}$
+
+* $d = \dfrac{cr}{1+y}$ = discounted retention
+
+$F = \dfrac{cr \cdot S[a + y (b-1)]}{(1+y)(1+y-cr)}$
+
+$D_F = \dfrac{a - b + 1}{(1+y)(a + by - y)} + \dfrac{1}{1 + y - cr}$
+
+$D_{total} = \dfrac{D_C \cdot C + D_F \cdot F}{C +F}$
+
+Managing interest rate risk by varying $k$ based on $y$
+
+* [pros and cons](#pro-cons)
+
+### Types of Exam Questions
+
 ## Introduction
 
 Asset liability management measure impact on $\Delta$ interest rates on the economic value of a firm, but typically does not account for the franchise value
@@ -128,6 +167,10 @@ This is the ideal method to manage duration
 
 * Find parameters $a$ and $b$ such that RoS and duration are both acceptable
 
+<a name="pro-cons"></a>
+
 **Advantages**: avoid rating agency and regulatory risk that are associated with managing the duration of the invested assets
 
 **Disadvantages**: Desired combination of target RoS and target duration can be maintained only for small interest rate $\Delta$
+
+## Past Exam Questions

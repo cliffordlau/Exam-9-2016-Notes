@@ -11,6 +11,57 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Focus on portfolio equity = currently booked asset - liability
+
+* Use MVS = MV Asset - Discounted libilities
+
+[Reasons](#manage-MVS) to manage the MVS
+
+**Market Value of Surplus (MVS)**
+
+$MVS = MV_A - MV_L$
+
+**Duration of MVS**
+
+$D_{MVS} = \dfrac{D_{MVA} \times MV_A - D_{MVL} \times MV_L}{MVS}$
+
+**Duration Gap of Surplus**
+
+$DG_s = D_{MVS}$
+
+* Use $\dfrac{1}{i}$ and $\dfrac{1}{d}$ as shortcut for duration for bond and stock
+
+* [Managing](#DGS-manage) DGS
+
+**Duration Gap of Total Return on Surplus** ($DG_{trs}$)
+
+$DG_{trs} = DG_S - H$
+
+* Measures the effectiveness of immunizing over a given holding period
+
+**Economic Leverage**
+
+$\dfrac{MVA}{MVS}$
+
+* Desirable to keep this constant
+* Keep both constant or change by the same proportions
+
+**Duration Gap of Economic Leverage** ($DG_{el}$)
+
+$DG_{el} = D_{MVS} - D_{MVA}$
+
+* $DG_{el} = 0$ to keep the economic leverage constant
+
+Still need to worry about unexpected loss development and [inflation](#inflation)
+
+Need to consider impact to surplus when implementing these strategy
+
+* e.g. If the bonds at amortized cost is higher than the market value, insurer would suffer a surplus hit if it liquidates the bonds
+
+### Types of Exam Questions
+
 ## Market Value of a P&C Company
 
 2 components of MV of P&C company:
@@ -33,6 +84,8 @@ output:
 2) **Franchise equity**: Value of net income from business not yet booked
 
 ## Managing Market Value Surplus
+
+<a name="manage-MVS"></a>
 
 MVS is highly volatile due to heavy investing in long term bonds
 
@@ -58,7 +111,7 @@ $DG_s = D_{MVS}$
 
 * Use $\dfrac{1}{i}$ and $\dfrac{1}{d}$ as shortcut for duration for bond and stock
 
-Manage size of duration gap of surplus to protect against interest rate fluctuations
+<a name="DGS-manage"></a> Manage size of duration gap of surplus to protect against interest rate fluctuations
 
 * Select a certain gap based on projected interest rate
 
@@ -101,7 +154,7 @@ Insurer still exposed to risk that the ultimate loss is > than anticipated
 
 In additional, strategies above immunize *nominal* return
 
-To mitigate unanticipated inflation:
+<a name="inflation"></a> To mitigate unanticipated inflation:
 
 * Immunize against the real rate of return $\Rightarrow$ Purchase securities with inflation dependent returns
 
@@ -122,3 +175,5 @@ Issues that might be encountered when trying to restructure asset portfolio
 If the bonds at amortized cost is higher than the market value, insurer would suffer a surplus hit if it liquidates the bonds
 
 Therefore need to consider impact to surplus when implementing these strategy
+
+## Past Exam Questions
