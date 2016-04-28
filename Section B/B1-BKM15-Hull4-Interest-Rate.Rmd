@@ -47,6 +47,45 @@ Theories of the term structure of interest rate
 
 <span style="color:red">Haven't done TIA practice questions</span>
 
+**Concepts**
+
+* 2001, Q27 a: describe FRA, agreement to pay a specified interest rate at a future time period on a specificed principal amount
+* $\star$ 2004, Q16: term structure theory; implication of sloping down for all 3 theory
+    * For liquidity the rate is expected to decrease even more than the expectation theory as there's additional illiquid premium baked in
+* 2005, Q9: illiquidity premium = compensation for illiquidity since investors prefer liquidity
+* 2005, Q14: liquidity preference theory
+* 2009, Q9: term structure; prediction of slope; relationship of forward and expected future spot
+* $\star$ [2013, Q6](#2013-6): term interest rate risk
+* 2014, Q8: Plot yield curve and explain with theory
+
+**FRA**
+
+* [2001, Q27 b](#2001-27): FRA value
+* [2007, Q10](#2007-10): FRA payoff and value
+* 2008, Q6: FRA value
+* $\star$ [2010, Q7](#2010-7): FRA value unwinding
+* 2014, Q7: FRA
+
+**Rates**
+
+* 2000, Q16: bootstrap spot price
+* 2001, Q16: forward rate from bootstrap
+* 2002, Q24: zero rate and forward rate
+* 2003, Q25: forward rate with bonds
+* 2003, Q26: spot rate and forward
+* $\star$ [2003, Q27](#2003-27): 
+    * bond price
+    * price under expectation theory we can just do the normal calculation
+    * liquidity theory calc forward rate need to be adjusted
+* 2004, Q15: bunch of bootstrapping, just testing your math
+* 2004, Q17: forward rate
+* 2006, Q11: forward rate
+* 2006, Q12: bootstrap zero rate
+* 2009, Q10: forward rate
+* $\star$ 2012, Q2: Given list of price and forward rate, do arbitrage
+* $\star$ 2015, Q8: Bond price with long calc involing FRA too
+    * Lender of the FRA receive fix payments
+
 ## Introduction
 
 **Spot rate**:  
@@ -153,6 +192,8 @@ Forward rate = expected future short rates $\Rightarrow$ Upward sloping yield cu
 
 Investors select bond that matures around the time that need the money to avoid interest rate and reinvestment risk
 
+* Forward rates shoud be higher than expected future spot rates
+
 Liquidity premium is required to compensate short term investors for the interest rate risk they face
 
 **Liquidity preferene theory**
@@ -189,6 +230,30 @@ Yield curve can provide signs about the future business cycle:
 
 ## Past Exam Questions
 
-<!-- <a name="2015-4"></a> 2015, Q4 -->
-<!-- ![alt text](questions/2015-4Q.png) -->
-<!-- ![alt text](questions/2015-4A.png) -->
+<a name="2001-27"></a> 2001, Q27
+![alt text](questions/2001-27Q.png)
+![alt text](questions/2001-27A.png)
+
+<a name="2003-27"></a> 2003, Q27
+![alt text](questions/2003-27Q.png)
+
+Part c.
+
+Discount rate use $= \dfrac{1.08^2}{1.07} - 0.01 = 1.0801$
+
+$P = \dfrac{109}{1.0801} = 100.92$
+
+I guess the point is that in the forward rate there is an additiona 100bps bakes in and when you're looking at the short rate in the future you need to take out that illiquidity premium
+
+<a name="2007-10"></a> 2007, Q10
+![alt text](questions/2007-10Q-1.png)
+![alt text](questions/2007-10Q-2.png)
+![alt text](questions/2007-10A.png)
+
+<a name="2010-7"></a> 2010, Q7
+![alt text](questions/2010-7Q.png)
+![alt text](questions/2010-7A.png)
+
+<a name="2013-6"></a> 2013, Q6
+![alt text](questions/2013-6Q.png)
+![alt text](questions/2013-6A.png)

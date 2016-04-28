@@ -11,6 +11,49 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Unconditional default probabilities: $Q(t) = 1 - \operatorname{exp} \left\{ - \bar{\lambda} (t) \cdot t \right\}$
+
+* $Pr(\text{Default})$ by $t$ given survival @ $T=0$
+
+Estimate probability of default from bond price
+
+* $\bar{\lambda}(t) = \dfrac{s}{1-R}$
+* More [accurate method](#bond-default-method)
+* Or use [asset swaps](#ass-swap)
+
+Risk-neutral vs reald world default probabilities and [reason](#rn-vs-rw) for difference
+
+* Know when to use which one
+
+Estimate probability of default from equity price
+
+* [Black scholes](#BS)
+* Default [calculation](#BS-def-calc)
+
+Credit risk of derivatives
+
+$f_0^* = f_0 e^{-(y^* - y)T}$
+
+* $y^*$: Yield of ZCB issued by the counterparty
+
+* $y$: Yield of similar risk free ZCB
+
+* Know the underlying assumptions
+
+Credit risk mitigation [methods](#CR-mit)
+
+* Netting
+* Collateralization
+* Downgrade triggers
+
+Correlation
+
+* Reduced form models [pros and cons](#reduce)
+* Structural model [pros and cons](#struct)
+### Types of Exam Questions
+
 ## Default Intensities
 
 **Default intensity/ hazard rate**
@@ -60,7 +103,7 @@ Column $\rightarrow$ Terms
 
 Recovery rate is significantly negatively correlated with the default rates
 
-## Estimate $Pr(\text{Default})$: Bond Price
+## Estimate Pr(Default): Bond Price
 
 Assume difference from risk free bond is only due to possibility of default
 
@@ -70,7 +113,7 @@ $\bar{\lambda}(t) = \dfrac{s}{1-R}$
 
 * $s$ = spread between yield of a bond and an equivalent risk free bond
 
-**More Accurate Method**
+<a name="bond-default-method"></a> **More Accurate Method**
 
 $\operatorname{E}[\text{Loss from Default}] =$ Price of risk free bond - Price of bond
 
@@ -111,6 +154,8 @@ Solve for probability of default (Col 2):
 
 ### Asset Swaps
 
+<a name="ass-swap"></a>
+
 Traders can use asset swaps to determine the $Pr(\text{Default})$ of bonds
 
 * Swap provides an estimate of the spread of bond yield over LIBOR
@@ -126,14 +171,14 @@ $Pr(\text{Default})$ from historical data are typical $\ll$ from bond price esti
 **Risk-neutral probabilities of default**:  
 Default probabilities implied by the bond yields
 
-* Calculation assumes that the $operatorname{E}[\text{Default Loss}]$ are discounted at the risk free rate
+* Calculation assumes that the $\operatorname{E}[\text{Default Loss}]$ are discounted at the risk free rate
 
 **Real world default probabilities**:  
 $Pr(\text{Default})$ derived from historical data
 
 #### Risk-Neutral vs Real World
 
-**Reason for differences**:
+<a name="rn-vs-rw"></a> **Reason for differences**:
 
 1) Corporate bond are illiquid $\Rightarrow$ Higher yields to compensate
 
@@ -153,7 +198,7 @@ Use **risk-neutral** when valuing credit derivatives or estimating the impact of
 
 Use **read world** if conducting scenario analysis to calculate potential losses from defaults
 
-## Estimate $Pr(\text{Default})$: Equity Price
+## Estimate Pr(Default): Equity Price
 
 **Merton's Model**:  
 Views the equity of a company as being an option on the company's assets
@@ -167,6 +212,8 @@ $E_T = (V_T - D)^+ =
 * Call option on company's asset with strike price = $D$
 
 **Black Scholes Model**
+
+<a name="BS"></a>
 
 $E_0 = V_0 N(d_1) - De^{-rT}N(d_2)$
 
@@ -191,6 +238,8 @@ $\sigma_E$: Volatility of *equity*
 $N(\cdot)$: CDF of the standard normal
 
 ### Probability of Default Calcuation
+
+<a name="BS-def-calc"></a>
 
 **Probability of Default**:  
 $N(-d_2)$
@@ -281,6 +330,8 @@ Since the sign of $f_i$ is uncertain, the value $v_i$ can be thought of as a cal
 
 ### Creidt Risk Mitigation
 
+<a name="CR-mit"></a>
+
 **Netting**:
 
 If a company default on one contract with a counterparty, they have to default on all outstanding contracts
@@ -317,6 +368,8 @@ $\hookrightarrow$ Credit risk can not be diversified away completely
 
 ### Reduced Form Models
 
+<a name="reduce"></a>
+
 Assume that the hazard rates for companies are correlated with macroeconomic variables
 
 Default correlation driven by hazard rates for different companies are likely to be high at the same time
@@ -334,6 +387,8 @@ Default correlation driven by hazard rates for different companies are likely to
     * e.g. 2 Companies with perfectly correlated hazard rate will default during the same short period of time is sill low
     
 ### Structural Models
+
+<a name="struct"></a>
 
 Assume that a company defaults if its assets falls below a specific level
 
@@ -416,3 +471,5 @@ Changes in credit rating based on transition matrix from rating agencies that sh
 ***
 
 Simulation is done using multivariate normal with a given pairwise correlation
+
+## Past Exam Questions
