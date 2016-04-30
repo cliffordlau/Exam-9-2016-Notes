@@ -29,8 +29,8 @@ Risk-neutral vs reald world default probabilities and [reason](#rn-vs-rw) for di
 
 Estimate probability of default from equity price
 
-* [Black scholes](#BS)
-* Default [calculation](#BS-def-calc)
+* [Black scholes](#BS); memorize formula
+* Default [calculation](#BS-def-calc) procedure
 
 Credit risk of derivatives
 
@@ -59,6 +59,38 @@ Correlation
 Credit metrics with transition matrix can account for impact of downgrade and incorporate mitigation clauses
 
 ### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Default Probability**
+
+* [2005, Q17](#2005-17): Default probability and intensity calc 
+* 2006, Q15: default intensity given cumulative table
+* 2007, Q13: Prob default, intensity given cumulative table
+* 2008, Q14: probably of default using simple method and hazard rate
+* $\star$ [2009, Q13](#2009-13): Long default calc
+* $\star$ 2010, Q10: Long default calc, see change in default intensity
+* $\star$ 2011, Q9: Long default calc, doing twice
+
+**Default prob with equity**
+
+* $\star$ [2008, Q16](#2008-16): black scholes
+* $\star$ 2010, Q9: probability of default with black scholes and expected loss
+* $\star$ 2013, Q10: current value of the firms debt
+
+**Concepts**
+
+* 2005, Q19: How to use black-scholes to get probability of default
+* 2006, Q34: Credit risk mitigation techniques
+* 2009, Q32: Credit mitigation clause
+* 2011, Q10: Credit mitigation clause and limitations
+* $\star$ 2015, Q12: interpret cumulative default and unconditional default prob
+* 2015, Q13: Credit mitigation clause and limitations
+
+**Credit Metrix**
+
+* 2007, Q32: Credit metrics procedure and pros and cons
+* $\star$ 2014, Q15: probability of downgrade for 2 bonds, mostly based on table and understanding
 
 ## Default Intensities
 
@@ -137,6 +169,7 @@ Col 2 Default Probability:
 * Make assumptions about conditional probability of default in that period
 * Or, assume constant default intensity
 * Can assume a different pattern of default probabilities
+* This is usually the unconditional probability of default in a given period
 
 Col 3 Recovery:
 
@@ -223,7 +256,7 @@ $E_T = (V_T - D)^+ =
 
 $E_0 = V_0 N(d_1) - De^{-rT}N(d_2)$
 
-* $d_1 = \dfrac{1}{\sigma_V \sqrt{T}} \left[ \operatorname{ln} \left( \dfrac{V_0}{D} \right) + \left( r + \dfrac{\sigma^2_V}{2} \right) \cdot T \right]$
+* $d_1 = \dfrac{1}{\sigma_v \sqrt{T}} \left[ \operatorname{ln} \left( \dfrac{V_0}{D} \right) + \left( r + \dfrac{\sigma^2_V}{2} \right) \cdot T \right]$
 
 * $d_2 = d_1 - \sigma_v \sqrt{T}$
 
@@ -256,7 +289,7 @@ Requires $V_0$ and $\sigma_V$ which are not directly observable
 
 1) Use black scholes and the observed $E_0$ with $V_0$ and $\sigma_V$ unknown
 
-2) Use Ito's Lemma: $sigma_E E_0 = N(d_1) \sigma_V V_0$
+2) Use Ito's Lemma: $\sigma_E E_0 = N(d_1) \sigma_V V_0$
 
 Use the combination of the 2 equations above to back out $V_0$ and $\sigma_V$
 
@@ -479,3 +512,15 @@ Changes in credit rating based on transition matrix from rating agencies that sh
 Simulation is done using multivariate normal with a given pairwise correlation
 
 ## Past Exam Questions
+
+<a name="2005-17"></a> 2005, Q17
+![alt text](questions/2005-17Q.png)
+![alt text](questions/2005-17A.png)
+
+<a name="2008-16"></a> 2008, Q16
+![alt text](questions/2008-16Q.png)
+![alt text](questions/2008-16A.png)
+
+<a name="2009-13"></a> 2009, Q13
+![alt text](questions/2009-13Q.png)
+![alt text](questions/2009-13A.png)
