@@ -23,13 +23,19 @@ $D = \sum t \cdot w_t$
 
 $w_t = \dfrac{CF_t(1+y)^{-t}}{\underbrace{\sum_i CF_i(1+y)^{-i}}_{\text{Price of bond}}}$
 
+* Best to do this for each compounded period and then scale back at the end by dividing the $D$ with the number of compounds per year
+
 Modified
 
 $D^* = \dfrac{D}{1+y}$
 
+* $y$ is for each period
+
 Estimated change in price
 
 $\dfrac{\Delta P}{P} = - D^* \Delta y$
+
+* Remember the negative since yield and price moves opposite direction
 
 [Duration](#dur-prop) properties
 
@@ -65,15 +71,8 @@ Nature of swap rate and LIBOR swap zero rate
 
 Valuation methods: [bond](#int-bond-method) and [FRA](#int-FRA-method)
 
-**Currency swap**
-
-Structure a [comparative advantage](#curr-comp-adv)
-
-Valuation methods: [bond](#curr-bond-method) and [FRA](#curr-FRA-method)
-
-### Types of Exam Questions
-
-<span style="color:red">Haven't done TIA practice questions</span>
+* Bond method is to get the price of the floating bond and difference with fixed bond
+* FRA needs to get the forward rates and then calculate the coupon payment based on that (need to watch out for the compounding period)
 
 **Overnight indexed swap**
 
@@ -81,7 +80,56 @@ Not very testable... skipped
 
 **Currency swap**
 
-Credit risk of different swaps
+Structure a [comparative advantage](#curr-comp-adv)
+
+Valuation methods: [bond](#curr-bond-method) and [FRA](#curr-FRA-method)
+
+* Bond method is just calcuating the bond price at each respective currency and then convert and look at the difference
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Duration/Convexity**
+
+* $\star$ [2000, Q14](#2000-14): full duration convexity price change calc
+* 2003, Q6: full duration convexity price change calc
+* 2004, Q32: change in bond price
+* 2005, Q34: price change full calc with duration and convexity
+* 2006, Q31: Duration
+* 2008, Q30: Price, duration and estimate change
+
+**Concepts**
+
+* 2003, Q6: market and reinvestment risk
+* $\star$ 2003, Q9: interet rate swap definition and structure and purpose
+* 2010, Q22 b: cash flow matching pros anc cons
+* 2011, Q5 b: immunization pros anc cons
+* 2011, Q8: interest rate relationship with duration and why convexity is good
+* $\star$ 2015, Q11: Bond purchase decision based on active or passive investment
+
+**Swaps**
+
+* [2003, Q34](#2003-34): structure based on comparative advantage
+* $\star$ [2003, Q35](#2003-35): Swap value
+* $\star$ [2005, Q25](#2005-Q25): Currency swap
+* 2006, Q22: Comparative advantage
+* 2007, Q18: swaps structure
+* 2007, Q19: swap value
+* 2008, Q20: Swap diagram and why does the comparative advantage comes up for swaps
+* 2008, Q21: swap value
+* 2009, Q18: currency swap
+* 2010, Q11: Swap diagram and resulting rates
+* 2012, Q6: Swap flow
+* $\star$ [2013, Q7](#2013-7): Currency swap value as FRA
+* 2014, Q9: comparative advantage structure and diagram
+* 2015, Q9: currency swap
+
+**Immunization**
+
+* $\star$ 2010, Q22 a: Get the PV of the liability and then get the weight you need to match the duration
+* 2011, Q5: Similar to above but need to get the duration of a bond too
+* $\star$ 2011, Q7: strategy and limitations
 
 ## Introduction
 
@@ -120,15 +168,15 @@ $w_t = \dfrac{CF_t(1+y)^{-t}}{\underbrace{\sum_i CF_i(1+y)^{-i}}_{\text{Price of
 
 Alt formula for using annual rate, where $K$ is the number of time compounded per annum
 
-$D = \dfrac{1}{P}\dfrac{1}{K}\sum \limits_{t=1}^n t \cdot CF_t \cdot \left( 1+\frac{y}{k} \right)^{-t}$
+$D = \dfrac{1}{P}\dfrac{1}{k}\sum \limits_{t=1}^n t \cdot CF_t \cdot \left( 1+\frac{y}{k} \right)^{-t}$
 
-### Modifited Duration
+### Modified Duration
 
 Measure that's used in practice, based on Macaulay's
 
 $D^* = \dfrac{D}{1+y}$
 
-* Note the $y$ here is the yield compounded over each period
+* Note the $y$ here is the yield **compounded over each period**
 
 * $D^* = D$ for continuously compounded interest rate
 
@@ -233,9 +281,9 @@ Duration is not constant:
 1) duration $\Delta$ as rate $\Delta$ 
 2) duration $\downarrow$ as time passes
 
-$\hookrightarrow$ Need to rebalance the portfolio to remain immunized
+$\hookrightarrow$ **Need to rebalance** the portfolio to remain immunized
 
-<a name="immun-cav></a> **Caveat**
+<a name="immun-cav"></a> **Caveat**
 
 1) Assumes flat yield curve
     * Or else need to discount all $CF_t$ with it's respective spot rate
@@ -519,3 +567,22 @@ Due to systematic risk concern of credit risk from OTC swaps, clearing houses ar
 
 ## Past Exam Questions
 
+<a name="2000-14"></a> 2000, Q14
+![alt text](questions/2000-14Q.png)
+![alt text](questions/2000-14A.png)
+
+<a name="2003-34"></a> 2003, Q34
+![alt text](questions/2003-34Q.png)
+![alt text](questions/2003-34A.png)
+
+<a name="2003-35"></a> 2003, Q35
+![alt text](questions/2003-35Q.png)
+![alt text](questions/2003-35A.png)
+
+<a name="2005-25"></a> 2005, Q25
+![alt text](questions/2005-25Q.png)
+![alt text](questions/2005-25A.png)
+
+<a name="2013-7"></a> 2013, Q7
+![alt text](questions/2013-7Q.png)
+![alt text](questions/2013-7A.png)
