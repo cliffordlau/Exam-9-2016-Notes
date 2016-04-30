@@ -13,7 +13,7 @@ output:
 
 ## Cliff's Summary
 
-Memorize formulas
+Memorize formulas is key here espeically the interest rate sensitive formula for the duration
 
 Franchise value
 
@@ -46,9 +46,27 @@ $D_{total} = \dfrac{D_C \cdot C + D_F \cdot F}{C +F}$
 
 Managing interest rate risk by varying $k$ based on $y$
 
+* [Difficulties](#difficul) in managing interest rate risk the traditional way
 * [pros and cons](#pro-cons)
 
 ### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2009, Q25: Shortcomings of ALMathing (Does not reflect franchise value; matching durating may confuse regulators; better to use pricing strategy)
+* 2010, Q24 b c: What traditional ALM ignores (franchise value, value of future renewals); method to reduce duration of total economic value
+
+**Calculation**
+
+* [2007, Q29](#2007-29): Total value of firm and dilemma in managing duration using traditional method
+* 2010, Q24 a: Total economic value with formula
+* $\star$ [2012, Q5](#2012-5): Duration reduction with pricing strategy
+    * Memorize the formula
+* 2013, Q9: Total econ value straight forward calc
+* 2014, Q10: Franchise and duration and pricing strategy
+    * Need to memorize the franchise value formula
 
 ## Introduction
 
@@ -72,6 +90,8 @@ Economic value of the profits that will be earned in the future years from the f
 Assumes **premium** based on target dollar return ($kS =$ Net Income)
 
 $P = \dfrac{S(k-y)+L}{1+y} + E$
+
+* $S(k-y)$ is the additional required return on top of the investment income
 
 **Current economic value**
 
@@ -142,6 +162,8 @@ $C$ = Current economic value: PV of the surplus & business already written
 
 $F = \dfrac{cr \cdot S[a + y (b-1)]}{(1+y)(1+y-cr)}$
 
+* Formula only works when $P$ is set based on the formula in the earlier section
+
 $D_F = \dfrac{a - b + 1}{(1+y)(a + by - y)} + \dfrac{1}{1 + y - cr}$
 
 Weight the duration of the components of $F$ will also yield the duration
@@ -151,6 +173,8 @@ Duration of $P > L, E$ because premium is sensitive to interest rates $\Rightarr
 ### Managing Interest Rate Risk
 
 $D_{total} = \dfrac{D_C \cdot C + D_F \cdot F}{C +F}$ <span style="color:red">Check</span>
+
+<a name="difficul"></a>
 
 Reducing the duration of invested assets does not work well as the $D_F$ is a big driver
 
@@ -174,3 +198,11 @@ This is the ideal method to manage duration
 **Disadvantages**: Desired combination of target RoS and target duration can be maintained only for small interest rate $\Delta$
 
 ## Past Exam Questions
+
+<a name="2007-29"></a> 2007, Q29
+![alt name](questions/2007-29A.png)
+![alt name](questions/2007-29A.png)
+
+<a name="2012-5"></a> 2012, Q5
+![alt name](questions/2012-5A.png)
+![alt name](questions/2012-5A.png)
