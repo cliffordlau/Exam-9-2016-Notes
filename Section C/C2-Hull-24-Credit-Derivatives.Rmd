@@ -11,6 +11,16 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Valuation of CDS [procedure](#val-cds)
+
+Total return swap
+
+ABS and systematic risk
+
+### Types of Exam Questions
+
 ## Credit Derivatives
 
 Credit derivatives requires payout when the underlying counterparty defaults
@@ -60,6 +70,8 @@ Given assumptions on:
 * Recovery
 
 We can calculate the spread
+
+<a name="val-cds"></a>
 
 **Step 1**: PV(Expected Payments)
 
@@ -306,3 +318,5 @@ Credit rating process should improve to better reflect the parameter and model u
 Investors will need to be able to distinguish the difference in the types of risk between single-name and structured securities
 
 * Risk from structured securities is comprised of solely systematic risk and should require a premium
+
+## Past Exam Questions

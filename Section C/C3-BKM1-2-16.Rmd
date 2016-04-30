@@ -11,6 +11,12 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+[3 Issues](#issues) with mortgage pass through
+
+### Types of Exam Questions
+
 ## Introduction
 
 Financial engineering uses mathematical models and engineering methodologies to create new financial products
@@ -32,6 +38,8 @@ MBS are known as pass through as the cash flow pass through many parties
 ![alt text](figures/Exam 9 - 15.png)
 
 ### Caveat
+
+<a name="issues"></a>
 
 **Issue 1**
 
@@ -72,3 +80,5 @@ Collateralized Mortgage Obligations (CMOs) redirect cash flows from MBS to sever
 All principal payments, including repayments will initially go towards the most short pay tranche
 
 Once the tranche is retired, the principal payments will then go towards the next longer pay tranche
+
+## Past Exam Questions

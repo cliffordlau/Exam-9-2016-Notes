@@ -11,6 +11,59 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+[RAROC](#raroc) and [EVA](#eva)
+
+Friction cost reduce the return on capital
+
+* Agency, double tax, regulations
+
+### Capital alloaction techniques
+
+**CAPM**
+
+$I = r_A A + \sum_i r_i P_i$
+
+* $r_A$: Return on assets
+* $r_i$: Rates of return on u/w from line $i$
+* $P_i$: Premium from line $i$
+
+$\beta_E = \beta_A(1+ \sum_i k_i) + \sum_i \beta_i s_i$
+
+* $\beta_A$: $\beta$ of assets
+* $\beta_i$ $\beta$ of *insurance risk* of line $i$
+* $k_i$: Liability leverage ratio for $i$ = $\dfrac{L_i}{E}$
+* $s_i$: Premium leverage ratio for $i$ = $\dfrac{P_i}{E}$
+
+Required rate of return on underwriting
+
+$r_i = \underbrace{-k_i r_f}_{(1)} + \underbrace{\beta_i (r_M - r_f)}_{(2)}$
+
+1) Each line is essentially paying interest for the use of p/h funds
+
+2) Receiving a return which is based on the systematic risk
+
+[Problem](#CAPM-problem) of CAPM
+
+**VaR**
+
+[Equalize](#var) the exceedence probability
+
+**Insolvency Put/ EPD**
+
+Allocate by setting to equivalent EPD ratios
+
+**Merton-Perold**
+
+Based on marginal capital requirement
+
+**Myers-Read**
+
+See Goldfard, equalize marginal default values across LoBs
+
+### Types of Exam Questions
+
 ## Introduction
 
 Useful to allocate capital to specific LoB or policy even though the entire capital of an insurer is available to pay claims
@@ -19,13 +72,13 @@ Useful to allocate capital to specific LoB or policy even though the entire capi
 
 Various metrics to determine if the value is being maximized, based on allocated capital
 
-**RAROC**
+<a name="raroc"></a> **RAROC**
 
 * RAROC > cost of capital $\Rightarrow$ Should continue to devote resources to the line
 
 * See Goldfarb paper
 
-**EVA** (Economic Value Added)
+<a name="eva"></a> **EVA** (Economic Value Added)
 
 * Quantifies the value added to the firm from a given line
 
@@ -59,7 +112,7 @@ Management may behave opportunistically and fail to achieve the owner's objectiv
 
 Investing in securities via insurance companies produces lower after tax returns than purchasing the securities directly
 
-**Rgulations**
+**Regulations**
 
 Insurer are forced to hold inefficient investment portfolios (too much capital)
 
@@ -122,7 +175,7 @@ $r_i = \underbrace{-k_i r_f}_{(1)} + \underbrace{\beta_i (r_M - r_f)}_{(2)}$
 
 * r is similar to the u/w provision from Robbin
 
-**Problems with Model**
+<a name="CAPM-problem"></a> **Problems with Model**
 
 * Only reflects systematic underwriting risk (underwriting risk correlated with the market portfolio) and does not reflect other risk such as tail risk
 
@@ -131,6 +184,8 @@ $r_i = \underbrace{-k_i r_f}_{(1)} + \underbrace{\beta_i (r_M - r_f)}_{(2)}$
 * Rates of return are impacted by other factors in addition to $\beta$
 
 ### VaR
+
+<a name="var"></a>
 
 Exceedence probability $\varepsilon_i = Pr[Loss_i > \operatorname{E}[Loss_i] + C_i]$
 
@@ -234,3 +289,5 @@ Capital allocation should factor in the duration & maturity of liabilities
 Decision making should drive the design of the data system
 
 Firms that allocate capital successfully will make better pricing, underwriting and entry/exit decisions, creating value for shareholders
+
+## Past Exam Questions

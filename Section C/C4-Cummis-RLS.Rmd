@@ -11,6 +11,27 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+CAT bond [structure](#structure)
+
+Different [triggers](#triggers) with moral hazard vs basis risk
+
+Know the advantages of CAT bonds and the other instruments
+
+* Sidecars
+* CAT E-Put
+* Cat Swaps
+* ILWs
+
+Potential factors that would impact the market
+
+* Regulatory
+* Tax
+* Information on bonds
+
+### Types of Exam Questions
+
 ## Introduction
 
 Risk linked securities enable insurance risk to be transferred to the capital market
@@ -46,6 +67,8 @@ Due to these problems, contingent notes did not arise as a common risk linked se
 
 A class of **event-linked bonds** that provide payment on the occurrence of a specified event
 
+<a name="structure"></a>
+
 ![alt text](figures/Exam 9 - 16.png)
 
 **SPR**
@@ -77,6 +100,8 @@ Where the return of principal is guaranteed
 * These are rare as they do not provide as much protection to the sponsor
 
 ### Loss Triggers
+
+<a name="triggers"></a>
 
 **Indemnity triggers**: Payouts are based on the sponsoring insurer's actual losses
 
@@ -253,3 +278,5 @@ Author suggested change:
 * Regulators in certain jurisdictions mandate CAT loss reporting of a certain level of detail of events with industry losses exceeding a certain threshold
 
 * Regulators account for reinsurance credit quality in regulatory capital calculations $\Rightarrow$ Improve insurance solvency regulation and also encourage the use of the ILS market
+
+## Past Exam Questions

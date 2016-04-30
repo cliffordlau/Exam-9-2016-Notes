@@ -52,6 +52,12 @@ Correlation
 
 * Reduced form models [pros and cons](#reduce)
 * Structural model [pros and cons](#struct)
+    * Gaussian copula
+    
+[Credit VaR](#c-var)
+
+Credit metrics with transition matrix can account for impact of downgrade and incorporate mitigation clauses
+
 ### Types of Exam Questions
 
 ## Default Intensities
@@ -428,7 +434,7 @@ Simulation of the default of $n$ companies can be done by generating $n$ differe
 
 ## Credit VaR
 
-**Credit VaR** of $Y$ at the $X$% CI = We are $X$% confident that the credit losses will not exceed $Y$ during the time period
+<a name="c-var"></a> **Credit VaR** of $Y$ at the $X$% CI = We are $X$% confident that the credit losses will not exceed $Y$ during the time period
 
 $X$% certain that the % of losses over $T$ years on a large portfolio will be less than $V(X,T)$
 
