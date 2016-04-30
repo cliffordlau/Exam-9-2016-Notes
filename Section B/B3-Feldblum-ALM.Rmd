@@ -19,9 +19,34 @@ Inflation sensitive cash flow has 0 duration
 
 [Properties](#properties) of different instruments
 
-P&C insurer should focus on maximizing expected return and invest in long term bonds and some stocks
+How P&C insuer [should invest](#pc-invest)
+
+* P&C insurers are not as exposed to interest rate change, can use cash flow from current premium and investment income to pay claims $\Rightarrow$ Mismatch duration is not a major problem unless current income is insufficient to support the losses
+
+* P&C insurer should focus on maximizing expected return and invest in long term bonds and some stocks
 
 ### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2000, Q39: P&C not too exposed to interest rate change; pros and cons of different instruments
+* 2001, Q42: P&C insurer investment focus justifications
+* 2002, Q37: inflation sensitive so don't match duration
+* 2009, Q27: Cash flow matching pros and cons
+* $\star$ 2005, Q10: pros and cons of investing only in short term commercial paper and suggest alternative strategy (inflation sensitive liabilities)
+
+**Calculation**
+
+* 2004, Q33: Duration of libablity with payment pattern calc
+* 2006, Q32: Immunization
+* 2007, Q28: Duration of liability with payment pattern calc
+* 2008, Q31: immunization
+* 2009, Q26: Duration calc and immunization
+* 2010, Q21: Duration calc
+* 2012, Q4: Duration and immunization limitation
+* $\star$ 2014, Q11: immunization strategy with rate of return constraint
 
 ## Introduction
 
@@ -96,7 +121,9 @@ $\hookrightarrow$ Stock prices generally $\propto$ inflation $\Rightarrow$ Durat
 | Stocks      | Higher yields               | 1) Systematic market risks 2) Higher transaction costs |
 | Real Estate | Inflation sensitive         | 1) Limited by regulation 2) Illiquid 3) Need investment expertise |
 | Short term bills & Commercial paper | Short duration: Liability matching and not as sensitive to interest | 1) Lowest yield 2) Higher transaction costs than long term bonds |
-| Long term bonds | 1) Higher yields than short term bond 2) Lowest transaction costs 3) Held at amortization so seems less volatile | 1) Lower yield than stocks 2) Longer duration |
+| Long term bonds | 1) Higher yields than short term bond 2) Lowest transaction costs 3) Held at amortization so seems less volatile | 1) Lower yield than stocks 2) Longer duration 3) Less volatile due to accounting STAT accounting as they are value amortized |
+
+<a name="pc-invest"></a>
 
 Life insurers vs P&C insurers:
 
@@ -113,3 +140,5 @@ P&C insurer should focus more on the traditional concerns
 $\hookrightarrow$ P&C insurers should invest in stocks and long term bonds (instead of short term bills)
 
 ## Past Exam Questions
+
+n/a
