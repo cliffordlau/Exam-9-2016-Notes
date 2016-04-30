@@ -33,7 +33,7 @@ $DG_s = D_{MVS}$
 
 * Use $\dfrac{1}{i}$ and $\dfrac{1}{d}$ as shortcut for duration for bond and stock
 
-* [Managing](#DGS-manage) DGS
+* [Managing](#DGS-manage) DGS targeting 0 or 1
 
 **Duration Gap of Total Return on Surplus** ($DG_{trs}$)
 
@@ -56,11 +56,27 @@ $DG_{el} = D_{MVS} - D_{MVA}$
 
 Still need to worry about unexpected loss development and [inflation](#inflation)
 
+* Some caveats to the inflation protection strategy
+
 Need to consider impact to surplus when implementing these strategy
 
 * e.g. If the bonds at amortized cost is higher than the market value, insurer would suffer a surplus hit if it liquidates the bonds
 
 ### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Calculation**
+
+* 2000, Q40: DGS, $DG_{el}$ and duration approximation
+* 2002, Q34: $D_{MVS}$ calc
+* 2001, Q27: $D_{el}$, condition for immunized el ($D_{el} = 0$)
+* 2011, Q6: $D_{el}$
+* $\star$ 2013, Q8: $D_{MVS}$ but with lots of intermediate steps to calculate the spot rates and then the duration of assets and liabilities
+
+**Concepts**
+
+* 2001, Q42: High duration investments will lead to volatile MVS; Important since MVS is leading indicator of future book value
 
 ## Market Value of a P&C Company
 
@@ -177,3 +193,5 @@ If the bonds at amortized cost is higher than the market value, insurer would su
 Therefore need to consider impact to surplus when implementing these strategy
 
 ## Past Exam Questions
+
+n/a
