@@ -19,8 +19,6 @@ Friction cost reduce the return on capital
 
 * Agency, double tax, regulations
 
-### Capital alloaction techniques
-
 **CAPM**
 
 $I = r_A A + \sum_i r_i P_i$
@@ -50,19 +48,36 @@ $r_i = \underbrace{-k_i r_f}_{(1)} + \underbrace{\beta_i (r_M - r_f)}_{(2)}$
 
 [Equalize](#var) the exceedence probability
 
+Know the [issues](#var-issue) with VaR
+
 **Insolvency Put/ EPD**
 
 Allocate by setting to equivalent EPD ratios
 
+Know the [pros and cons](#EPD-pro-con)
+
 **Merton-Perold**
 
-Based on marginal capital requirement
+Based on marginal capital requirement, [doesn't allocate all](#MP-dis) the capital
 
 **Myers-Read**
 
 See Goldfard, equalize marginal default values across LoBs
 
 ### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concpets**
+
+* 2005, Q41: RBC vs VaR pros/cons
+* 2008, Q38: pros and cons of VaR
+* 2011, Q11: VaR vs EPD
+* 2012, Q9: Allocate capital with VaR and considerations
+
+**Calculation**
+
+* $\star$ [2012, Q11](#2012-11): CAPM
 
 ## Introduction
 
@@ -133,6 +148,8 @@ Various methods that are available to allocate capital
 
 Minimum level of capital to avoid regulatory intervention
 
+Relatively simple to calculate and find input value
+
 Not an appropriate basis for capital allocation
 
 * Factors used in RBC are of questionable accuracy
@@ -150,7 +167,7 @@ Decompose the aggregate $\beta$ of the firm to determine $\beta$ by LoB and requ
 
 * Not for surplus allocation
 
-$I = r_A A + \sum_i r_i P_i$
+$Income = r_A A + \sum_i r_i P_i$
 
 * $r_A$: Return on assets
 * $r_i$: Rates of return on u/w from line $i$
@@ -197,7 +214,7 @@ $\varepsilon_i = Pr \left[ \dfrac{Loss_i}{\operatorname{E}[Loss_i]} > 1 + \dfrac
 
 ![alt text](figures/Exam 9 - 17.png)
 
-**Issues**
+<a name="var-issue"></a> **Issues**
 
 * Firm may not have enough capital to achieve a certain $\varepsilon$
 * Does not consider diversification
@@ -223,11 +240,13 @@ Capital can be allocated to achieve equivalent ratios of $\dfrac{EPD}{\text{Liab
 
 * Similar to the graph in VaR but with $\dfrac{\text{Asset}}{\text{Liabilities}}$ vs $\dfrac{EPD}{\text{Liabilities}}$
 
-Advantage over VaR:
+<a name="EPD-pro-con"></a>
+
+**Advantage** over VaR:
 
 * Reflects the severity of the losses
 
-Disadvantage:
+**Disadvantage**:
 
 * Still does not account for diversification
 
@@ -254,9 +273,7 @@ Determine the marginal capital required when each line is added
 
 All lines combined minus (All line - one of the lines)
 
-***
-
-Merton Perold method allocates less than 100% of the risk capital
+<a name="MP-dis"></a> **Disadvantages**: allocates less than 100% of the risk capital
 
 Allocating all the capital would cause the firm to reject projects that would add to its market value
 
@@ -291,3 +308,7 @@ Decision making should drive the design of the data system
 Firms that allocate capital successfully will make better pricing, underwriting and entry/exit decisions, creating value for shareholders
 
 ## Past Exam Questions
+
+<a name="2012-11"></a> 2012, Q11
+![alt text](questions/2012-11Q.png)
+![alt text](questions/2012-11A.png)
