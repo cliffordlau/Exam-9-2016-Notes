@@ -21,6 +21,14 @@ ABS and systematic risk
 
 ### Types of Exam Questions
 
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2012, Q8: Structure ABS and assumptions; structured finance's role in 2008 crisis; Credit rating agencies' role in the crisis
+* 2013, Q12: probability of loss for different tranche; default prob of structured finance
+* $\star$ 2014, Q16: CAT bond vs CDO vs CDO^2^ and which is most preferrable for change in correlation and default probabilities
+
 ## Credit Derivatives
 
 Credit derivatives requires payout when the underlying counterparty defaults
@@ -320,3 +328,7 @@ Investors will need to be able to distinguish the difference in the types of ris
 * Risk from structured securities is comprised of solely systematic risk and should require a premium
 
 ## Past Exam Questions
+
+<!-- <a name="2009-13"></a> 2009, Q13 -->
+<!-- ![alt text](questions/2009-13Q.png) -->
+<!-- ![alt text](questions/2009-13A.png) -->
