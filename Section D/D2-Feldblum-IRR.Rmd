@@ -11,6 +11,58 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Financial market and product market [relationships](#fin-prod)
+
+IRR [assumptions](#ass) and [calculations](#IRR-calc)
+
+* Really key is just to be able to do the questions
+
+IRR pitfalls with [cashflow](#cashflow) pattern and [mutually exclusive](#exclusive) projects
+
+Other [practical](#practical) issues with IRR
+
+Surplus requirements varies based on the different [insurance risk](#ins-risk) and [policy forms](#forms)
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**IRR**
+
+* 2000, Q27: IRR calc
+* 2002, Q22: IRR calc no setup
+* 2004, Q31: IRR calc
+* 2005, Q18: IRR calc
+* 2006, Q16: IRR back out premium, Surplus based on Pr(ruin)
+* 2007, Q15 a b: IRR calc, adjust loss to have 0% IRR
+* 2008, Q8: IRR calc with and without reinsurance
+* $\star$ [2009, Q7](#2009-7): Surplus based on $\sigma$ of expected loss
+* 2010, Q7: IRR back out premium
+* $\star$ 2010, Q3: U/w profit provision $\Rightarrow$ $P = \dfrac{\operatorname{E}[L]}{1 - Expense - U}$; need to consider u/w tax, II tax
+* $\star$ 2011, Q13: Long calc of backing out premium
+* 2011, Q19: IRR calc with different allocation assumption
+* $\star$ 2012, Q17: IRR calc with alt assumptions
+* 2013, Q19: IRR calc backing out premium
+* 2014, Q18: IRR calc
+* 2015, Q19: IRR and NPV for different surplus option
+
+**Other Calculation**
+
+* 2006, Q21: NPV calc no setup
+* $\star$ 2015, Q20: Different allocation method; impact of growing LoB
+
+**Concepts**
+
+* 2004, Q35: Risk surplus protect against (pricing, reserve, CAT, reinsurance)
+* 2005, Q16: same as above
+* 2007, Q15 c: IRR less than cost of capital
+* 2008, Q9: Risk sources; problem with surplus allocation
+* 2009, Q15: surplus allcation and commitment; considerations for allocating between AL and WC
+* 2010, Q11: Risk sources
+
+
 ## Motivation for IRR
 
 Early procedures for profit margin used a fixed %
@@ -35,6 +87,8 @@ Alternative pricing models were proposed due to:
 ![alt text](figures/Exam 9 - 18.png)
 
 The 2 views are interrelated
+
+<a name="fin-prod"></a>
 
 | Financial Market        |               | Product Market          |
 | :--------------------- | :-----------: | :--------------------- |
@@ -72,7 +126,7 @@ IRR looks at cash flow pattern from the equity contributors POV
 
 ### Assumptions
 
-**Surplus requirement**
+<a name="ass"></a> **Surplus requirement**
 
 Difficult to determine as there are no fixed relationship between premium & surplus
 
@@ -113,6 +167,8 @@ Expenses that need to be allocated includes:
 * Underwriting & Admin Expenses
 
 ### Calculating Equity Flow 
+
+<a name="IRR-calc"></a>
 
 This is the calculation bit of IRR in exam
 
@@ -164,6 +220,8 @@ NPV & IRR may differ:
 
 ### Cash Flow Pattern
 
+<a name="cashflow"></a>
+
 There maybe 2 positive roots to the IRR if the cash flow changes signs more than once
 
 * Typically they are not true reversals, but result from oversimplifications in the analysis
@@ -175,6 +233,8 @@ There maybe 2 positive roots to the IRR if the cash flow changes signs more than
 * Actual cashflow may have reversals though $\Rightarrow$ Use NPV
 
 ### Mutually Exclusive Projects
+
+<a name="exclusive"></a>
 
 NPV & IRR do not necessarily result in the same ranking of projects
 
@@ -193,6 +253,8 @@ Mutually exclusive is more likely an issue for capital budgeting and rarely an i
 * Policies are usually priced using an u/w profit provision which set the IRR = cost of capital $\Rightarrow$ Assumptions hold, IRR = CoC = Reinvestment rate
 
 ### Practical Criticisms of IRR
+
+<a name="practical"></a>
 
 Regulators might believe company is making sufficient return when it is clearly unprofitable when:
 
@@ -214,6 +276,8 @@ Some general information on surplus as it influences IRR
 
 ### Insurance Risks
 
+<a name="ins-risk"></a>
+
 Surplus to protect against various risks
 
 **Asset** risk: depreciation
@@ -231,6 +295,8 @@ Surplus to protect against various risks
 **Credit**: Agents/ insureds won't remit premium
 
 ### Policy Form
+
+<a name="forms"></a>
 
 Amount of surplus depends on the policy form
 
@@ -257,3 +323,9 @@ Insurer's required surplus is an estimate based on expected future development
 Surplus allocation for an insurer is artificial
 
 Amount of surplus held isn't a deliberate amount but rather heavily dependent on the past profits of the firm
+
+## Past Exam Questions
+
+<a name="2009-7"></a> 2009, Q7
+![alt text](questions/2009-7Q.png)
+![alt text](questions/2009-7A.png)
