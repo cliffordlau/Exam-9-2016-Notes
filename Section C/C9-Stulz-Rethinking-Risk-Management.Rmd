@@ -11,6 +11,23 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Should not manage diversifiable risk and only manage the risks if the cash flow variability from the risk may impose [real cost](#real-cost) on the firm
+
+Risk management can be viewed as a direct substitute for equity $\Rightarrow$ Only practice risk management to the extent that equity capital is more expensive than debt
+
+Limitation of [VaR](#limit)
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+* 2003, Q47: real costs that risk management can reduce
+* 2005, Q39: Company should take on more bets when in financial distress
+* 2006, Q37: cost associated with higher cashflow variability
+* 2014, Q17: Stock options create asymmetric gain and lose so incentivize to use less risk management; direct ownership should increase hedgeing
+
 ## Introduction
 
 Companies do not necessarily purchase derivative to control exposure in interest rate risk, FX risk, commodities risk etc
@@ -45,13 +62,15 @@ Management should not devote energy to manage diversifiable risk
 
 $\hookrightarrow$ Companies will not be rewarded by investors for intentionally managing their financial risk
 
+<a name="real-cost"></a>
+
 Companies should devote resources to manage the risks if the cash flow variability from the risk may impose real cost on the firm
 
 * Higher **expected bankruptcy cost**
 * Higher **expected payments to stakeholders** to compensate for risk
     * Stakeholders can't diversify their risk as easily as shareholders
 * Higher **tax payments**
-    * Taxes are usually higher if income is more volatile
+    * Taxes are usually higher if income is more volatile due to the convexity of the tax structure
     
 Benefits of risk management arise from its ability to reduce these 3 costs
 
@@ -93,6 +112,8 @@ Company already in distress
 
 ## Limitation of VaR
 
+<a name="limit"></a>
+
 VaR does not work well for an extended period of time
 
 * Insufficient data to conduct empirical tests
@@ -110,3 +131,5 @@ When hedging risk, main concern is the possibility of distress during the year, 
 <span style="color:red">Don't quite understand</span>
 
 Should conduct sensitivity analysis of the expected dist^n^ of cash flows to reflect the value during the year
+
+## Past Exam Questions
