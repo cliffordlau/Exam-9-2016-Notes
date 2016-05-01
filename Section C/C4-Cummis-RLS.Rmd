@@ -32,6 +32,24 @@ Potential factors that would impact the market
 
 ### Types of Exam Questions
 
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**General Concepts**
+
+* 2001, Q44: diversification benefit of ILS
+* 2009, Q8: Why high layer of insurance coverage is not reinsured; Why CAT bond is better for those
+
+**CAT Bonds**
+
+* 2001, Q45: moral hazard for investor of CAT bonds is that insurer inflatin the claims
+* 2011, Q12: draw out the CAT bond structure; pros of CAT bonds and cons of CAT E Puts
+* 2013, Q13: CAT bond vs CAT risk swap based on counterparty risk, basis risk and diversification
+* $\star$ 2015, Q14: CAT bonds securitization vs subprime CDO; See sample answers
+
+**Basis risk/ Moral Hazard**
+
+* 2002, Q12: 3 triggers (indem, industry index, modeled index); risks for each
+
 ## Introduction
 
 Risk linked securities enable insurance risk to be transferred to the capital market
@@ -280,3 +298,5 @@ Author suggested change:
 * Regulators account for reinsurance credit quality in regulatory capital calculations $\Rightarrow$ Improve insurance solvency regulation and also encourage the use of the ILS market
 
 ## Past Exam Questions
+
+n/a
