@@ -11,6 +11,54 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Looks at return on sales, asset, or equity
+
+Opportunity cost 
+
+* [Factors](#opp-cost-fac) that drives the opportunity cost 
+
+* Calculation based on net cash flow (Premium - Loss - Expense) over the whole time horizon and discount with risk free rate
+
+Premium credit should only be given for the investment income of policyholders fund
+
+[Problem](#roe-prob) with ROE and ROS should be the focus of rate regulation (not rate of return equity)
+
+Judge the current rate of return is appropriate or not by examining the structure of the industry; Signs of inadequate return:
+
+* Increasing size of residual market
+* Reducing degree of product diversity
+* Reduced innovation
+
+Difficult for analyst examining the financials to determine how they really are performing in a given year as management can influence the results by tempering with reserve
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Calculations**
+
+* 2004, Q30: Opportunity cost calc
+* 2007, Q21 a: Opportunity cost calc
+* 2013, Q20: Opportunity cost calc
+
+**Concepts**
+
+* 2001, Q16: Rate regulation and ROE
+* 2002, Q5: ROE vs ROS
+* 2003, Q16: opportunity cost
+* 2003, Q40: Why ROS is more appropriate for rate regulation
+* 2004, Q10: Different basis of return
+* 2005, Q22: ROE vs ROS
+* 2006, Q22: Reason to not include some elements in the adequate rate of return
+    * Return XS of risk free; investment income on surplus; all of the investment income from policy cash flow
+    * ROE vs ROS
+* 2007, Q21 a: State of the market
+* 2008, Q19: ROE issues on rate regulation; ROS advantages
+* 2012, Q16: ROE ROS comparison with some calc
+* $\star$ 2015, Q22: ROE ROS with some new twist and additional considerations
+
 ## Profitablity vs Rate of Return
 
 **Profit**
@@ -44,6 +92,8 @@ If applied retrospectively, be aware that a single year of experience is not suf
 ## Opportunity Cost
 
 Policyholders are losing out on some investment income as premiums are paid up front
+
+<a name="opp-cost-fac"></a>
 
 Factors that affect opportunity cost:
 
@@ -86,7 +136,7 @@ ROE compares the profit of the insurer to the owner's investment
 
 ### Problems of ROE
 
-**ROE vs Rate Equity**
+<a name="roe-prob"></a> **ROE vs Rate Equity**
 
 Problem of focusing on ROE in rate regulation is that this forces the regulator to focus on ROE instead of rate equity
 
@@ -147,3 +197,9 @@ Current u/w results will be affected by
 * Amortization of past reserving decisions
 
 $\therefore$ difficult for analyst examining the financials to determine how they really are performing in a given year
+
+## Past Exam Problems
+
+<!-- <a name="2012-11"></a> 2012, Q11 -->
+<!-- ![alt text](questions/2012-11Q.png) -->
+<!-- ![alt text](questions/2012-11A.png) -->
