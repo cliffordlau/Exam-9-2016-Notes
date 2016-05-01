@@ -11,11 +11,31 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Know what is [VaR](#var) and it's [limitations](#var-limit)
+
+Know the other alternatives of VaR
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+* 2003, Q45: paper's case study discussion
+* 2005, Q38: VaR vs shortfall risk
+* 2006, Q36: Cash flow risk and shortfall risk
+* 2012, Q9: Features of VaR
+* $\star$ 2015, Q2: mix with BKM7
+    * Note that the 90% VaR for stocks is on the left hand side
+    * Why do we need to subtract the mean?
+
 ## Introduction
 
-**Value at Risk**
+<a name="var"></a> **Value at Risk**
 
 Dollar loss at a given probability level
+
+* Amounts of money that can be expected to be lost over a specific time period with a specific certainty
 
 Quantifies the exposure of a portfolio of risk
 
@@ -34,6 +54,8 @@ VaR is best suited for:
     * Won't be distorted by changing portfolio composition over the risk horizon
     
 ## Limitations of VaR Examples {.tabset}
+
+<a name="var-limit"></a>
 
 VaR should not be used in isolation to manage risk and is most beneficial when used in conjunction with other analysis
 
@@ -99,7 +121,7 @@ Procedure is similar to VaR but a distribution of cash flow is generated instead
 
 Abnormal returns (XS of $r_f$) can measures risk taking activities
 
-Returns should be based on capital that has been allocated $propto$ exposure to risk
+Returns should be based on capital that has been allocated $\propto$ exposure to risk
 
 Does not penalize managers for exploiting perceived information advantages
 
@@ -132,3 +154,5 @@ VaR should be applied carefully to firms that are selectively managing their ris
 * Mainly use as a diagnostic monitoring tool and should be reported along with an estimate of corresponding profit
 
 No form of risk measurement is a substitute for good management
+
+## Past Exam Questions
