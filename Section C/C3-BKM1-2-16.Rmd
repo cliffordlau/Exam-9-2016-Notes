@@ -17,6 +17,13 @@ output:
 
 ### Types of Exam Questions
 
+**Concepts**
+
+* $\star$ [2014, Q32](#2014-32): market issues addressed with purchasing whole mortgages and pass through securitization
+    * Look for analogous insurance risk transfer mech and market issue it addresses
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
 ## Introduction
 
 Financial engineering uses mathematical models and engineering methodologies to create new financial products
@@ -82,3 +89,9 @@ All principal payments, including repayments will initially go towards the most 
 Once the tranche is retired, the principal payments will then go towards the next longer pay tranche
 
 ## Past Exam Questions
+
+<a name="2014-13"></a> 2014, Q13
+![alt text](questions/2014-13Q.png)
+![alt text](questions/2014-13A-1.png)
+![alt text](questions/2014-13A-2.png)
+![alt text](questions/2014-13A-3.png)
