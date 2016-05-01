@@ -11,6 +11,90 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Know this well since it typically has 2 questions in a year
+
+Talks about the [income](#income) and [capital](#cap) measures to get the RORAC
+
+Need [risk measures](#risk-measure) to get the risk capital
+
+3 different ways to select a [threshold](#threshold) for the risk measures
+
+Major risk source of a insurer includes [market](#market), [credit](#credit), [insurance underwriting](#ins-uw) (Reserve, U/w, CAT), and other such as op risk and strategic risk
+
+All different risk sources need to be aggregated and [dependencies](#aggre) quantified
+
+Once we have the total risk capital we can allocated them with different methods of allocation
+
+* [Proportional](#prop)
+* [Incremental](#inc)
+* [Marginal](#mar)
+
+    * $s_i = s - \left(\dfrac{\partial p}{\partial s}\right)^{-1} \left(\dfrac{\partial p}{\partial \sigma}\right) \dfrac{(\sigma_{iL} - \sigma_L^2) - \overbrace{(\sigma_{iV} - \sigma_{LV})}^{=0 \text{ if asset }\perp\!\!\!\perp \text{ liab}}}{\sigma}$
+
+* [Co-measures](#com)
+
+RORAC can be used for:
+
+* Assessing capital adequacy
+* Setting risk management priorities
+* Evaluating alternative risk management strategies
+* Risk adjusted performance measurement
+* Insurance policy [pricing](#pricing)
+    * Know how to get the RORAC for a line
+    * [Multi period](#multi) commitment
+
+Other practical considerations
+
+* Time horizon of market and insurance risk don't match
+* Look at alternative return measures and consider the cost of stranded capital
+* Focus on less extreme events
+* RORAC is driven by many assumptions along the way so shouldn't be the sole measure used
+
+### Types of Exam Questions
+
+Quesitons:
+
+* Economic capital with 95% solvency is just 95% VaR - mean? Why is that
+* What should the time period for the income and capital be?
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**RORAC**
+
+* [2004, Q40](#2004-40): RORAC with prob of loss given
+* 2005, Q42: RORAC calc
+    * Econ capital here can be VaR over mean or reserve
+* 2008, Q35: RAROC and EVA; additional margin = required income calculated based on EVA less actual and discounted based to time 0
+* 2008, Q37: RORAC comparison by line
+* $\star$ 2009, Q31: Co measure allocation; additional risk margin; RORAC
+* $\star$ 2010, Q27: Lots of disgesting the information; RORAC, capital allocation
+* $\star$ [2010, Q28](#2010-28): Myers Read method
+* 2011, Q13: Back out combined ratio from RAROC and what captial would be under MP for lines with high correlation
+* $\star$ [2011, Q14](#2011-14): Multi period
+* 2013, Q15: analyze 2 lines (invest in both if both over cost of capital)
+* $\star \star$ [2014, Q14](#2014-14): RAROC multi period
+* $\star$ 2015, Q15: Econ Profit only vs RAROC; adjust premium to match RAROC
+* $\star$ 2015, Q18: RAROC
+
+**Capital Allocation**
+
+* 2008, Q36: Capital allocation by Co-CTE
+* $\star$ 2012, Q10: allocation with proportional, incremental; risk capital vs book value
+* $\star$ 2014, Q12: allocation with CTE and VaR (for VaR 99.5% is the 6th highest number); Var vs CTE; identify difference with CTE
+
+**EVA**
+
+* 2006, Q38: Simple EVA calc
+
+**Concepts**
+
+* 2007, Q35: Capital measures; risk measures; allocation methods; Each LoB should have different rate
+* 2013, Q16: economic capital is important to s/h to achieve capital adequacy objective to pay dividends and grow business; for p/h is to achieve solvency objective
+    * risk cap vs market cap: mkt includes franchise value not risk adjusted; risk cap = amount of capital to protect the firm from the risk that it is exposed to, lower than market cap
+* $\star$ 2015, Q17: CAT exposed line needs higher premium risk; reserve risk for long tail; long tail also higher interest rate risk; CTE would give more capital to CAT risk prone line
+    
 ## Introduction
 
 Risk adjusted performance measures
@@ -27,6 +111,8 @@ Risk adjusted performance measures
 * Focus of this paper
 
 ## Income Measures
+
+<a name="income"></a>
 
 **GAAP Net Income**
 
@@ -54,9 +140,14 @@ Risk adjusted performance measures
 
 ## Capital Measures
 
+<a name="cap"></a>
+
 Not risk adjusted
 
 * **Actual committed capital**: actual capital provided by shareholders
+    * Just capital a point in time, not prospective
+    * Volatile based on past u/w performance
+    * However it is reliable and readily available
 * **Market value of equity**: market capitalization
 
 Risk adjusted
@@ -67,6 +158,7 @@ Risk adjusted
     * Solvency objective: firm can meet existing obligations to policyholders
     * Capital adequacy objective: firm can continue to pay dividends/ grow premiums/ maintain a certain financial strength
 * **Risk capital**: amount of capital the needs to be provide by the shareholders to cover the risk that the liabilities may exceed the funds already provided (in the form of loss reserve or premium)
+    * Dependant on risk metric
 
 ***
 
@@ -76,15 +168,22 @@ Risk based measures of the required capital are typically much lower than the ma
 
 ## Risk Measures
 
+<a name="risk-measure"></a>
+
 Derive the necessary amount of capital
 
 **Percentile risk measure**: provides a capital required to achieve a certain probability of ruin (asset < liabilities)
+
+* Probability of ruin: estimated probability that losses exceed capital
+* VaR: dollar amount that will not be exceeded in the next N days with X% certainty
 
 **Conditional Tail Expectation**(CTE): mean loss of all the losses that exceed a certain percentile
 
 **Expected Policyholder Deficit Ratio**
 
 ### Threshold Level
+
+<a name="threshold"></a>
 
 **Bond default probabilities** @ a selected credit rating level
 
@@ -136,6 +235,8 @@ Does not have to estimate values at very low probability of occurrences, where a
 
 ### Market Risk
 
+<a name="market"></a>
+
 Risk to the firm's current investments from changes in market variables
 
 * e.g. equity indices, interest rates, FX rates
@@ -145,6 +246,8 @@ Financial industry typically calculate them based on very short duration (< 10 d
 Insurers however typically calculate them over a 1 year horizon to make it easier to aggregate with the other risks to which it is exposed
 
 ### Credit Risk
+
+<a name="credit"></a>
 
 Risk of loss due to credit events
 
@@ -179,6 +282,8 @@ Firm's investments in **securities** may lose value from credit events
 * Includes partial default where settling at less than full recovery due to disputes
 
 ### Insurance Underwriting Risk
+
+<a name="ins-uw"></a>
 
 3 categories:
 
@@ -289,6 +394,8 @@ Difficult to quantify and is ignored in this paper
 
 ### Risk Aggregation
 
+<a name="aggre"></a>
+
 Aggregate the individual dist^n^ of the above risks
 
 Need to consider dependency between the risks
@@ -334,6 +441,8 @@ Allocation to different risk sources once the aggregate amount of risk capital i
 
 ### Proportional Allocation
 
+<a name="prop"></a>
+
 Proportional allocation based on a risk measure
 
 Allocate risk measure in proportion to the risk measure applied to each unit
@@ -344,11 +453,16 @@ Risk measure used can have a material impact on the allocation
 
 ### Incremental Allocation
 
+<a name="inc"></a>
+
 Allocate based on the incremental contribution of the particular risk to the risk measure
 
 * Incremental risk measure = Total risk measure - all other risk measure
+* The allocation % is then applied to the total risk measure
 
 ### Marginal Allocation
+
+<a name="mar"></a>
 
 Based on marginal increments of risk
 
@@ -394,6 +508,8 @@ Notes:
 
 ### Co-Measures Approach
 
+<a name="com"></a>
+
 Risk measure has to be adopted to determine the capital requirement of the entire firm
 
 Co-measure = calculating the equivalent risk measures for the individual LoB in the cases where the *firmwide* measures exceed a threshold
@@ -436,6 +552,8 @@ RAROC measurement is highly sensitive to the capital allocation method used
 
 ### Insurance Policy Pricing
 
+<a name="pricing"></a>
+
 Set price targeting a specific RAROC
 
 * e.g. determine the additional risk margin needed to arrive at the target
@@ -462,6 +580,8 @@ True target return needs to include the investment return on risk capital
 ***
 
 #### Multi-Period Capital Commitment
+
+<a name="multi"></a>
 
 Above assumes capital is only held for one period
 
@@ -550,3 +670,21 @@ Might not be the most appropriate in terms of guiding business decisions $\Right
 Assumption selected will have a material impact on the derivation of the aggregate risk profile, allocation of risk capital and RAROC
 
 $\therefore$ RAROC should not be the only metric used to drive decisions
+
+## Past Exam Questions
+
+<a name="2004-40"></a> 2004, Q40
+![alt text](questions/2004-40Q.png)
+![alt text](questions/2004-40A.png)
+
+<a name="2010-28"></a> 2010, Q28
+![alt text](questions/2010-28Q.png)
+![alt text](questions/2010-28A.png)
+
+<a name="2011-14"></a> 2011, Q14
+![alt text](questions/2011-14Q.png)
+![alt text](questions/2011-14A.png)
+
+<a name="2014-14"></a> 2014, Q14
+![alt text](questions/2014-14Q.png)
+![alt text](questions/2014-14A.png)
