@@ -329,6 +329,4 @@ Investors will need to be able to distinguish the difference in the types of ris
 
 ## Past Exam Questions
 
-<!-- <a name="2009-13"></a> 2009, Q13 -->
-<!-- ![alt text](questions/2009-13Q.png) -->
-<!-- ![alt text](questions/2009-13A.png) -->
+n/a
