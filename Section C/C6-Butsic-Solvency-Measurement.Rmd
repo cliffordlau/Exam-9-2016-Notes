@@ -11,6 +11,46 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Know the EPD calc for varying asset or liability or both
+
+* Typically get the expected loss first then convert the $d$ to EPD
+* Then look at the scenarios that might get to the EPD and put up additioanl capital
+
+Correlation: $C = \sqrt{\sum_i C_i^2 + \sum_j \sum_i \rho_{ij}C_i C_j}$
+
+* If risky items appear on opposite sides of the B/S, correlation needs to be multiplied by -1
+
+Accounting bias
+
+Time horizon
+
+Insuer as going concern
+
+Insolvency cost as option
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**EPD**
+
+* $\star$ [2000, Q44](#2000-44): EPD and VaR
+* 2001, Q46: EPD; 2 correlated and independent risk (make a new table and calculate again)
+* $\star$ 2002, Q41: EPD calc with additional wrinkles
+* 2004, Q39: EPD with one thing being uniform distributed
+* 2006, Q39: EPD and some variations
+* $\star$ 2009, Q33: EPD calc
+* $\star$ 2010, Q30: multiperiod EPD
+* $\star$ 2013, Q14: EPD calc more complicated
+* 2015, Q16: EPD simple
+
+**Concepts**
+
+* 2002, Q40: VaR doesn't capture severity of ruin; EPD pros
+* 2008, Q39: EPD vs VaR
+
 ## Introduction
 
 RBC need to be fair for all parties to the insurance contract
@@ -20,6 +60,8 @@ RBC need to be fair for all parties to the insurance contract
 * Be able to distinguish between items that differ materially in level of riskiness
 
 ## Expected Policyholder Deficit
+
+EPD is the expected value of the difference between the amount the insurer is obligated to pay the claimant and the actual amount paid
 
 EPD is better than probability of ruin as it account for the severity
 
@@ -96,7 +138,7 @@ $C = \sqrt{\sum_i C_i^2 + \sum_j \sum_i \rho_{ij}C_i C_j}$
 
 ### Accounting Conventions & Bias
 
-RBC calculated on accounting book value is no appropriate due to accounting bias (e.g. recorded value $\neq$ current realizable value)
+RBC calculated on accounting book value is not appropriate due to accounting bias (e.g. recorded value $\neq$ current realizable value)
 
 Market value account is preferable for solvency assessment as it is based on current realizable value
 
@@ -158,3 +200,9 @@ Think of EPD as a call option with 1 year maturity
 For risk-less asset and risky liability, EPD = call option on the losses with strike price = assets at the end of the year
 
 For risky asset and risk-less liability, EPD = put option on the ending assets with strike price = liability at the end of the year
+
+## Past Exam Questions
+
+<a name="2000-44"></a> 2000, Q44
+![alt text](questions/2000-44Q.png)
+![alt text](questions/2000-44A.png)
