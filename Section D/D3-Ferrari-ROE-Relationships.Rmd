@@ -11,19 +11,74 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+[Relationship](#formula1) of ROE and ROA
+
+$\dfrac{T}{S} = \dfrac{I}{A} \left( 1 + \dfrac{R}{S} \right) + \dfrac{U}{P} \times \dfrac{P}{S}$
+
+[Alt formula](#formula2)
+
+$\dfrac{T}{S} = \dfrac{I}{A} + \dfrac{R}{S} \Big( \dfrac{I}{A} + \dfrac{U}{R} \Big)$
+
+Look at the [optimal](#optimal) capital structure and factors that impact value of the firm:
+
+* Expected earnings stream
+* Rate at which they are discounted
+
+$\hookrightarrow$ Mix of equity & liabilities impact both
+
+How to [determine](#determine) the optimal captial structure and added [complexity](#complex) for insurer
+
+Need to consider additional [interactions](#interaction) between ratios
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Calculation**
+
+* 2001, Q17: ROE calc formula manipulations
+* 2001, Q44: Formula manipulations
+* 2002, Q27 a: ROE
+* 2005, Q20: ROE
+* 2006, Q18: Formula plug and play
+* 2007, Q17: ROE calc (need to back out the u/w profit and R/S from just R/A)
+* 2008, Q17: insurance leverage, exposure and ROE (need to make tax adj)
+* 2009, Q8: Formla manipulations
+* 2010, Q9: Formla backing out surplus
+* 2011, Q15: insurance leverage, exposure and ROE
+
+**Concepts**
+
+* 2000, Q24: Continue to write business or not
+* 2002, Q27 b: underwriting return as interest
+* 2003, Q41: View $R$ as non equity capital; complication of debt with insurance; optimal portfolio mix
+* 2005, Q20: interactions of ratios
+* 2007, Q13: interactions of ratios
+* 2009, Q9: Different interest on the return
+* 2011, Q15: Insurance leverage factor and exposure
+* 2012, Q12: interactions of ratios
+* 2013, Q24: interactions of ratios
+* 2013, Q25: impact of non equity financing
+* 2015, Q21: 
+
 ## Impact of Leverage on ROE
 
-Relationship of ROE and ROA
+<a name="formula1"></a> Relationship of ROE and ROA
 
 $\underbrace{\dfrac{T}{S}}_{ROE} = \underbrace{\dfrac{I}{A}}_{ROA} \underbrace{\left( 1 + \dfrac{R}{S} \right)}_{\begin{array}{c} \text{Insurance} \\ \text{Leverage} \\ \text{Factor} \\ \end{array}} + \underbrace{\dfrac{U}{P}}_{ROS} \times \underbrace{\dfrac{P}{S}}_{\begin{array}{c} \text{Insurance} \\ \text{Exposure} \\ \end{array}}$
 
 * $T$: total after-tax return to the insurer
 * $S$: equity
+    * Includes equity in UEPR
 * $I$: investment gain or loss after tax
 * $A$: total asset
 * $R$: reserves & other liabilities
+    * excluding equity in UEPR
 * $U$: underwriting profit after tax
 * $P$: premium
+* Remember that $\dfrac{U}{P} = 1 -$ Combined Ratio
 
 Different parties are interested in different components:
 
@@ -35,7 +90,7 @@ Different parties are interested in different components:
 
 ### Reserves as Non-Equity Capital
 
-Rearranges the above equation
+<a name="formula2"></a> Rearranges the above equation
 
 $\dfrac{T}{S} = \dfrac{I}{A} + \underbrace{\dfrac{R}{S}}_{(1)} \overbrace{\Big( \underbrace{\dfrac{I}{A}}_{(2)} + \underbrace{\dfrac{U}{R}}_{(3)} \Big)}^{(4)}$
 
@@ -50,7 +105,7 @@ Increased insurance leverage results in increased variability in returns $\Right
 
 ## Optimal Capital Structure
 
-**Optimal Capital Structure**:  
+<a name="optimal"></a> **Optimal Capital Structure**:  
 Mix of equity & liabilities that maximize the value of the firm
 
 Factors that impact value of the firm:
@@ -64,13 +119,13 @@ $\hookrightarrow$ Mix of equity & liabilities impact both
 
 Writing more business $\Rightarrow$ Growing the reserves has both (+) and (-) impact on the value of the company
 
-To determine the optimal capital structure
+<a name="determine"></a> To determine the optimal capital structure
 
 * Determine expected relationship between $\dfrac{I}{A}$ and $\dfrac{U}{R}$ and the resulting impact on the expected earning stream of writing more business
 
 * Determine the increased probability of unfavorable result due to the higher volatility and resulting impact on insurer value due to higher discount rates
 
-Additional complexity for insurer
+<a name="complex"></a> Additional complexity for insurer
 
 * Accounting for reserves is more complicated than accounting for debt
 * Increased level of reserve does not necessarily implies a higher amount of premium written
@@ -100,6 +155,8 @@ Ferrari's conclusions were derived by focusing on certain variables while holdin
 
 However we need to consider interactions between variables
 
+<a name="interaction"></a>
+
 1. $\uparrow \dfrac{P}{S} \longrightarrow \; \downarrow \dfrac{I}{A}$
 
     * Higher portion of surplus is from current business and is therefore in form of cash or agent's balances which can not be invested
@@ -121,3 +178,5 @@ However we need to consider interactions between variables
     * Looser u/w standards in order to grow
     
     * This relationship is not as strong, insurer can avoid this by maintaining current u/w-ing standards while growing
+    
+## Past Exam Questions
