@@ -279,6 +279,8 @@ Allocating all the capital would cause the firm to reject projects that would ad
 
 XS capital can then be allocated to the corporate level
 
+Slightly different from the incremental allocation mentioned in Goldfarb as this just leave some capital out and not allocate
+
 ### Myers-Read Method
 
 M-R looks at the marginal impact of very small changes to the loss liabilities (as opposed to adding entire LoB)
