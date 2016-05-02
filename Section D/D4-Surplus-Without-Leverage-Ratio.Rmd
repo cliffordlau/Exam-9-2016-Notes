@@ -11,6 +11,65 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Using leverage ratios to allocate surplus is flawed as not risk faced are related to the premium volume
+
+2 meaningful measure of surplus:
+
+* Required surplus for the insurance group
+* Required marginal surplus for a specific change in assets/liabilities/premiums
+
+What is [fair and reasonable](#fair) return and what is [adequate](#adequate) or [inadequate](#inadequate) return
+
+[Mutual vs stock](#mvs) insurer
+
+Resaonable return:
+
+* **Required surplus $\Delta$**:  
+= expense & claims inflation + increase demand + increase reserve
+
+* **Actual surplus $\Delta$**:  
+= retained return on capital + surplus paid in
+
+* **Required rate of return**:  
+= required surplus $\Delta$ + stock dividends - surplus paid in
+
+* **Actual rate of return**:  
+= stock dividends - retained return on capital
+
+* No stock dividends and surplus paid in for mutual
+
+Return is reasonable individual insurer as they each has a unique share price, which changes in response to the investor’s assessment of its risk and return
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Calculations**
+
+* 2000, Q10: required and actual RoR (back out the retained based on actual surplus $\Delta$ - surplus paid in)
+* [2001, Q15](#2001-15): required rate of return
+* 2002, Q25 a: rate of return calc just from income statement
+* 2003, Q19: change in surplus just from I/S
+* 2004, Q8: return of surplus
+* 2005, Q12: Change in surplus calc from I/S
+* 2007, Q14: required surplus change and likelihood of meeting requirement
+* 2008, Q13: require return for stock and mutual
+* $\star$ [2014, Q24](#2014-244): required change in surplus
+* 2015, Q24: actual rate of return and compare companies
+
+**Concepts**
+
+* 2000, Q11: Retain return of capital = actual surplus $\Delta$ - surplus paid in
+* 2002, Q4: No need to consider stock dividend for mutual
+* 2002, Q25 b c: [fair and reasonable](#fair) return
+* 2004, Q11: stock company doesn't need to consider divident to p/h
+* 2009, Q16: Risk sources for insurers
+* 2011, Q16: issues with allocation; risk sources; reasonable and fair
+* 2014, Q21: Issues for allocation by line or industry P/S ratio
+* $\star$ [2015, Q25](2015-25): rate of return and outlook
+
 ## Introduction
 
 Surplus allocation is required for regulators and IEE using **leverage ratios** ($\dfrac{R}{S}$) <span style="color:red">What is it here? P:S or R:S?</span>
@@ -60,17 +119,17 @@ Need to develop the total amount of risk based surplus for an insurer to account
 
 ### Fair & Reasonable Return
 
-Insurers are allowed to earn **fair & reasonable rate of return**
+<a name="fair"></a> Insurers are allowed to earn **fair & reasonable rate of return**
 
 * Return will be similar to that of other companies with similar risk
 * Return will be sufficient for the insurer to attract capital
 
-If the currently allowable return is **adequate** or there is a perception that returns are reasonable:
+<a name="adequate"></a> If the currently allowable return is **adequate** or there is a perception that returns are reasonable:
 
 * Industry attracts capital
 * New companies are being formed
 
-If the currently allowable return is **inadequate** or there is a perception that returns are not reasonable:
+<a name="inadequate"></a> If the currently allowable return is **inadequate** or there is a perception that returns are not reasonable:
 
 * Stockholder dividends > Capital inflow
 * Companies are leaving the market
@@ -80,6 +139,8 @@ Insurers are only require to have the *opportunity* to earn a reasonable return
 * Does not require that each insurer actually earns a reasonable return
 
 ## Mutual vs Stock Insurers
+
+<a name="mvs"></a>
 
 Mutual insurers: goal is to provide availability of insurance
 
@@ -99,6 +160,7 @@ Stock insurers need to increase surplus to fund:
 * Expense & claims inflation
 * $\uparrow$ in aggregate reserves
     * $\uparrow$ in aggregate deflated reserves: from growing and increase in reserve from loss development (<span style="color:red">Confirm</span>)
+    * Typically need to remove the effect of increase demand from the increase in reserve
 * $\uparrow$ demand for insurance
 * Dividends to stockholders
 
@@ -136,7 +198,7 @@ However, test is not necessary as these investors are receiving a fair and reaso
 
 * Each insurer has a unique share price, which changes in response to the investor's assessment of its risk and return $\Rightarrow$ Return is reasonable
 
-Stronger firm (higher Market:Book and P/E ratio) the higher the MV
+Stronger firm (higher Market/Book and P/E ratio) the higher the MV
 
 Return on market is the return investors demand to invest in the shares
 
@@ -155,3 +217,30 @@ Return on book
     * Ratio of M:B is roughly the same as a benchmark ratio of companies from all industries combined
     
     * Actual return on book values derived above are close to the required rates of returns which were derived in an earlier table
+
+## Past Exam Problems
+
+<a name="2001-15"></a> 2001, Q15
+![alt text](questions/2001-15Q.png)
+![alt text](questions/2001-15A.png)
+
+<a name="2014-24"></a> 2014, Q24
+![alt text](questions/2014-24Q.png)
+![alt text](questions/2014-24A.png)
+
+<a name="2015-25"></a> 2015, Q25
+![alt text](questions/2015-25Q.png)
+
+a. Market/book:  
+indicate financial performance
+
+b. EPS:  
+indicate financial performance, closer to top quartile but forcaste down while while industry is trending up
+
+c. PE:  
+measure of investor confidence. closer to bottom
+
+d. return on book  
+Compare to answer from part 1 shows that they met the target, but not the forecast though; higher return on market indicates more risky
+
+Performance and outlook: good performance and uncertain future; good returns likely won't continue; average performance and not a good outlook
