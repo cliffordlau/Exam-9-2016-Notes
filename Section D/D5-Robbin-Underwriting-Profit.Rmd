@@ -11,6 +11,71 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+The 6 methods: procedure, assumptions and pros/cons
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**CY Offset**
+
+* 2002, Q21: cons of CY offset; when does it not work well
+* 2009, Q14 a: calc and distortion
+
+**CY ROE**
+
+* 2000, Q26: Calc; CY ROE vs CY offset
+* 2001, Q40: Calc; CY ROE vs CY offset
+* 2003, Q44: pros/cons; PY Offset fixed some of the issue
+* 2004, Q13: Calc
+* 2004, Q36: Backout ROE
+* 2006, Q17: @ breakeven (target RoR = risk free)
+* $\star$ 2007, Q18: PHSF needs to take out prepaid expense and receivable; Also get the reserve baed on ratio of reserve/incurred $\times$ Permissible LR
+* 2008, Q15: Calc; pros/cons
+* 2009, Q14 b: calc
+* 2010, Q12: Back out ROE; pros
+* 2011, Q20: Calc; pros/cons
+* 2013, Q17: Calc; risk is reflected in the ROE and P:S ratio
+
+**PV Offset**
+
+* 2001, Q43: Calc; pros/cons of using prior portfolio yield
+    * So PLR = 1 - exp% - u/w%
+* 2002, Q24: Calc; Premium; inputs
+    * Why is the Premium formula yeild different result from direct calc with the % from (a)
+* 2005, Q13: Calc; pros/cons
+* 2008, Q12: Calc; pros/cons
+* 2010, Q15: Calc
+* 2011, Q21: arithmatic; pros/cons
+* 2014, Q19: back out PLR; rate use
+
+**PV Cashflow**
+
+* 2012, Q18: Go through with the calc
+
+**Risk Adjusted Discounted Cashflow**
+
+* $\star$ [2003, Q42](#2003-42): Calc premium
+* 2003, Q45: Calc premium and pre tax income
+* 2007, Q19: Calc premium then u/w profit
+* 2010, Q10: Calc premium
+* $\star$ 2013, Q18: Need to back out the $\beta_l$; Also quite long
+
+**IRR**
+
+* 2001, Q39: Calc; GAPP and SAP should be similar for IRR
+* 2008, Q14: Calc; Can do Feldblum method
+
+**General Concepts**
+
+* 2005, Q14: Discount
+    * Discount PHSF at risk free as the insured is not bearing the risk and XS should goes to own for putting assets at risk
+    * Exclude investment income on surplus in ratemaking as surplus belon to insurer so p/h should not get credit; don't want to penalize insured
+* 2014, Q20: types of u/w profit; use stockholder funds because split is arbitrary
+* $\star$ 2015: Consideration with each method
+
 ## Underwriting Profit Provision
 <a name="uwprofit"></a>
 $P = \dfrac{\overbrace{(1+c)L}^{\text{L&LAE}} + Fix}{1-Var\% - U}$
@@ -117,9 +182,10 @@ Discount rate options:
 * Estimated portfolio yield for the year in which the rate will be in effect
 * New money yield (Prospective so more suitable)
 
-$U$ = 1 - Combined Ratio = $U^0$ - PLR $\times$ $\left( PV_{factor}[x^0] - PV_{factor}[Loss] \right)$
+$U$ = 1 - Combined Ratio = $U^0 - PLR \times$ $\left( PV_{factor}[x^0] - PV_{factor}[Loss] \right)$
 
 * PLR = Projected LR (or Permitted LR?)
+* This is just 1 iteration
 
 Proof:
 
@@ -137,7 +203,7 @@ $\begin{array}{ccc}
 **Advantages**
 
 * Accounts for investment income
-* Not distorted by rapid growth/ decline
+* Not distorted by rapid growth/ decline since it uses PLR which is prospective
 * No need to select a target return or allocate surplus
 
 **Disadvantage**
@@ -198,6 +264,7 @@ U/w-ing profit to achieve a target **present value return**: $\dfrac{\text{Prese
 * Discount using pre-tax risk free rate
     * We separately deduct tax
     * U/w profit provision should not depend on the investment strategy
+* Everything is investable (UPR + Reserve + Surplus - Receivable)
     
 **Advantages**
 
@@ -349,6 +416,7 @@ $i_r = i_f + \beta(i_m - i_f)$
 * Losses are discounted @ risk adjusted rate based on CAPM
 * Other components are discounted @ risk free
 * Everything is discounted to the **end of 1st year**
+* Only surplus is investible
 
 **Advantages**
 
@@ -445,7 +513,7 @@ Equity flow = Income - $\Delta$ Statutory Surplus
 
 | Time | Unearned Premium Reserve | Loss Reserve | Expense Reserve | SAP Surplus | Premium Receivable | Investable Assets | Average Investable Assets | Investment Income |
 | :--: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| (1) | (2) | (3) | (4) | (5) | (6) | (7) = (3) + (4) - (5) - (6) | (8) = (7) $\times$ (1 - $t_u$) | (9) |
+| (1) | (2) | (3) | (4) | (5) | (6) | (7) = (3) + (4) + (5) - (6) | (8) = (7) $\times$ (1 - $t_u$) | (9) |
 
 1) Assumption, could be quarterly, start from 0
 2) Based on pattern consistent with u/w-ing income table
@@ -509,3 +577,8 @@ Constrained free market theory
 * Premium will move to an optimal level (from the initial starting point: the manual rates) via market forces
 * Direct regulation is not necessary
 
+## Past Exam Questions
+
+<a name="2003-42"></a> 2003, Q42
+![alt text](questions/2003-42Q.png)
+![alt text](questions/2003-42A.png)
