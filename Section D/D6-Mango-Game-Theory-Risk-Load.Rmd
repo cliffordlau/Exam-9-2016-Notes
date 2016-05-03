@@ -11,7 +11,61 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+The [basic](#relationship) expected value and variance formula
+
+MS Method
+
+$r = \underbrace{\dfrac{y}{1+y} z}_{\text{Multiplier}} \cdot \underbrace{(S_1 - S_0)}_{\text{Marginal }\sigma}$
+
+MV Method
+
+$\begin{array}{cccc}
+  r &= &\underbrace{\overbrace{\dfrac{y}{1+y} z}^{\text{MS Multiplier}} \dfrac{1}{\underbrace{\sqrt{\operatorname{Var}(L + n)}}_{S_1}}}_{\text{Multiplier }\lambda} \cdot &\underbrace{\left[\operatorname{Var}(L+n) - \operatorname{Var}(L)\right]}_{\text{Marginal }\sigma^2} \\
+  &= &\lambda &\left[ \operatorname{Var}(n) - 2\operatorname{Cov}(L,n)\right] \\
+\end{array}$
+
+Renewal:
+
+* MS renewal is lower than build up
+* MV renewal is higher than build up (double counting the COV)
+
+Covariance share:
+
+* Shapely Value = $\operatorname{Var}(n) + \sum \limits_{\in L}\operatorname{Cov}(L,n)$
+* Covariance Share: $2 \sum_i X_i \cdot Y_i \cdot p_i \cdot (1 - p_i) \cdot \dfrac{Y_i}{X_i + Y_i}$
+
+Game Theory
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2004, Q34: Renewal additivity
+* 2006, Q19: renewal additivity; method ignore parameter risk; MV is excessive
+* 2007, Q20: covariance share vs shapely
+* 2009, Q11: MS and MV not renewal additive; build up will be fine
+* 2009, Q12: MS MV
+* 2010, Q14: MV, covariane share; deferred risk load
+* 2011, Q17: Shapley co-share
+* $\star$ 2012, Q13: good long questions with concepts too
+* 2013, Q21: MS and subadditivity
+* $\star$ 2014, Q22: good long calc
+* 2015, Q27: allocation
+
+**Calculation**
+
+* 2005, Q19: MS risk load
+* 2006, Q20: MS risk load
+* 2007, Q23: MS and MV
+* 2008, Q11: Shapely and Covariance share
+
 ## Introduction
+
+<a name="relationship"></a>
 
 For portfolio $L$:
 
@@ -254,3 +308,5 @@ Application of game theory to the risk loads discussion:
 
 * Player want to minimize the allocation of the total risk load
 * Allocation method needs to fairly & objectively assign the risk load to each account in proportion to its contribution to the total (e.g. loss amount)
+
+## Past Exam Questions
