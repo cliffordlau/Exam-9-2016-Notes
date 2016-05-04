@@ -11,6 +11,59 @@ output:
     toc_depth: 4
 ---
 
+## Cliff's Summary
+
+Premium:  
+$P = R + \dfrac{\mu_L}{1 + r_f}$
+
+Constraints:
+
+1) **Loss safety constraint**: $(1+ r_f)F \geq s$
+2) **Investment yield constraint**: $\sigma_i \leq \sigma_y$
+
+Swaps:
+
+$R = A \dfrac{y - r_f}{1+r_f}$
+
+$A \geq \dfrac{s - \mu_L}{1+y}$
+
+$A \geq \dfrac{\sigma_L}{\sigma_y}$
+
+Put:
+
+$A \geq \dfrac{s \cdot { \color{blue}{ \phi } } - \mu_L}{1+y}$
+
+* ${ \color{blue}{ \phi } } = \dfrac{1+i}{1+r_f}$
+
+$R = \dfrac{s[(1+y)(1+r) - (1+i)] - \mu_L (y-r_f)}{(1+r_f)(1+y)}$
+
+$R = A \dfrac{(1+r)(1+y) - (1+i)}{1+i} + \mu_L \left[ \dfrac{1+r}{1+i} - \dfrac{1}{1+r_f} \right]$
+
+Pick the higher of the constraint first then the method
+
+ROL for very high limit
+
+Simplifications of the model
+
+### Types of Exam Questions
+
+<span style="color:red">Haven't done TIA practice questions</span>
+
+**Concepts**
+
+* 2008, Q16: explain the swap and option method and the constraints
+* 2013, Q23: swap and option method; constraints
+
+**Calculation**
+
+* 2009, Q10: swaps calc
+* 2010, Q8: risk load for swap method
+* $\star$ 2012, Q15: swap method calculate the premium; Solve for A with given F amount
+* 2013, Q22: swap method for premium
+* 2014, Q23: straight calc for swaps
+* $\star$ 2015, Q26: ROL; put usually get lower ROL; minimum ROL
+    * charge for surplus and expense; risk load; free cover
+
 ## Introduction
 
 Risk load based on:
@@ -268,3 +321,5 @@ In multi year examples, it may be possible to recognize a degree of correlation 
 Pricing method in this paper biased high as it assume each risk is standalone
 
 * More accurate would be to consider the risk load of the whole book with and without the proposed contract
+
+## Past Exam Questions
