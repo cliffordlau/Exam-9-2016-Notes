@@ -433,11 +433,24 @@ Risk is lower than lending to a borrower with a high initial rating for the enti
 
 #### LIBOR/ Swap Zero Rate
 
-<span style="color:red">Not sure what this section is about </span>
+**Background**
 
-Swap rate is like IRR for the whole swap
+LIBOR is used for proxy for risk free but it only observable for maturities out to 12 months
 
-<span style="color:red">elaborate a little</span>
+Extending LIBOR:
+
+* Eurodollar futures can produce a d LIBOR zero curve out to 2 years (or 5 years)
+* Use Swap rates to extend LIBOR zero curve further $\leadto$ LIBOR zero curve or LIBOR swap curve
+
+**Extending LIBOR/ swap zero curve with swap rates**
+
+For bond with coupon = swap rate $\Rightarrow$ $B_{fix} = B_{fl}$ since value of the swap is worth zero
+
+Newly issued $B_{fl}$ = principal value (given that LIBOR/ swap zero is used for discounting)
+
+$\therefore$ Swap rate define a set of par yield bonds
+
+We can then use the bootstrap method to determine the LIBOR/ swap zero curve
 
 #### Valuation of Interest Rate Swaps
 

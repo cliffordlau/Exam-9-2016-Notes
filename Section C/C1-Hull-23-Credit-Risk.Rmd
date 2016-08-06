@@ -23,7 +23,7 @@ Estimate probability of default from bond price
 * More [accurate method](#bond-default-method)
 * Or use [asset swaps](#ass-swap)
 
-Risk-neutral vs reald world default probabilities and [reason](#rn-vs-rw) for difference
+Risk-neutral vs real world default probabilities and [reason](#rn-vs-rw) for difference
 
 * Know when to use which one
 
