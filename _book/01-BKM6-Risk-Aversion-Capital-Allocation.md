@@ -141,7 +141,7 @@ $\operatorname{E}[r_c] = r_f + \dfrac{\sigma_c}{\sigma_p}\left( \operatorname{E}
 
 <a name="CAL"></a>
 
-![](images/Exam-9-1.png)
+![alt text](Exam 9 - 1.png)
 
 Slop of CAL = $\left. \dfrac{\operatorname{E}[r_p] - r_f}{\sigma_p} \right \} \text{Sharpe Ratio} = \dfrac{\text{Incremental Return}}{\text{Unit of }\sigma}$
 
@@ -169,7 +169,7 @@ $y^* = \dfrac{\operatorname{E}[r_p] - r_f}{A\sigma^2_p}$
 
     * As higher $U$ will shift the curve upwards
 
-![](figures/Exam-9-2.png)
+![alt text](figures/Exam 9 - 2.png)
 
 **Proof** for $y^*$ equation:
 
@@ -204,22 +204,21 @@ CAL that uses a passive portfolio as the risky portfolio
 ## Past Exam Questions
 
 <a name="2003-3"></a> 2003, Q3
-![](questions/2003-3Q.png)
-![](questions/2003-3A.png)
-
+![alt text](questions/2003-3Q.png)
+![alt text](questions/2003-3A.png)
 
 <a name="2003-4"></a> 2003, Q4
-![](questions/2003-4Q.png)
-![](questions/2003-4A.png)
+![alt text](questions/2003-4Q.png)
+![alt text](questions/2003-4A.png)
 
 <a name="2009-1"></a> 2009, Q1
-![](questions/2009-1Q.png)
-![](questions/2009-1A.png)
+![alt text](questions/2009-1Q.png)
+![alt text](questions/2009-1A.png)
 
 <a name="2011-1"></a> 2011, Q1
-![](questions/2011-1Q.png)
-![](questions/2011-1A.png)
+![alt text](questions/2011-1Q.png)
+![alt text](questions/2011-1A.png)
 
 <a name="2012-1"></a> 2012, Q1
-![](questions/2012-1Q.png)
-![](questions/2012-1A.png)
+![alt text](questions/2012-1Q.png)
+![alt text](questions/2012-1A.png)

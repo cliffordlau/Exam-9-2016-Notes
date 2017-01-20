@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html">
+<link rel="prev" href="a5-bkm10-arbitrage-pricing-theory.html">
+<link rel="next" href="a7-bkm12-behavioral-finance.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -281,27 +281,254 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CAS Exam 9 Study Notes</h1>
-<h4 class="author"><em>Cliff Lau</em></h4>
-<h4 class="date"><em>2017-01-19</em></h4>
+<div id="a6-bkm11-efficient-market-hyothesis" class="section level1">
+<h1><span class="header-section-number">Module 7</span> A6 BKM11: Efficient Market Hyothesis</h1>
+<p>Z. Bodie, A. Kane, A. Marcus</p>
+<div id="cliffs-summary-5" class="section level2">
+<h2><span class="header-section-number">7.1</span> Cliff’s Summary</h2>
+<p>3 <a href="#EMH-forms">forms</a> of EMH and <a href="#EMH-implications">implications</a></p>
+<p>Event studies and the <a href="#event-diff">difficulties</a></p>
+<p><a href="#efficient-diff">Difficulties</a> in assessing whether the market is efficient</p>
+<ul>
+<li><p>Also the test should be risk adjusted which is also difficult</p></li>
+<li><p><a href="#EMH-3-forms-test">Test</a> for the 3 forms of EMH</p>
+<ul>
+<li>Efficient market anomalies</li>
+</ul></li>
+<li><p>Interpretation might be difficult too</p></li>
+<li><p>There is still perpose for portfolio management</p></li>
+</ul>
+<p>Look at performance of stock analyst and also mutual fund managers</p>
+<div id="types-of-exam-questions-5" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Types of Exam Questions</h3>
+<p><span style="color:red">Haven’t done TIA practice questions</span></p>
+<p><strong>Concepts</strong></p>
+<ul>
+<li>2003, Q14: passive investment strategy and why is it better under EMH</li>
+<li>2003, Q15: Small firm in jan and B:M ratio anomalies</li>
+<li>2004, Q10: 3 EMH; Technical analysis; EMH implication; ptf managment purpose</li>
+<li>2006, Q8: Anomalies</li>
+<li>2007, Q5: semi-strong, anomalies</li>
+<li>2008, Q5: 3 EMH; price drift violate semi strong</li>
+<li>2008, Q7: Should not be persistent performance</li>
+<li>2010, Q1: value of portfolio managment; if everyone actually use the passive portfolio not price correction will happen</li>
+<li><span class="math inline">\(\star\)</span> <a href="#2012-3">2012, Q3</a>: 3 form of EMH; examples</li>
+<li><span class="math inline">\(\star\)</span> [2014, Q6](#2014-6: market anomalies based on data</li>
+</ul>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Module 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>For now, you have to install the development versions of <strong>bookdown</strong> from Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+</div>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">7.2</span> Introduction</h2>
+<p>Stock prices should reflect all available information</p>
+<p>New information relevant to the stock will cause the price to change and since new information is unpredictable, so is the movement of stock price (random walk process)</p>
+<p><a name="EMH-forms"></a> 3 versions of EMH</p>
+<ul>
+<li><p><strong>Weak form</strong>: Reflect all information that can be derived from examining market (trading) data</p></li>
+<li><p><strong>Semi-strong form</strong>: Reflect all publicly available information about the firm’s prospects</p></li>
+<li><p><strong>Strong form</strong>: Reflect all information relevant to the firm including non-public information</p></li>
+</ul>
+<p>All 3 versions pertain only to information available</p>
+</div>
+<div id="implication-of-emh" class="section level2 tabset">
+<h2><span class="header-section-number">7.3</span> Implication of EMH</h2>
+<p><a name="EMH-implications"></a></p>
+<p>If EMH holds, it’ll impact the following investment strategies</p>
+<div id="technical-analysis" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Technical Analysis</h3>
+<p>Technical analysis search for predictable patterns of stock prices to used to derive a profit from trading</p>
+<p>Rely on sluggish response of the stock price to fundamental factors and exploit the trend</p>
+<ul>
+<li>Uses metrics such as: <em>Resistence levels</em> (levels above prices should not rise); <em>Support levels</em> (levels below which prices should not fall)</li>
+</ul>
+<p>Can only be successful if markets are not efficient in weak form of EMH</p>
+</div>
+<div id="fundamental-analysis" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Fundamental Analysis</h3>
+<p>Uses the fundamentals of a firm to determine the appropriate prices</p>
+<p>Try to gain insight into future performance that is not yet reflected by the market</p>
+<ul>
+<li>Earning &amp; dividend prospects; Future interest rate expectations; risks</li>
+</ul>
+<p>Semi-strong form of EMH states that it will not work unless investors have a unique insight</p>
+</div>
+<div id="active-vs-passive-managment" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> Active vs Passive Managment</h3>
+<p>Takes a lot of effort and cost to gain unique insight</p>
+<p>For smaller investors cost will be &gt; benefits</p>
+<p>Should resort to passive investments or mutual funds and ETFs</p>
+<p>EMH advocates believe that stocks are priced fairly which means buy and sell frequently is pointless</p>
+</div>
+</div>
+<div id="event-studies" class="section level2 tabset">
+<h2><span class="header-section-number">7.4</span> Event Studies</h2>
+<p><a name="event-diff"></a> <strong>Event study</strong>: To determine the importance of an event by measuring the resulting price changes</p>
+<ul>
+<li>Since price changes reflect new information</li>
+</ul>
+<p>2 difficulties with these studies:</p>
+<ol style="list-style-type: decimal">
+<li>Market movement</li>
+<li>Leakage</li>
+</ol>
+<div id="market-movement" class="section level3">
+<h3><span class="header-section-number">7.4.1</span> Market Movement</h3>
+<p>Stock price may respond to a wide range of economic news in addition to the event</p>
+<p><strong>Abnormal return</strong> = Actual return - benchmark return</p>
+<ul>
+<li>Need to calculate a proxy for what the return would have been in absence of the event (benchmark return)</li>
+</ul>
+<p>Several methods to calculate the benchmark:</p>
+<ul>
+<li>Market return</li>
+<li>Return of the stock implied by CAPM</li>
+<li>Return of the stock implied by index model (<span class="math inline">\(e_t =\)</span> abnormal return)</li>
+</ul>
+</div>
+<div id="leakage" class="section level3">
+<h3><span class="header-section-number">7.4.2</span> Leakage</h3>
+<p>Information about the event maybe leaked prior and price maybe begin to move before the event</p>
+<p>Maybe more appropriate to measure the impact of the event by referring to the cumulative abnormal return</p>
+<ul>
+<li>Beginning at a time period before the actual event is made public</li>
+</ul>
+</div>
+</div>
+<div id="are-market-efficient" class="section level2">
+<h2><span class="header-section-number">7.5</span> Are Market Efficient?</h2>
+<p><a name="efficient-diff"></a> Difficulties in determining if the markets are truly efficient:</p>
+<p><strong>Magnitude Issue</strong>: 0.1% of a huge portfolio will be a big dollar term contribution but very small compared to the normal volatility of the market <span class="math inline">\(\Rightarrow\)</span> Hard to assess how much the manager actually contributed</p>
+<p><strong>Selection Bias Issue</strong>: Investment scheme that are known by others will no longer generate abnormal returns <span class="math inline">\(\Rightarrow\)</span> Only schemes that do not work will be reported</p>
+<p><strong>Lucky Event Issue</strong>: The number of investors is so large so that just by chance some will have to make huge returns</p>
+<div id="tests-of-different-emh-forms" class="section level3 tabset">
+<h3><span class="header-section-number">7.5.1</span> Tests of Different EMH Forms</h3>
+<p><a name="EMH-3-forms-test"></a> Tests can be constructed for each version of EMH</p>
+<div id="weak-form-tests" class="section level4">
+<h4><span class="header-section-number">7.5.1.1</span> Weak-Form Tests</h4>
+<p>Patterns in stock returns</p>
+<p><strong>Returns over short horizons</strong></p>
+<ul>
+<li><p>Measure <em>serial correlation</em> of stock market returns to see whether investors can use historical trends to earn abnormal profits over the short term</p></li>
+<li><p>Results show only small correlations over short periods</p>
+<ul>
+<li>Exception being sectors with the best and worst returns exhibit stronger correlation, <em>momentum effect</em></li>
+</ul></li>
+</ul>
+<p><strong>Returns over long horizons</strong></p>
+<ul>
+<li><p>Similar to above but for longer term</p></li>
+<li><p>Results show negative correlation over the long term <span class="math inline">\(\Rightarrow\)</span> Fads hypothesis maybe</p></li>
+<li><p><span class="math inline">\(\hookrightarrow\)</span> A contrarian investment strategy may be profitable</p></li>
+</ul>
+<hr />
+</div>
+<div id="semi-strong-form-tests" class="section level4">
+<h4><span class="header-section-number">7.5.1.2</span> Semi-strong Form Tests</h4>
+<p>Efficient market anomalies</p>
+<p>Investigate whether publicly available information beyond the trading history can be used to generate abnormal returns</p>
+<p>Results show that some easily available diagnostics can be used to predict abnormal returns</p>
+<ul>
+<li><p><strong>Small firm in January effect</strong>: Small firms have historically generate superior returns particularly in January</p></li>
+<li><p><strong>Neglect firm effect</strong>: Some firms are neglected by large investors so less information is available. The superior returns might be due to additional premium required to compensate for the risk of less information</p></li>
+<li><p><strong>Book:Market ratios</strong>: High B:M firm have historically outperformed the rest</p></li>
+<li><p><strong>Post-earnings-announcement price drift</strong>: Cumulative abnormal return of stocks has been shown to continue to increase even after the information about the even become public</p></li>
+</ul>
+<p>Tests require the level of risk to be reflected <span class="math inline">\(\Rightarrow\)</span> Need to appropriately risk adjust the return, which can be more difficult than EMH itself</p>
+<hr />
+</div>
+<div id="strong-tests" class="section level4">
+<h4><span class="header-section-number">7.5.1.3</span> Strong Tests</h4>
+<p>Markets are not expected to be strong-form efficient, people with inside information should be able to make superior profits</p>
+<hr />
+</div>
+</div>
+<div id="intrepreting-the-evidence" class="section level3">
+<h3><span class="header-section-number">7.5.2</span> Intrepreting the Evidence</h3>
+<p>Results above might still not be sufficient to show that the market is inefficient:</p>
+<ul>
+<li><p>Properties are only proxies for fundamental determinants of risk</p></li>
+<li><p>Properties arise just due to data mining and many of the anomalies disappear after discovered</p></li>
+</ul>
+</div>
+<div id="role-of-portfolio-management" class="section level3">
+<h3><span class="header-section-number">7.5.3</span> Role of Portfolio Management</h3>
+<p>Portfolio management can still be beneficial in efficient market</p>
+<ul>
+<li>Helps selects a diversification strategy to eliminate firm risk</li>
+<li>Reflects tax considerations of the individual investors</li>
+<li>Adjust portfolio to reflect the unique risk profile of the investor</li>
+</ul>
+</div>
+<div id="resource-allocation" class="section level3">
+<h3><span class="header-section-number">7.5.4</span> Resource Allocation</h3>
+<p>Inefficient resource allocation, deviations from market efficiency will generate a cost to everyone</p>
+<p>e.g. firms with overpriced securities will be able to obtain capital too cheaply</p>
+</div>
+</div>
+<div id="mutual-fund-and-analyst-performance" class="section level2">
+<h2><span class="header-section-number">7.6</span> Mutual Fund and Analyst Performance</h2>
+<div id="stock-market-analysts" class="section level3">
+<h3><span class="header-section-number">7.6.1</span> Stock Market Analysts</h3>
+<p>Expect positive bias since they work for brokers</p>
+<ul>
+<li><p>Need to look at the relative strength of a recommendation compared to other analysts</p></li>
+<li><p>Or the change in recommendation of an analyst</p></li>
+</ul>
+<p>Study showed changes are associated with permanent change in stock prices <span class="math inline">\(\Rightarrow\)</span> Likely due to analyst’s insight</p>
+<ul>
+<li>Or instead the change is just due to the change in recommendation itself</li>
+</ul>
+<p>Another study indicates that firms with highest ratings do outperform those with the least favorable ratings</p>
+<ul>
+<li>However costs of trading would eliminate the additional profits</li>
+</ul>
+</div>
+<div id="mutual-fund-managers" class="section level3">
+<h3><span class="header-section-number">7.6.2</span> Mutual Fund Managers</h3>
+<p>No evidence that managers can consistently beat the market</p>
+<p>There are some evidence that indicates better managers in a period tend to be better managers in following periods</p>
+<p>Adjusts tests above for exposure to systematic risk factors</p>
+<ul>
+<li><p>e.g. Risk adjust return XS of CAPM indication</p></li>
+<li><p>But market index may not be an adequate benchmark as managers may have significant holdings in small firms that’s not represented in the market index</p></li>
+</ul>
+<p><strong>4 Factor Fama French Model</strong></p>
+<p>Benchmark return with 3 Fama French factors model + momentum factor <span class="math inline">\(\Rightarrow\)</span> Fund have not been shown to exceed this benchmark</p>
+<p>The 4 factor model also only show minor persistence in mutual fund performance, mostly due to expenses and transaction costs</p>
+<p>Another test from Bollen &amp; Busse was to rank mutual fund to decile and track results in the following quarters</p>
+<ul>
+<li>Results showed only small persistence that is not sufficient to justify performance chasing</li>
+</ul>
+<hr />
+<p>Argument supporting the lack of persistence is that fund that had good performance will attract new funds, driving the alpha down due to the additional cost &amp; complexity of managing the new funds</p>
+<p>Study of bond fund indicate that the bond fund under perform the passive indexes by the expense amount and with no persistence in performance <span class="math inline">\(\Rightarrow\)</span> Bond market is efficient</p>
+</div>
+</div>
+<div id="past-exam-questions-5" class="section level2">
+<h2><span class="header-section-number">7.7</span> Past Exam Questions</h2>
+<p><a name="2012-3"></a> 2012, Q3 <img src="questions/2012-3Q.png" alt="alt text" /></p>
+<ol style="list-style-type: lower-alpha">
+<li><ul>
+<li>Weak form reflect all past market trading data. Technical analysis can’t generate XS returns</li>
+<li>Semi strong: price reflect all public information, fundamental analysis won’t benefit</li>
+<li>Strong form: all information is reflected. Unlikely this hold so fundamental analysis could work with non public information</li>
+</ul></li>
+<li><ul>
+<li>Lucky event: 50% for each of the 3 years is not impossible</li>
+<li>Wide variance in return and small difference, might just be random</li>
+<li>Companys might be taking on more risk to achieve higher returns</li>
+</ul></li>
+</ol>
+<p><a name="2014-6"></a> 2014, Q6 <img src="questions/2014-6Q.png" alt="alt text" /> <img src="questions/2014-6Q.png" alt="alt text" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="a5-bkm10-arbitrage-pricing-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a7-bkm12-behavioral-finance.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

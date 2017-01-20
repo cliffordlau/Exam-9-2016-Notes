@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html">
+<link rel="prev" href="a4-bkm9-capital-asset-pricing-model.html">
+<link rel="next" href="a6-bkm11-efficient-market-hyothesis.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -281,27 +281,214 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CAS Exam 9 Study Notes</h1>
-<h4 class="author"><em>Cliff Lau</em></h4>
-<h4 class="date"><em>2017-01-19</em></h4>
+<div id="a5-bkm10-arbitrage-pricing-theory" class="section level1">
+<h1><span class="header-section-number">Module 6</span> A5 BKM10: Arbitrage Pricing Theory</h1>
+<p>Z. Bodie, A. Kane, A. Marcus</p>
+<div id="cliffs-summary-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Cliff’s Summary</h2>
+<p>Factor model (single, multi)</p>
+<ul>
+<li>Multifactor SML (how is this derived?)</li>
+</ul>
+<p><a href="#famma">Fama French Three Factor</a></p>
+<ul>
+<li>Small minus big stocks</li>
+<li>High minus low book:market ratio</li>
+<li>Market index</li>
+<li>The formula adds the <span class="math inline">\(\alpha\)</span> instead of <span class="math inline">\(r_f\)</span> like CAPM</li>
+</ul>
+<p><strong>Arbitrage</strong>:<br />
+Opportunity to earn 1) risk-less profit 2) without need to make a net investment</p>
+<p><strong>Law of one price</strong>:<br />
+Two assets with equivalent economical aspects should have the same market price</p>
+<p><strong>APT Assumptions</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Security returns can be described by a factor model</p></li>
+<li><p>There are a sufficient number of securities to diversify away idiosyncratic risk</p></li>
+<li><p>Well functioning securities markets do not allow for persistence of arbitrage opportunities</p></li>
+</ol>
+<p>2 ways to reach <a href="#equil">equilibrium</a></p>
+<p>Know how to execute an arbitrage opportunity</p>
+<p><a href="#APT-v-CAPM">APT vs CAPM</a></p>
+<p><a href="#TB">Treynor Black Model</a> for optimal risky if arbritrage is identified so not to be over exposed to residual risk</p>
+<div id="types-of-exam-questions-4" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Types of Exam Questions</h3>
+<p><span style="color:red">Haven’t done TIA practice questions</span></p>
+<p><strong>Concepts</strong></p>
+<ul>
+<li>2006, Q9: Famma French additional factors</li>
+<li><span class="math inline">\(\star\)</span> 2011, Q2: arbitrage equilibirum; risk return dominance</li>
+<li><span class="math inline">\(\star\)</span> <a href="#2015-6">2015, Q6</a>: FF model and behavioral</li>
+</ul>
+<p><strong>Arbitrage opportunity</strong></p>
+<ul>
+<li>2000, Q13: structure an arbitrage opportunity</li>
+<li>2003, Q13 b: structure arbitrage</li>
+</ul>
+<p><strong>Factor Model</strong></p>
+<ul>
+<li>2001, Q32: expected XS return and weighted <span class="math inline">\(\beta\)</span></li>
+<li>2003, Q13 a: expected return</li>
+<li>2004, Q9: arithmetic to back out factors from 2 equations</li>
+<li>2006, Q7: factor model arithmetic</li>
+<li>2008, Q4: factor model arithmetic</li>
+<li>2009, Q4: factor model arithmetic</li>
+</ul>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Module 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>For now, you have to install the development versions of <strong>bookdown</strong> from Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+</div>
+<div id="factor-models" class="section level2">
+<h2><span class="header-section-number">6.2</span> Factor Models</h2>
+<p>Similar to the index model but focus on individual risks rather than using market as proxy</p>
+<ul>
+<li>Index model implicitly assumes that the security has the same relative sensitivity to each risk factor that is represented by <span class="math inline">\(M\)</span></li>
+</ul>
+<div id="single-factor-model-1" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Single Factor Model</h3>
+<p>Recall from BKM8, return based on a single factor <span class="math inline">\(F\)</span>:</p>
+<p><span class="math inline">\(r_i = \operatorname{E}[r_i] + \beta_i F + e_i\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F\)</span>: deviation of a factor from is expected value</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> sensitivity of the security return to the factor</p></li>
+</ul>
+</div>
+<div id="multifactor-model" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Multifactor Model</h3>
+<p>Add additional factors to account for varying sensitivities to different factors</p>
+<p><span class="math inline">\(r_i = \operatorname{E}[r_i] + \sum \limits_{j=1}^n \beta_{ij} F_j + e_i\)</span></p>
+<p>Impact of actual return = <span class="math inline">\(\beta_i F\)</span> where <span class="math inline">\(F\)</span> is the actual - expected</p>
+<div id="multifactor-sml" class="section level4">
+<h4><span class="header-section-number">6.2.2.1</span> Multifactor SML</h4>
+<p>Calculate the risk premiums for the risk factors with a <strong>factor portfolio</strong></p>
+<ul>
+<li>Portfolio that have <span class="math inline">\(\beta = 1\)</span> for which the risk premium is being measured, else <span class="math inline">\(\beta = 0\)</span></li>
+</ul>
+<p><span class="math inline">\(\operatorname{E}[r_i] = r_f + \sum \limits_{j=1}^n \beta_{ij} \left( \operatorname{E}[r_j] -r_f \right)\)</span> <span style="color:red">Where is this from?</span></p>
+</div>
+</div>
+<div id="fama-french-three-factor-model" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Fama French Three Factor Model</h3>
+<p><a name="famma"></a></p>
+<p>Uses firm characteristics that seem to be proxy for exposure to systematic risk</p>
+<p><span class="math inline">\(R_{it} = \alpha_i + \beta_{iM}R_{Mt} + \beta_{iSMB}SMB_t + \beta_{iHML}HML_t + e_{it}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(SMB\)</span> = return of a portfolio of small stocks in XS of portfolio of large stocks</p></li>
+<li><p><span class="math inline">\(HML\)</span> = return of a portfolio of high <span class="math inline">\(\frac{\text{book}}{\text{market}}\)</span> in XS of portfolio of low <span class="math inline">\(\frac{\text{book}}{\text{market}}\)</span> stocks</p></li>
+<li><p>Include market index as well to include systematic risk from macroeconomic factors</p></li>
+</ul>
+<p>The 2 additional factors maybe acting as proxies for something fundamental</p>
+<ul>
+<li><p>Measure some of the systematic risk not captured by only using the market portfolio</p></li>
+<li><p>F-F not necessarily thought small firms or high B:M had better returns</p></li>
+</ul>
+<p><strong>Problem with FF model</strong>: It is derived from empirical evidence, and none of the factors can be identified as hedging a specific source of uncertainty</p>
+<ul>
+<li>Pattern might be purely due to chance</li>
+</ul>
+</div>
+</div>
+<div id="arbitrage-pricing-theory" class="section level2">
+<h2><span class="header-section-number">6.3</span> Arbitrage Pricing Theory</h2>
+<p><strong>Arbitrage</strong>:<br />
+Opportunity to earn 1) risk-less profit 2) without need to make a net investment</p>
+<p><strong>Law of one price</strong>:<br />
+Two assets with equivalent economical aspects should have the same market price</p>
+<p><strong>APT Assumptions</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Security returns can be described by a factor model</p></li>
+<li><p>There are a sufficient number of securities to diversify away idiosyncratic risk</p></li>
+<li><p>Well functioning securities markets do not allow for persistence of arbitrage opportunities</p></li>
+</ol>
+<div id="equilibrium" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Equilibrium</h3>
+<p><a name="equil"></a></p>
+<p>Market prices change to eliminate arbitrage opportunities and reach equilibrium when the opportunity disappears</p>
+<p><strong>Risk return dominance</strong><br />
+Many investors will make limited changes to their portfolio (depending on risk aversion) and the cumulative changes from sufficient volumes move the market price</p>
+<p><strong>Arbitrage</strong><br />
+Investor who discovers the arbitrage will maximize his position to maximize profits so lower number of investors are needed to move prices back to equilibrium</p>
+</div>
+<div id="impact-of-diversification" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Impact of Diversification</h3>
+<p>Return of portfolio with <span class="math inline">\(n\)</span> stocks using single factor model <span class="math inline">\(r_p = \operatorname{E}[r_p] + \beta_p F + e_p\)</span></p>
+<p><span class="math inline">\(\sigma^2(e_p) = \dfrac{\sigma^2(e_i)}{n}\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\underbrace{\lim \limits_{n \rightarrow \infty} \sigma^2(e_p) = 0}_{\text{diversification}}\)</span></p>
+<p><span class="math inline">\(\hookrightarrow\)</span> After diversification <span class="math inline">\(r_p = \operatorname{E}[r_p] + \beta_p F\)</span> as the non factor risk can be diversified away and security will only receive risk premium for the factor risk</p>
+<div class="figure">
+<img src="figures/Exam%209%20-%2010.png" alt="alt text" />
+<p class="caption">alt text</p>
+</div>
+</div>
+<div id="executing-arbitrage" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Executing Arbitrage</h3>
+<p>Given 2 well diversified portfolio <span class="math inline">\(M\)</span> and <span class="math inline">\(P\)</span> that has (+) <span class="math inline">\(\alpha\)</span></p>
+<p>Construct <span class="math inline">\(Z\)</span> a zero beta portfolio with <span class="math inline">\(M\)</span> and <span class="math inline">\(P\)</span></p>
+<p><span class="math inline">\(\beta_Z = w_p \beta_p + (1-w_p)\beta_M = 0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(w_p = \dfrac{1}{1-\beta_p}\)</span></p>
+<p><span class="math inline">\(\hookrightarrow\)</span> <span class="math inline">\(Z\)</span> is riskless since no residual risk from diversification and 0 systematic risk from <span class="math inline">\(\beta\)</span></p>
+<p><span class="math inline">\(\operatorname{E}[R_z] = \alpha_Z = w_p \alpha_p = \dfrac{\alpha_p}{1 - \beta_p}\)</span></p>
+<ul>
+<li><p>If <span class="math inline">\(\beta_p &lt; 1\)</span>, borrow money and invest in <span class="math inline">\(Z\)</span> to make a risk free profit</p></li>
+<li><p>If <span class="math inline">\(\beta_p &gt; 1\)</span>, short <span class="math inline">\(Z\)</span> and invest in risk free</p></li>
+</ul>
+</div>
+<div id="no-arbitrage-equation" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> No-Arbitrage Equation</h3>
+<p>Return of well diversified portfolio with APT <span class="math inline">\(\operatorname{E}[R_p] = \alpha_p + \beta_p \operatorname{E}[R_M]\)</span></p>
+<p><span class="math inline">\(\Downarrow\)</span> No arbitrage, <span class="math inline">\(\alpha = 0\)</span></p>
+<p>APT SML: <span class="math inline">\(\operatorname{E}[R_p] = \beta_p \operatorname{E}[R_M]\)</span></p>
+<ul>
+<li>Same as CAPM SML</li>
+</ul>
+<p>For APT, there can not be 2 parallel APT SML as that would mean one to be dominant over the other and investor can produce arbitrage opportunity</p>
+</div>
+<div id="apt-vs-capm" class="section level3">
+<h3><span class="header-section-number">6.3.5</span> APT vs CAPM</h3>
+<p><a name="APT-v-CAPM"></a></p>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Based on diversified portfolio <span class="math inline">\(\Rightarrow\)</span> 0 residual risk</p></li>
+<li><p>If residual risk is sufficiently high, cannot have full confidence in APT</p></li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li><p>Does not reply on mean-variance optimizers assumption</p></li>
+<li><p>Does not require an all inclusive portfolio</p></li>
+</ul>
+</div>
+<div id="optimization-in-a-single-index-market" class="section level3">
+<h3><span class="header-section-number">6.3.6</span> Optimization in a Single Index Market</h3>
+<p>APT indicates how to generate infinite profit if risk premium of well diversified portfolio differs from the SML</p>
+<ul>
+<li>If arbitrage portfolio not perfectly well diversified, increasing the size of an investment to take advantage of an arbitrage opportunity will also increase the risk of the arbitrage position</li>
+</ul>
+<p><a name="TB"></a> <strong>Treynor-Black Model</strong></p>
+<p>To construct an optimal risky portfolio based on identified underpriced asset or portfolio under a single factor market</p>
+<ul>
+<li><p>Model produces an optimal risky portfolio if there is residual risk</p></li>
+<li><p>More flexible that APT in reflecting residual risk that may exist</p></li>
+</ul>
+</div>
+</div>
+<div id="past-exam-questions-4" class="section level2">
+<h2><span class="header-section-number">6.4</span> Past Exam Questions</h2>
+<p><a name="2015-6"></a> 2015, Q6 <img src="questions/2015-6Q.png" alt="alt text" /></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Ignore <span class="math inline">\(\beta\)</span> since it’s the same; A because highest B:M value and lower MV</p></li>
+<li></li>
+</ol>
+<ul>
+<li>Small firm ignored by large investors due to regret avoidance, require higher return due to less information and unconventional choice</li>
+<li>Forecast error, more weight in recent performance of glamour firm</li>
+<li>Smaple size neglect, tend to infer too quickly and extrapolate price of low B:V too high</li>
+</ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="a4-bkm9-capital-asset-pricing-model.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a6-bkm11-efficient-market-hyothesis.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

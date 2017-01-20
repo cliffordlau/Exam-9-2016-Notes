@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html">
+<link rel="prev" href="a3-bkm8-index-models.html">
+<link rel="next" href="a5-bkm10-arbitrage-pricing-theory.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -281,27 +281,342 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CAS Exam 9 Study Notes</h1>
-<h4 class="author"><em>Cliff Lau</em></h4>
-<h4 class="date"><em>2017-01-19</em></h4>
+<div id="a4-bkm9-capital-asset-pricing-model" class="section level1">
+<h1><span class="header-section-number">Module 5</span> A4 BKM9: Capital Asset Pricing Model</h1>
+<p>Z. Bodie, A. Kane, A. Marcus</p>
+<div id="cliffs-summary-3" class="section level2">
+<h2><span class="header-section-number">5.1</span> Cliff’s Summary</h2>
+<p>Know the CAPM assumptions</p>
+<ul>
+<li><a href="#behav-ass">Behavioral assumptions</a></li>
+<li><a href="#market-ass">Market assumptions</a></li>
+</ul>
+<p>Normative (test assumptions) and positive (examines prediction) model testing</p>
+<p>Be familiar of the CAPM proof</p>
+<p><a href="#SML">SML</a> (and compare to CML)</p>
+<p>CAPM test and <a href="#CAPM-test-caveat">caveats</a> to the results</p>
+<p><strong>CAPM Extensions</strong></p>
+<p>Zero <span class="math inline">\(\beta\)</span></p>
+<ul>
+<li>Slopt of <span class="math inline">\(SML_{zb} &lt; SML_{reg}\)</span></li>
+</ul>
+<p>Non-traded assets</p>
+<ul>
+<li><p>Portfolio of traded assets that hedge the private business will be bid up <span class="math inline">\(\Rightarrow\)</span> (-) <span class="math inline">\(\alpha\)</span> under standard CAPM</p></li>
+<li><p>Labor intensive firms will have lower demand <span class="math inline">\(\Rightarrow\)</span> (+) <span class="math inline">\(\alpha\)</span> in traditional CAPM</p></li>
+</ul>
+<p>Multiperiod CAPM</p>
+<ul>
+<li><p>Hedge portfolios on the additional sources of risk to arise from longer horizon will be bid up</p>
+<ul>
+<li>Assets that have higher return during periods of adverse economic environment will be bid up</li>
+<li>Bid up prices of assets that hedge the increases in prices of consumption goods (inflation protection)</li>
+</ul></li>
+</ul>
+<p>Consumption CAPM</p>
+<ul>
+<li><p>Assets with (+) covariance with consumption growth (higher payoff when consumption is already high) are viewed as riskier <span class="math inline">\(\Rightarrow\)</span> Risk premium higher</p></li>
+<li><p><span class="math inline">\(\operatorname{E}[R_i] = \beta_{iC}RP_C\)</span></p></li>
+</ul>
+<p>Liquidity Adjustment</p>
+<ul>
+<li><p>Demand additional return on liquidity risk</p></li>
+<li><p>Can be adjusted with liquidity <span class="math inline">\(\beta\)</span> that reflects the sensitivity of the return of the security to changes in market liquidity</p></li>
+</ul>
+<div id="types-of-exam-questions-3" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Types of Exam Questions</h3>
+<p><span style="color:red">Haven’t done TIA practice questions</span></p>
+<p><strong>Concepts</strong></p>
+<ul>
+<li>2002, Q11: meaning of the <span class="math inline">\(\beta\)</span></li>
+<li>2003, Q11: draw stock with (+) <span class="math inline">\(\alpha\)</span> with the SML</li>
+<li>2004, Q5: CAPM assumptions</li>
+<li>2004, Q7: zero <span class="math inline">\(\beta\)</span> CAPM</li>
+<li>2008, Q3: Interpretation of plot of XS stock return vs XS market and also variability around the line</li>
+<li>2010, Q4: CAPM assumptions on wealth, tax, human capital (ignored, not public), future cash flow expectations(homogenous), portfolio selection (MV optimizers)</li>
+<li>2011, Q3: <span class="math inline">\(\alpha\)</span> should center around 0 in a bunch of stocks</li>
+<li><span class="math inline">\(\star\)</span> 2013, Q4: impact of selling market portfolio and by single stock with <span class="math inline">\(\beta = 0.75\)</span>
+<ul>
+<li>Reduce systematic risk but significant increase non systematic risk, risk increase over all</li>
+<li>Expected return should fall as well as CAPM dictates that return only rewards systematic risk</li>
+</ul></li>
+<li>2014, Q3: Empirical and implied SML and that for stock above the SML is a better buy</li>
+</ul>
+<p><strong>Calculations</strong></p>
+<ul>
+<li>2005, Q8: Calculate <span class="math inline">\(\beta\)</span> based on quarterly return of stock and market</li>
+<li>2005, Q12: back out numbers with CAPM</li>
+<li><span class="math inline">\(\star\)</span> 2006, Q6: Back out <span class="math inline">\(\beta\)</span> then <span class="math inline">\(\alpha\)</span> then SML
+<ul>
+<li>Assume there is <span class="math inline">\(\alpha\)</span> is the expected return is based on analysis</li>
+<li>Need to assume equal change of scenarios for the <span class="math inline">\(\alpha\)</span> to make sense?</li>
+</ul></li>
+<li><span class="math inline">\(\star \star\)</span> <a href="#2015-4">2015, Q4</a>: Long questions
+<ul>
+<li>Expected return</li>
+<li>Arbitrage with 0 variance portfolio</li>
+</ul></li>
+<li><span class="math inline">\(\star\)</span> 2015, Q5: zero beta CAPM, assumptions and properties</li>
+</ul>
+<p><strong>Plug and Play</strong></p>
+<ul>
+<li>2003, Q10: return of a portfolio (sum up the <span class="math inline">\(\beta\)</span>’s)</li>
+<li>2004, Q6: return of a stock with CAPM</li>
+<li>2011, Q4: return of stock with CAPM</li>
+</ul>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Module 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>For now, you have to install the development versions of <strong>bookdown</strong> from Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+</div>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">5.2</span> Introduction</h2>
+<p><strong>CAPM</strong></p>
+<p>Shows the relationship between risk and expected return in equilibrium</p>
+<p><strong>Assumes</strong>:</p>
+<ul>
+<li><p>All investors optimized portfolio using Markowitz procedure <span class="math inline">\(\Rightarrow\)</span> Construct efficient frontier based on all available risky assets <span class="math inline">\(\Rightarrow\)</span> Identify efficient risky portfolio P</p></li>
+<li><p>Investors face an identical investable universe and same input list to construct efficient frontier <span class="math inline">\(\Rightarrow\)</span> Same weights for each risky asset</p></li>
+<li><p>Since market portfolio is based on the same risky portfolios, it will have the same weights <span class="math inline">\(\Rightarrow\)</span> Investor will hold the market portfolio <span class="math inline">\(\Rightarrow\)</span> CAL = CML</p></li>
+</ul>
+<p><strong>Mutual fund theorm</strong>: All investors hold a common risky portfolio, they would have no problem if all the stock in the market were replaced with shares of a single mutual fund holding the market portfolio</p>
+<p>Key implications:</p>
+<ul>
+<li><p>Market portfolio is efficient</p></li>
+<li><p>Premium on a risky asset is <span class="math inline">\(\propto\)</span> its <span class="math inline">\(\beta\)</span></p></li>
+</ul>
+</div>
+<div id="capm-assumptions" class="section level2">
+<h2><span class="header-section-number">5.3</span> CAPM Assumptions</h2>
+<p><a name="behav-ass"></a> <strong>Individual Behavior Assumptions</strong></p>
+<ul>
+<li><p>Investors are rational mean-variance optimizers</p>
+<ul>
+<li>Not concerned about correlation of asset return with inflation/ prices of consumption items</li>
+</ul></li>
+<li><p>Single period planning horizon (can alter later)</p>
+<ul>
+<li><p>Longer periods would result in extra-market risk factors</p></li>
+<li><p>e.g. <span class="math inline">\(\Delta\)</span> interest rates <span class="math inline">\(\downarrow\)</span> income <span class="math inline">\(\Rightarrow\)</span> Assets that can hedge this will be priced higher</p></li>
+</ul></li>
+<li><p>Identical input list</p>
+<ul>
+<li>Implies that all information are public</li>
+</ul></li>
+<li><p>There are many investors and they are all price takers</p>
+<ul>
+<li>Transactions have no impact on the price</li>
+</ul></li>
+<li><p>Investors have homogeneous expectations</p>
+<ul>
+<li>Everyone’s analysis come to the same conclusion</li>
+</ul></li>
+</ul>
+<p><a name="market-ass"></a> <strong>Market Structure Assumptions</strong></p>
+<ul>
+<li><p>All assets are publicly traded (can alter later) and short positions are allowed</p>
+<ul>
+<li>Assets have to be tradable for investors to be able to derive identical input list</li>
+</ul></li>
+<li><p>Can borrow/lend at a common risk free rate (can alter later)</p>
+<ul>
+<li>Necessary for investors to derive the same tangency portfolio</li>
+</ul></li>
+<li><p>All information is publicly available</p></li>
+<li><p>No taxes</p>
+<ul>
+<li>Different tax rate <span class="math inline">\(\Rightarrow\)</span> Different after tax rates on the same stock <span class="math inline">\(\Rightarrow\)</span> Investor could derive different after tax optimal risky portfolio</li>
+</ul></li>
+<li><p>No transaction costs</p></li>
+</ul>
+<div id="assumptions-testing" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Assumptions Testing</h3>
+<p><strong>Model Testing</strong></p>
+<ul>
+<li><p>Normative: test model assumptions</p></li>
+<li><p>Positive: examines the predictions</p></li>
+</ul>
+<p>Impossible to create a model consistent with the complexity of markets <span class="math inline">\(\Rightarrow\)</span> CAPM is a simplification of reality</p>
+<p><span class="math inline">\(\hookrightarrow\)</span> Ideally assumptions will be robust (outcome not highly sensitive to the violation of the assumptions)</p>
+</div>
+<div id="derivation-of-capm" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Derivation of CAPM</h3>
+<p>Proved:</p>
+<ul>
+<li><p>Contribution of an individual stock to the portfolio risk premium is <span class="math inline">\(w_i[\operatorname{E}[r_i]-r_f]\)</span></p></li>
+<li><p>Contribution of an individual stock the portfolio variance is <span class="math inline">\(w_i \operatorname{Cov}(r_i, r_M)\)</span></p></li>
+</ul>
+<p><strong>Reward-to-risk ratio</strong> based on above:</p>
+<p><span class="math inline">\(\dfrac{\text{Contribution to Risk Premium}}{\text{Contribution to Variance}} = \dfrac{w_i[\operatorname{E}[r_i]-r_f]}{w_i \operatorname{Cov}(r_i, r_M)} = \dfrac{[\operatorname{E}[r_i]-r_f]}{\operatorname{Cov}(r_i, r_M)}\)</span></p>
+<p>Reward-to-risk ratio for <em>market portfolio</em> is the <strong>market price of risk</strong>:</p>
+<p><span class="math inline">\(\dfrac{[\operatorname{E}[r_M]-r_f]}{\sigma^2_M}\)</span></p>
+<p>In equilibrium all securities should have the same reward-to-risk ratio <span class="math inline">\(\Rightarrow\)</span> reward-to-risk ratio for individual stock = market price of risk:</p>
+<p><span class="math inline">\(\begin{array}{ccc}  \dfrac{[\operatorname{E}[r_i]-r_f]}{\operatorname{Cov}(r_i, r_M)} &amp;= \dfrac{[\operatorname{E}[r_M]-r_f]}{\sigma^2_M} \\  \operatorname{E}[r_i] &amp;= r_f + \beta_i [\operatorname{E}[r_M] - r_f] &amp;\text{where } \beta_i = \dfrac{\operatorname{Cov}(r_i, r_M)}{\sigma^2_M} \\ \end{array}\)</span></p>
+</div>
+<div id="security-market-line" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Security Market Line</h3>
+<p><span class="math inline">\(\beta\)</span> measures the risk of the security</p>
+<ul>
+<li>Can be estimated by plotting XS return on stock vs XS return on market</li>
+<li>Intercept should be 0</li>
+</ul>
+<p><a name="SML"></a> <strong>Security Market Lines</strong><br />
+Graphs relationship between <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\operatorname{E}[r]\)</span> of a stock</p>
+<div class="figure">
+<img src="figures/Exam%209%20-%209.png" alt="alt text" />
+<p class="caption">alt text</p>
+</div>
+<p><strong>SML vs CML</strong></p>
+<ul>
+<li><p>CML: Risk premium of <em>efficient Portfolios</em> vs <span class="math inline">\(\sigma\)</span></p>
+<ul>
+<li><span class="math inline">\(\sigma\)</span> is the appropriate risk measure for portfolios</li>
+</ul></li>
+<li><p>SML: Risk premium of <em>individual asseets</em> vs <span class="math inline">\(\beta\)</span></p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> is the appropriate risk measure for individual securities held as part of a well diversified portfolio</li>
+</ul></li>
+</ul>
+</div>
+<div id="testing-capm" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Testing CAPM</h3>
+<p>Impossible to construct market portfolio, so test the SML equation instead <span class="math inline">\(\operatorname{E}[R_i] = \beta_i R_M\)</span></p>
+<p>Regression on the XS returns of a sample of stocks against their betas over time</p>
+<p><span class="math inline">\(R_{i,t} = \lambda_0 + \lambda_1 \beta_i + \lambda_2 \sigma^2(e_i) + \eta_{i,t}\)</span></p>
+<p>CAPM predicts:</p>
+<ul>
+<li><p><span class="math inline">\(\lambda_0 = 0\)</span> as the average <span class="math inline">\(\alpha = 0\)</span></p></li>
+<li><p><span class="math inline">\(\lambda_1 = R_M\)</span> as the slope of SML = market risk premium</p></li>
+<li><p><span class="math inline">\(\lambda_2 = 0\)</span> as the risk premium is only based on proportion of market risk premium</p></li>
+</ul>
+<p>Estimate the <span class="math inline">\(\beta\)</span> and residual variance for each stock from time series of stock return</p>
+<p><a name="CAPM-test-caveat"></a> <strong>Caveat</strong></p>
+<ul>
+<li><p>Parameter estimates have large errors and may be correlated <span class="math inline">\(\Rightarrow\)</span> Downward bias in <span class="math inline">\(\lambda_1\)</span> and upward bias on <span class="math inline">\(\lambda_0\)</span></p></li>
+<li><p>Might reject CAPM even if it is valid</p>
+<ul>
+<li>Returns simulated following CAPM but regression still indicates that CAPM does not hold</li>
+</ul></li>
+<li><p>Parameters are time varying but the regression techniques does not recognize this</p></li>
+</ul>
+</div>
+</div>
+<div id="capm-extensions" class="section level2">
+<h2><span class="header-section-number">5.4</span> CAPM Extensions</h2>
+<p>Problematic assumptions:</p>
+<ul>
+<li><p>No restrictions on short sales, but in reality it can be difficult to take short positions</p></li>
+<li><p>All assets are tradable</p></li>
+<li><p>No transaction costs</p></li>
+<li><p>Single period horizon</p></li>
+</ul>
+<p>However the extensions of CAPM are not perfect so none have superseded CAPM so far</p>
+<div id="zero-beta-capm" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> Zero Beta CAPM</h3>
+<p>When investors face borrowing restrictions of risk free asset</p>
+<p><span class="math inline">\(\operatorname{E}[r_i] = \operatorname{E}[r_Z] + \beta_i \left[\operatorname{E}[r_M] - \operatorname{E}[r_Z]\right]\)</span></p>
+<ul>
+<li><p><span class="math inline">\(Z\)</span> = zero-beta portfolio for M</p></li>
+<li><p>Uncorrelated portfolio on the inefficient side of the minimum-variance frontier</p></li>
+</ul>
+<p>Investors with borrowing restrictions will invest more in high <span class="math inline">\(\beta\)</span> stocks and less in low <span class="math inline">\(\beta\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\uparrow\)</span> price of high <span class="math inline">\(\beta\)</span> stocks</p>
+<ul>
+<li><p>Slopt of <span class="math inline">\(SML_{zb} &lt; SML_{reg}\)</span></p></li>
+<li><p>Risk premium on the market portfolio is smaller as the <span class="math inline">\(\operatorname{E}[r_Z] &gt; r_f\)</span> so less reward for bearing risk</p></li>
+</ul>
+</div>
+<div id="non-traded-assets" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> Non-Traded Assets</h3>
+<p>Some assets are tradable e.g. human capital and privately held business</p>
+<ul>
+<li>These are of significant values and can have a material impact on the equilibrium returns of traded securities</li>
+</ul>
+<p><strong>Privately held business</strong></p>
+<ul>
+<li><p>Privately held business w/ similar characteristics to traded assets:<br />
+Little impact to CAPM as owners can still achieve diversification by reducing their portfolio of other similar traded assets <span class="math inline">\(\Rightarrow\)</span> Still holding market portfolio</p></li>
+<li><p>Privately held business w/o similar characteristics to traded assets:<br />
+Portfolio of traded assets that hedge the private business will be up <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\downarrow\)</span> expected return <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(-\alpha\)</span> in traditional CAPM</p></li>
+</ul>
+<p><strong>Human Capital</strong></p>
+<ul>
+<li><p>Only way to hedge is for employees to avoid purchasing share of their own employer <span class="math inline">\(\Rightarrow\)</span> labor intensive firms will have lower demand <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(+\alpha\)</span> in traditional CAPM</p></li>
+<li><p>Adjusted CAPM for labor income:</p>
+<ul>
+<li><p><span class="math inline">\(\operatorname{E}[R_i] = \operatorname{E}[R_M] \dfrac{\operatorname{Cov}(R_i, R_M) + \frac{P_H}{P_M}\operatorname{Cov}(R_i, R_H)}{\sigma^2_M + \frac{P_H}{P_M}\operatorname{Cov}(R_M,R_H)}\)</span></p></li>
+<li><p><span class="math inline">\(P_H\)</span>: value of aggregate human capital</p></li>
+<li><p><span class="math inline">\(P_M\)</span>: market value of traded assets</p></li>
+</ul></li>
+<li><p>Adjustment produce lower <span class="math inline">\(\beta\)</span> so a SML with a less steep slope, which explain negative alpha of high beta securities indicated by some tests</p></li>
+</ul>
+</div>
+<div id="multiperiod-capm" class="section level3">
+<h3><span class="header-section-number">5.4.3</span> Multiperiod CAPM</h3>
+<p><strong>Intertemporal CAPM</strong></p>
+<p>Assume investors will optimize their consumption/ investment over their lifetime</p>
+<p>ICAPM = CAPM when:</p>
+<ul>
+<li><p>Only type of risk is the uncertainty about portfolio returns</p></li>
+<li><p>Investment opportunities are constant over time</p></li>
+</ul>
+<p>However, over the long run we expect additional sources of risk to arise and <strong>hedge portfolios</strong> will be bid up</p>
+<ol style="list-style-type: decimal">
+<li><p>Changes in the parameters that describe investment opportunities</p>
+<ul>
+<li>Investors will bid up prices of assets that have higher return during periods of adverse economic environment <span class="math inline">\(\Rightarrow\)</span> lower expected return</li>
+</ul></li>
+<li><p>Changes in the prices of consumption goods</p>
+<ul>
+<li>Investors will bid up prices of assets that hedge the increases in prices of consumption goods (inflation protection)</li>
+</ul></li>
+</ol>
+<p>ICAPM with <span class="math inline">\(K\)</span> sources of extramarket risk and <span class="math inline">\(K\)</span> hedge portfolios:</p>
+<p><span class="math inline">\(\operatorname{E}[R_i] = \beta_{iM}\operatorname[R_M] + \sum_k \beta_{ik}\operatorname[R_k]\)</span></p>
+<ul>
+<li><span class="math inline">\(\beta_{ik}\)</span> is the <span class="math inline">\(\beta\)</span> on the <span class="math inline">\(k\)</span><sup>th</sup> hedge portfolio</li>
+</ul>
+</div>
+<div id="consumption-based-capm" class="section level3">
+<h3><span class="header-section-number">5.4.4</span> Consumption Based CAPM</h3>
+<p>Assume that in a period, investors need to allocate the current wealth between consumption today and savings/ investments to support future consumption</p>
+<p>Optimal mix: utility from an additional dollar of consumption today = utility associated with the future consumption generated from the investment of that dollar</p>
+<ul>
+<li>Additional income from savings are more valued during tough economic times (w/ limited consumption opportunities) <span class="math inline">\(\Rightarrow\)</span> Assets with (+) covariance with consumption growth (higher payoff when consumption is already high) are viewed as riskier <span class="math inline">\(\Rightarrow\)</span> Risk premium higher</li>
+</ul>
+<p>CCAPM:</p>
+<p><span class="math inline">\(\operatorname{E}[R_i] = \beta_{iC}RP_C\)</span></p>
+<ul>
+<li><p><span class="math inline">\(C\)</span> is a consumption tracking portfolio, one with the highest correlation with consumption growth</p></li>
+<li><p><span class="math inline">\(\beta\)</span> of market portfolio can be &gt; 1</p></li>
+</ul>
+<p>Disadvantages: consumption growth figures are published infrequently and with significant error</p>
+</div>
+<div id="liquidity-adjusted-capm" class="section level3">
+<h3><span class="header-section-number">5.4.5</span> Liquidity Adjusted CAPM</h3>
+<p>Security prices should be discounted to reflect illiquidity</p>
+<ul>
+<li><p>Standard CAPM ignores liquidity costs like bid-ask spread</p></li>
+<li><p>Discount <span class="math inline">\(\uparrow\)</span> as trading cost <span class="math inline">\(\uparrow\)</span> but <em>not</em> proportional to the increase due to <strong>clientele effect</strong></p>
+<ul>
+<li>Frequent traders hold more liquid assets and long term traders hold less liquid assets</li>
+</ul></li>
+</ul>
+<p>Investor also demand additional return on liquidity risk (risk of unanticipated changes in liquidity)</p>
+<ul>
+<li>Can be adjusted with liquidity <span class="math inline">\(\beta\)</span> that reflects the sensitivity of the return of the security to changes in market liquidity</li>
+</ul>
+</div>
+</div>
+<div id="past-exam-questions-3" class="section level2">
+<h2><span class="header-section-number">5.5</span> Past Exam Questions</h2>
+<p><a name="2015-4"></a> 2015, Q4 <img src="questions/2015-4Q.png" alt="alt text" /> <img src="questions/2015-4A.png" alt="alt text" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="a3-bkm8-index-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a5-bkm10-arbitrage-pricing-theory.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

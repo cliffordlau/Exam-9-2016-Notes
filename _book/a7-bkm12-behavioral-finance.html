@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html">
+<link rel="prev" href="a6-bkm11-efficient-market-hyothesis.html">
+<link rel="next" href="a8-bkm13-empirical-evidence-on-security-returns.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -281,27 +281,196 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CAS Exam 9 Study Notes</h1>
-<h4 class="author"><em>Cliff Lau</em></h4>
-<h4 class="date"><em>2017-01-19</em></h4>
+<div id="a7-bkm12-behavioral-finance" class="section level1">
+<h1><span class="header-section-number">Module 8</span> A7 BKM12: Behavioral Finance</h1>
+<p>Z. Bodie, A. Kane, A. Marcus</p>
+<div id="cliffs-summary-6" class="section level2">
+<h2><span class="header-section-number">8.1</span> Cliff’s Summary</h2>
+<p>Important to know the incorrect <a href="#info-process">information processing</a> and <a href="#bias">behavior bias</a></p>
+<p>The <a href="#limits-to-a">limits</a> to arbitrage: mispricing doesn’t disappear, implementation cost and model risk</p>
+<ul>
+<li>Examples on the violation of law of 1 price</li>
+</ul>
+<p><a href="#bad-behav">Critique</a> behavioral finance</p>
+<p>How technical anlaysis can work</p>
+<ul>
+<li>Trends indications and market sentiments indicators</li>
+</ul>
+<div id="types-of-exam-questions-6" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Types of Exam Questions</h3>
+<p><strong>Concepts</strong></p>
+<ul>
+<li>2007, Q7: information processing error and market anomaly associated</li>
+<li>2008, Q6: Law of 1 price and violation examples</li>
+<li>2013, Q5: anomaly based on example shown; and associated information process error; what efficient market would look like</li>
+</ul>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Module 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>For now, you have to install the development versions of <strong>bookdown</strong> from Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+</div>
+<div id="critique-of-financial-theory" class="section level2">
+<h2><span class="header-section-number">8.2</span> Critique of Financial Theory</h2>
+<p>Account for irrationalities in decision making</p>
+<ul>
+<li><p><strong>Incorrect information processing</strong> <span class="math inline">\(\Rightarrow\)</span> Incorrect probability distributions</p></li>
+<li><p>Inconsistent/ suboptimal decisions due to <strong>behavioral biases</strong> even if the probability distribution generated was correct</p></li>
+</ul>
+<div id="information-processing" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Information Processing</h3>
+<p><a name="info-process"></a></p>
+<p><strong>Forecasting Errors</strong>:</p>
+<ul>
+<li>Too much weight assigned to recent experience</li>
+<li>Forecasts are too extreme given the actual level of uncertainty</li>
+</ul>
+<p><strong>Overconfidence</strong>: Overestimate their abilities and think they can outperform market and trade too much</p>
+<ul>
+<li>Lead to the prevalence of active investment</li>
+</ul>
+<p><strong>Conservatism</strong>: Too slow to update their beliefs in response to new evidence</p>
+<ul>
+<li>Lead to post earnings announcement drift</li>
+</ul>
+<p><strong>Sample Size Neglect &amp; Representativeness</strong>: Infer a pattern based on too small a sample</p>
+<ul>
+<li>Lead to stocks that have best recent performance tend to show reversals in a few days due to investor adjusting their initial beliefs</li>
+</ul>
+</div>
+<div id="behavioral-biases" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Behavioral Biases</h3>
+<p><a name="bias"></a></p>
+<p><strong>Framing</strong>: Decisions are often materially impacted by how the question is framed</p>
+<ul>
+<li>E.g. preference of discount over surcharge, more risk adverse with gain and risk seeking with loss</li>
+</ul>
+<p><strong>Mental Accounting</strong>: Segregate decisions</p>
+<ul>
+<li>E.g. Segment their investment portfolios into pieces which go towards different goals and they will have different risk attitudes to each piece</li>
+</ul>
+<p><strong>Regret Avoidance</strong>: Unconventional decisions that turned out to be wrong will have more regret</p>
+<p><strong>Affect</strong>: Good or bad feeling investors may associate with investing in a stock</p>
+<ul>
+<li>E.g. Socially responsible firms may generate higher affect <span class="math inline">\(\Rightarrow\)</span> Drive up the prices as investors prefer them <span class="math inline">\(\Rightarrow\)</span> Lower risk adjusted returns</li>
+</ul>
+<p><strong>Prospect Theory</strong>:</p>
+<p>Modifies the standard definition of risk averse investors</p>
+<p>Utility depends on changes in wealth instead of level of wealth</p>
+<p>There is diminishing return of utility as wealth increases but in addition it shows that investors become risk seeing as they begin to lose money</p>
+<div class="figure">
+<img src="figures/Exam%209%20-%2011.png" alt="alt text" />
+<p class="caption">alt text</p>
+</div>
+</div>
+</div>
+<div id="limits-to-arbitrage" class="section level2">
+<h2><span class="header-section-number">8.3</span> Limits to Arbitrage</h2>
+<p><a name="limits-to-a"></a></p>
+<p>Actions for arbitrageurs are limits <span class="math inline">\(\Rightarrow\)</span> Price irrationalities can continue</p>
+<p><strong>Fundamental Risk</strong>: Mispricing are not necessarily going to disappear, so it’s not actually risk free</p>
+<p><strong>Implementation Costs</strong>: There are limitations to short selling e.g. short notice to return the security and some investors are not permitted to short sell</p>
+<p><strong>Model Risk</strong>: Fault in the arbitrageur’s model that falsely indicate a mispricing</p>
+</div>
+<div id="violations-of-the-law-of-one-price" class="section level2 tabset">
+<h2><span class="header-section-number">8.4</span> Violations of the Law of One Price</h2>
+<p>Examples where the law of one price has been violated</p>
+<div id="siamese-twin-companies" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Siamese Twin Companies</h3>
+<p>When Shell and Royal Dutch Petroleum merged, the profits are set to split 40/60</p>
+<p><span class="math inline">\(\hookrightarrow\)</span> Royal Dutch shares should be 150% of Shells but the price relativity deviated from the 150% level for extended period</p>
+<ul>
+<li>Arbitrageurs who tried to profit may have lost money as there were periods of time where the deviations actually grew in size</li>
+</ul>
+</div>
+<div id="equity-carve-outs" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> Equity Carve-outs</h3>
+<p>When 3Com spun off Palm, each 3Com shareholder gets 1.5 shares of Palm</p>
+<p>3Com shares should be traded for at least 1.5x of Palm but Palm was traded for more</p>
+<p>Arbitrageurs were not able to exploit this by short selling Palm as not enough shares were available for short selling</p>
+</div>
+<div id="closed-end-funds" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> Closed-End Funds</h3>
+<p>They typically trade at discount or premium of net asset value</p>
+<p>Not a true violation as the fund incurs expenses which will reduce the share prices</p>
+<p><span class="math inline">\(\dfrac{\text{Premium}}{\text{Net Asset Value}} = \dfrac{\text{Price} - \text{NAV}}{\text{NAV}} = \dfrac{\alpha - \varepsilon}{\delta + \varepsilon - \alpha}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(\delta\)</span> = Dividend yield; <span class="math inline">\(\varepsilon\)</span> = Expense ratio</p></li>
+<li><p>Fund will sell at a premium is <span class="math inline">\(\alpha &gt; \varepsilon\)</span></p></li>
+</ul>
+</div>
+</div>
+<div id="critique-of-behavioral-finance" class="section level2">
+<h2><span class="header-section-number">8.5</span> Critique of Behavioral Finance</h2>
+<p><a name="bad-behav"></a></p>
+<p><strong>Unstructured</strong>: Allows virtually any anomaly to be explained by a combination of irrationalities</p>
+<ul>
+<li>Critics would have more faith in behavioral finance if it provides a single behavioral characteristic that explains a range of anomalies</li>
+</ul>
+<p><strong>Inconsistent</strong>: Some anomalies are inconsistent in their support for one irrationality vs another</p>
+<p><strong>Benchmark</strong>: Picking the wrong benchmark can produce an apparent abnormality</p>
+</div>
+<div id="technical-analysis-1" class="section level2">
+<h2><span class="header-section-number">8.6</span> Technical Analysis</h2>
+<p>Behavioral Finance suggest that technical analysis will be successful in many cases due to irrationalities in decision making from investors</p>
+<p><strong>Disposition effect</strong> where investors hold on to losing investments because they are reluctant to realize losses <span class="math inline">\(\Rightarrow\)</span> Slow down the adjustment of the share price to the appropriate value</p>
+<p><strong>Overconfidence</strong> investors trade more <span class="math inline">\(\Rightarrow\)</span> Relationships between trading volume and market returns</p>
+<ul>
+<li>Technical analyst uses volume data to capture this</li>
+</ul>
+<p><strong>Irrational factors</strong> can disturb market fundamentals and technical analysis can exploit the corrections</p>
+<div id="trends-corrections" class="section level3">
+<h3><span class="header-section-number">8.6.1</span> Trends &amp; Corrections</h3>
+<p>Technical analysis has to do with uncovering trends</p>
+<p><strong>Moving Averages</strong></p>
+<p>Average stock price over an interval</p>
+<ul>
+<li><p>Falling stocks’ moving average &gt; current price</p></li>
+<li><p>If market breaks through the moving average line from below = bullish signal as it’s a sign of a shift from falling trend to rising trend</p></li>
+<li><p><strong>Elliott wave theory</strong> Decomposes the actual movements into long term and short term wave cycles, buy when the long term direction is positive</p></li>
+</ul>
+<p><strong>Relative Strength</strong></p>
+<p>Measures how the stock has performed relative to the industry or market</p>
+<ul>
+<li>Ratio of the stock price vs market index</li>
+</ul>
+<p><strong>Breadth</strong></p>
+<p>Measures how widely the movement in the market index is reflected in the price movements of all stocks</p>
+<ul>
+<li>e.g. measure the spread between the # of stocks that advance and decline, as # of advances &gt; # of declines by a wider margin the market is viewed as being stronger</li>
+</ul>
+</div>
+<div id="sentiment-indicators" class="section level3">
+<h3><span class="header-section-number">8.6.2</span> Sentiment Indicators</h3>
+<p>Methods to measure market sentiment</p>
+<p><strong>Trin Statistics</strong></p>
+<p>Market advances are considered to be stronger when they are accompanied by stronger trading volumes</p>
+<p><span class="math inline">\(\text{Trin} = \dfrac{\text{Vol. Declining}/\text{# Declining}}{\text{Vol. Advancing}/\text{# Advancing}}\)</span></p>
+<ul>
+<li>Ratio &gt; 1.0 are bearish</li>
+</ul>
+<p><strong>Confidence Index</strong></p>
+<p>Based on bond market data assuming actions of bond traders reveal trends that will later follow in the stock market</p>
+<p><span class="math inline">\(\text{Confidence Index} = \dfrac{\text{Avg yield on top 10 rated corporate bonds}}{\text{Avg yield on intermediate 10 rated corporate bonds}}\)</span></p>
+<ul>
+<li>Approaches 100% when traders are optimistic as they’ll require smaller default premiums</li>
+</ul>
+<p><strong>Put/ Call Ratio</strong></p>
+<p><span class="math inline">\(\dfrac{\text{o/s put options}}{\text{o/s call options}}\)</span></p>
+<ul>
+<li>Increase in the ratio is a bearish sign as put options profit from falling markets</li>
+</ul>
+</div>
+</div>
+<div id="past-exam-questions-6" class="section level2">
+<h2><span class="header-section-number">8.7</span> Past Exam Questions</h2>
+<p>n/a</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="a1-bkm-6-risk-averison-capital-allocation-to-risk-assets.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="a6-bkm11-efficient-market-hyothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a8-bkm13-empirical-evidence-on-security-returns.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
