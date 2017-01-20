@@ -1,15 +1,6 @@
----
-title: "A3 BKM8: Index Models"
-author: "Z. Bodie, A. Kane, A. Marcus"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
-output: 
-  html_document:
-    toc: true
-    toc_float:
-      collapsed: false
-      smooth_scroll: false
-    toc_depth: 4
----
+# A3 BKM8: Index Models
+
+Z. Bodie, A. Kane, A. Marcus
 
 ## Cliff's Summary
 
@@ -375,13 +366,13 @@ If short positions are prohibited, we need to take out securities with negative 
 ## Past Exam Questions
 
 <a name="2004-8"></a> 2004, Q8
-![alt text](questions/2004-8Q.png)
-![alt text](questions/2004-8A.png)
+![alt text](Section A/questions/2004-8Q.png)
+![alt text](Section A/questions/2004-8A.png)
 
 <a name="2013-3"></a> 2013, Q3
-![alt text](questions/2013-3Q.png)
-![alt text](questions/2013-3A.png)
+![alt text](Section A/questions/2013-3Q.png)
+![alt text](Section A/questions/2013-3A.png)
 
 <a name="2015-3"></a> 2015, Q3
-![alt text](questions/2015-3Q.png)
-![alt text](questions/2015-3A.png)
+![alt text](Section A/questions/2015-3Q.png)
+![alt text](Section A/questions/2015-3A.png)
