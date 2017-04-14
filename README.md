@@ -1,5 +1,5 @@
 # Exam-9-2016-Notes
 
-Notes for CAS Exam 9 2016 sitting
+Notes for CAS [Exam 9 2016 sitting](http://cliffordlau.github.io/Exam-9-2016-Notes/)
 
-Eventually will cover all 4 sections A to D
+This will eventually be moved to Bookdown and won't look so ugly
